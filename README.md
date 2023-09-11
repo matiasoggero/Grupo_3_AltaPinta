@@ -19,3 +19,5 @@ Soy Germán Poupeau, tengo 33 años, vivo en Rafaela, provincia de Santa Fe, act
 Soy Juan Ingacio Schreter, tengo 23 años, soy estudiante a meses de ser Licenciado en "Administración y Gestión de la Información". Hice un curso de "Desarrollador Web" en CoderHouse en el año 2022 donde obtuve una buena base sobre HTML y CSS y me interesa seguir aprendiendo sobre esta temática.
 Me gusta Informarme sobre los avances de las tecnologías y la economía.
 En mis tiempos libres exploro distintas páginas donde se puedan ver aplicados los avances y/o cambios tanto en backend como en frontend.
+
+Mi nombre es Martín Botta, tengo 38 años , vivo en la ciudad de Santa fe y actualmente trabajo en el area comercial de Sancor Salud. Con respecto a programción ,tengo conocimiento en html,css, javaScript y react js. 
