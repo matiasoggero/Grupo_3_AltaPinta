@@ -21,3 +21,7 @@ Me gusta Informarme sobre los avances de las tecnologías y la economía.
 En mis tiempos libres exploro distintas páginas donde se puedan ver aplicados los avances y/o cambios tanto en backend como en frontend.
 
 Mi nombre es Martín Botta, tengo 38 años , vivo en la ciudad de Santa fe y actualmente trabajo en el area comercial de Sancor Salud. Con respecto a programción ,tengo conocimiento en html,css, javaScript y react js. 
+
+Rocio Salamano,tengo 35 años,soy diseñadora de modas y vivo en Susana.
+Con respecto al curso todo es super nuevo para mí,  me esfuerzo todo el día para llegar y estudiar a full;Le dedico mucho tiempo a esta mini carrera, es mi prioridad en este momento!.
+Mi fuerte son mis ganas de aprender y superarme.git
