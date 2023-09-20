@@ -1,6 +1,6 @@
 # Grupo_3_AltaPinta
-Presentamos Alta Pinta, un modelo de negocio 100% on-line enfocado en la venta de sandwiches de hamburguesas con la particularidad de poder armarlo a tu gusto. Nuestra propuesta de valor está enfocada en que el cliente, por medio de su dispositivo móvil o computadora pueda realizar el pedido, con la particularidad de poder armarse el sandwich a su gusto, eligiendo entre las variedades de tipos de harmburguesas y el resto de los ingredientes que desea agregar.
-Cabe resaltar que el usuario debe para ello registrarse o loguearse, si ya se encuentra registrado, luego de completar su pedido, pasa a los datos de envío y elige la forma de pago... y listo!, pedido en camino.
+Presentamos Alta Pinta, un modelo de negocio 100% on-line cuya propuesta de valor está enfocada en la venta de sandwiches de hamburguesas con la particularidad de poder armarlo a tu gusto, es decir, el cliente, por medio de su dispositivo móvil o computadora puede realizar el pedido, eligiendo entre las variedades de harmburguesas y el resto de los ingredientes que desea agregar.
+Cabe resaltar que el usuario debe para ello registrarse o loguearse, si ya se encuentra registrado. Luego de completar su orden, pasa a los datos de envío, elige la forma de pago... y listo!, pedido en camino.
 Alta Pinta se orienta a un público amplio de 18 a 60 años, dado que la navegación y funcionalidad de la app web o móvil es intuitiva y facil de usar.
 + Como producto, nos enfocamos en Subway(https://www.subway.com/es-ar).
 + En cuanto a la estetica, nos guiamos en la pagina de KFC(https://www.kfc.com.ar).
