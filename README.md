@@ -25,3 +25,6 @@ Mi nombre es Martín Botta, tengo 38 años , vivo en la ciudad de Santa fe y act
 Rocio Salamano,tengo 35 años,soy diseñadora de modas y vivo en Susana.
 Con respecto al curso todo es super nuevo para mí,  me esfuerzo todo el día para llegar y estudiar a full;Le dedico mucho tiempo a esta mini carrera, es mi prioridad en este momento!.
 Mi fuerte son mis ganas de aprender y superarme.git
+
+como tablero de trabajo usamos trello. a continuacion compartimos la url:
+https://trello.com/b/jemgrOVF/alta-pinta
