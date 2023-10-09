@@ -6,14 +6,13 @@ header{
 
 header img{
     width: 100%;
-    height: 120%; 
+    height: 280%; 
 }
 
 header button{
     position: absolute;
     bottom: 7px;
     left: 160px;
-    background-color: #fff;
     width: 25%;
     height: 50%;
     border: none;
@@ -21,7 +20,7 @@ header button{
 }
 
 header button img{
-    width: 40%;
+   
 }
 
 @media(min-width: 769px){
