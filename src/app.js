@@ -2,6 +2,8 @@ const express = require("express");
 const path = require("path");
 
 const app = express();
+
+// configuracion para usar ejs en lugar de html
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
  
@@ -11,21 +13,21 @@ app.get("/",(req,res) =>{
     res.render('index');
 })
 
-// app.get("/login",(req,res) =>{
-//     res.render(path.join(__dirname, "views/login.html"));
-// })
+ app.get("/login",(req,res) =>{
+     res.render("login");
+})
 
-// app.get("/productCard",(req,res) =>{
-//     res.render(path.join(__dirname, "views/productCard.html"));
-// })
+app.get("/productCard",(req,res) =>{
+    res.render("productCard");
+})
 
-// app.get("/productDetail",(req,res) =>{
-//     res.render(path.join(__dirname, "views/productDetail.html"));
-// })
+app.get("/productDetail",(req,res) =>{
+    res.render("productDetail");
+})
 
-// app.get("/register",(req,res) =>{
-//     res.render(path.join(__dirname, "views/register.html"));
-// })
+app.get("/register",(req,res) =>{
+    res.render("register");
+})
 
 const port = 3040;
 app.listen(port, () => {
