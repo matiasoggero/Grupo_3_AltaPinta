@@ -1,0 +1,82 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+main form {
+    width: 95%;
+    height: 80vh;
+    margin: auto;
+}
+
+main form h4.title {
+    text-align: center;
+    margin: 15px 0px;
+    color: #af1717;
+}
+
+main form div.burguer {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+main form div.option label {
+    display: block;
+    text-align: center;
+}
+
+main form div.option select {
+    display: block;
+    text-align: center;
+    width: 70%;
+    position: relative;
+    left: 16%;
+    margin-bottom: 10px;
+}
+
+main form button {
+    width: 90%;
+    height: 25px;
+    position: relative;
+    left: 20px;
+    top: 10px;
+    border-radius: 5px;
+}
+
+main form button.acept {
+    background-color: #DAA520;
+    color: #fff;
+}
+
+main form button.cancel {
+    top: 20px;
+    background-color: #af1717;
+    color: #fff;
+}
+
+@media(min-width: 769px) {
+
+    main form h4.title {
+        font-size: 18px;
+    }
+
+    main form div.burguer {
+        justify-content: space-around;
+    }
+
+    main form label {
+        font-size: 20px;
+    }
+
+    main form div.option select {
+        height: 28px;
+        font-size: 16px;
+    }
+
+    main form button {
+        height: 32px;
+        left: 50px;
+        font-size: 16px;
+    }
+}

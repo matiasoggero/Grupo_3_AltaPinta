@@ -1,0 +1,31 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+.login-container{
+    position: absolute;
+}
+
+.logo-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;   
+}
+
+.label-container{
+    width: 60%;
+    margin:20px; 
+    text-align: center;
+}
+button.enviar{
+    width: 10%;
+    height: 25px;
+    position: relative;
+    border-radius: 5px;
+    left: 375px;
+    top: 20px;
+    background-color: #af1717;
+    color: #fff;
+    
+}
