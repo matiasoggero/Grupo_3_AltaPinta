@@ -1,0 +1,42 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+main section h3 {
+    text-align: center;
+    margin: 15px 0px;
+    color: #af1717;
+}
+
+footer {
+    display: flex;
+    flex-direction: wrap;
+}
+
+footer button {
+    width: 40%;
+    height: 25px;
+    position: relative;
+    left: 20px;
+    top: 10px;
+    border-radius: 5px;
+    color: #fff
+}
+
+#buy {
+    background-color: #DAA520;
+
+
+
+}
+
+#back {
+
+    background-color: #af1717;
+
+
+}
+
+@media(min-width: 769px) {}

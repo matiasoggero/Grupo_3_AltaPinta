@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Carrito de Compras</title>
+  <link rel="stylesheet" href="/css/productCart.css" />
+  <link rel="stylesheet" href="/css/style.css" />
+  <%- include('partials/head.ejs') %>
+</head>
+
+<body>
+  <%- include('partials/header.ejs') %>
+
+    <main>
+      <section>
+        <h3>Carrito de Compras</h3>
+        <article>
+          <i>imagen de mas</i>
+          <i>imagen de menos</i>
+          <div>
+            <img src="/images/hamb2.png" alt="Hamburguesa doble queso" />
+          </div>
+          <h4>Detalle Producto</h4>
+          <a href="#">Ver mas</a>
+        </article>
+        <article>
+          <i>imagen de mas</i>
+          <i>imagen de menos</i>
+          <div>
+            <img src="/images/hamb2.png" alt="Hamburguesa doble de pollo" />
+          </div>
+          <h4>Detalle Producto</h4>
+          <a href="#">Ver mas</a>
+        </article>
+        <article>
+          <i>imagen de mas</i>
+          <i>imagen de menos</i>
+          <div>
+            <img src="/images/hamb3.png" alt="Hamburguesa simple" />
+          </div>
+          <h4>Detalle Producto</h4>
+          <a href="#">Ver mas</a>
+        </article>
+        
+
+      </section>
+
+    </main>
+
+    <footer>
+      <form action="/productDetail.ejs" method="post"></form>
+      <button id="back" type="button" >Regresar</button>
+      <form action="/" method="post"></form>
+      <button id="buy" type="button" >Comprar</button>
+    </footer>
+</body>
+
+</html>
