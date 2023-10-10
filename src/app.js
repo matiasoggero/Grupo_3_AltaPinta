@@ -17,8 +17,8 @@ app.get("/",(req,res) =>{
      res.render("login");
 })
 
-app.get("/productCart",(req,res) =>{
-    res.render("productCart");
+app.get("/productCard",(req,res) =>{
+    res.render("productCard");
 })
 
 app.get("/productDetail",(req,res) =>{
@@ -27,6 +27,14 @@ app.get("/productDetail",(req,res) =>{
 
 app.get("/register",(req,res) =>{
     res.render("register");
+})
+
+app.post("/register",(req,res) =>{
+    res.redirect("/");
+})
+
+ app.post("/login",(req,res) =>{
+     res.redirect("/");
 })
 
 const port = 3040;
