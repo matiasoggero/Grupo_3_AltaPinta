@@ -17,8 +17,8 @@ app.get("/",(req,res) =>{
      res.render("login");
 })
 
-app.get("/productCard",(req,res) =>{
-    res.render("productCard");
+app.get("/productCart",(req,res) =>{
+    res.render("productCart");
 })
 
 app.get("/productDetail",(req,res) =>{
