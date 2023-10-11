@@ -1,43 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carrito de Compras</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/productCart.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <%- include('partials/head.ejs') %>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Carrito de Compras</title>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet" />
-  <link rel="stylesheet" href="/css/productCart.css" />
-  <link rel="stylesheet" href="/css/style.css" />
-  <%- include('partials/head.ejs') %>
-</head>
-
-<body>
-  <%- include('partials/header.ejs') %>
+  <body>
+    <%- include('partials/header.ejs') %>
 
     <main>
       <section>
         <h3>Carrito de Compras</h3>
         <article>
-          <h4>Detalle Producto</h4>
-          <a href="#">Ver mas</a>
-          <div class="cart-plus"><i class="fas fa-cart-plus"></i></div>
-          <div class="trash"><i class="fas fa-trash"></i></div>
-          <div class="image-hamburger"><img src="/images/hamb2.png" width="50px" alt="Hamburguesa doble queso" /></div>
-        </article>
-        <article>
-          <h4>Detalle Producto</h4>
-          <a href="#">Ver mas</a>
-          <div class="cart-plus"><i class="fas fa-cart-plus"></i></div>
-          <div class="trash"><i class="fas fa-trash"></i></div>
-          <div class="image-hamburger"><img src="/images/hamb2.png" width="50px" alt="Hamburguesa doble de pollo" />
+          <div class="image-hamburger">
+            <img
+              src="/images/hamb2.png"
+              width="50px"
+              alt="Hamburguesa doble queso"
+            />
           </div>
-        </article>
-        <article>
           <h4>Detalle Producto</h4>
           <a href="#">Ver mas</a>
           <div class="cart-plus"><i class="fas fa-cart-plus"></i></div>
           <div class="trash"><i class="fas fa-trash"></i></div>
-          <div class="image-hamburger"><img src="/images/hamb3.png" width="50px" alt="Hamburguesa simple" /></div>
+        </article>
+        <article>
+          <div class="image-hamburger">
+            <img
+              src="/images/hamb2.png"
+              width="50px"
+              alt="Hamburguesa doble de pollo"
+            />
+          </div>
+          <h4>Detalle Producto</h4>
+          <a href="#">Ver mas</a>
+          <div class="cart-plus"><i class="fas fa-cart-plus"></i></div>
+          <div class="trash"><i class="fas fa-trash"></i></div>
+        </article>
+        <article>
+          <div class="image-hamburger">
+            <img
+              src="/images/hamb3.png"
+              width="50px"
+              alt="Hamburguesa simple"
+            />
+          </div>
+          <h4>Detalle Producto</h4>
+          <a href="#">Ver mas</a>
+          <div class="cart-plus"><i class="fas fa-cart-plus"></i></div>
+          <div class="trash"><i class="fas fa-trash"></i></div>
         </article>
       </section>
       <section class="buttons">
@@ -48,6 +67,5 @@
       </section>
     </main>
     <footer></footer>
-</body>
-
+  </body>
 </html>

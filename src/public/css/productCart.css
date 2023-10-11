@@ -1,79 +1,77 @@
 * {
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
 }
 
 main {
-    width: 95%;
-    height: 80vh;
-    margin: auto;
+  width: 95%;
+  height: 80vh;
+  margin: auto;
 }
 
 main section h3 {
-    text-align: center;
-    margin: 15px 0px;
-    color: #af1717;
+  text-align: center;
+  margin: 15px 0px;
+  color: #af1717;
 }
 
 article {
-    width: 60%;
-    height: 100px;
-    margin: 10px 30px 10px;
-    border: 1px solid #000000;
-    display: flex;
-    justify-content: space-evenly;
+  width: 80%;
+  height: 100px;
+  margin: 10px 30px 10px;
+  border: 1px solid #000000;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
 }
 
 article h4 {
-    text-align: left;
-    color: #af1717;
-    
+  text-align: left;
+  color: #af1717;
 }
 
 article .cart-plus {
-    font-size: 15px;
-    text-align: right;
-    
+  font-size: 15px;
+  text-align: right;
 }
 
 article .trash {
-    font-size: 15px;
-    text-align: right;
-    
+  font-size: 15px;
+  text-align: right;
 }
 
 article .image-hamburger {
-    flex: -1;
+  flex: -1;
 }
 
 article a {
-    text-decoration: inherit;
-    color: #000000;
+  text-decoration: inherit;
+  color: #000000;
 }
 
 section .buttons {
-    display: flex;
-    flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 section form button {
-    width: 60%;
-    height: 30px;
-    position: relative;
-    left: 20px;
-    top: 10px;
-    border-radius: 5px;
-    color: #fff
+  width: 60%;
+  height: 30px;
+  position: relative;
+  left: 20px;
+  top: 10px;
+  border-radius: 5px;
+  color: #fff;
 }
 
 #buy {
-    background-color: #DAA520;
-    
+  background-color: #daa520;
 }
 
 #back {
-    background-color: #af1717;
+  background-color: #af1717;
 }
 
-@media(min-width: 769px) {}
+@media (min-width: 769px) {
+}
