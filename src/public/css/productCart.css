@@ -103,3 +103,38 @@ section button {
 
 @media (min-width: 769px) {
 }
+
+main section h3 {
+  text-align: center;
+  margin: 15px 0px;
+  color: #af1717;
+  font-size: 35px;
+}
+
+article {
+  width: 90%;
+  height: 150px;
+  margin: 10px 30px 10px;
+  border: 1px solid #000000;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  font-size: 25px;
+}
+
+article a {
+  text-decoration: inherit;
+  color: #000000;
+  font-size: 20px;
+}
+
+article .cart-plus {
+  font-size: 25px;
+  text-align: right;
+  align-items: end;
+}
+
+article .trash {
+  font-size: 25px;
+  text-align: right;
+}
