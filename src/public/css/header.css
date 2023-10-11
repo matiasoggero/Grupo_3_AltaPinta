@@ -65,6 +65,9 @@ header button img{
         padding: 10px 15px;
         color: #000;
         font-size: 14px;
+        min-width: 120px;
+        display: block;
+        text-align: center;
     }
 
     .nav ul li a:active, .nav ul li a:visited {

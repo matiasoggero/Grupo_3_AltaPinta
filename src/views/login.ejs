@@ -5,31 +5,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <link rel="stylesheet" href="/css/loginDetail.css"> 
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/login.css">
     <%- include('partials/head.ejs') %>
 </head>
     
 <body>
     <%- include('partials/header.ejs') %>
-
-    <h1 class="login-container"></h1>
     
-    <form action="/login" method="post">
-        
-        <div class="label-container">
-            <label for="txfuser"></label>
-            <input type="text" name="NombreUsuario" id="txfuser" placeholder="Nombre de usuario">
-        </div>
-        
-        <div class="label-container">
-            <label for="txfpassword"></label>
-            <input type="password" name="password" id="password" placeholder="Contraseña">
-        </div>
-
-        <button class="enviar" type="submit">Enviar</button>
-        
-    </form>
+    <main class="login-container">
+        <form action="/login" method="post">
+            
+            <div class="label-container">
+                <input type="text" name="NombreUsuario" id="txfuser" placeholder="Nombre de usuario">
+            </div>
+            
+            <div class="label-container">
+                <input type="password" name="password" id="password" placeholder="Contraseña">
+            </div>
+            
+            <div class="button-container">
+                <button class="enviar" type="submit">Enviar</button>
+            </div>
+            
+        </form>
+    </main>
+    
     
 </body>
 </html>

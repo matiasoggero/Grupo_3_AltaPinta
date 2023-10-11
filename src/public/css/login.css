@@ -1,0 +1,46 @@
+.login-container{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.login-container form {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px
+}
+
+.login-container .label-container {
+    width: 100%;
+    padding: 10px 0;
+}
+
+.login-container .label-container input {
+    padding: 10px;
+    width: 100%;
+}
+
+.label-container{
+    text-align: center;
+}
+
+.button-container {
+    display: flex;
+    justify-content: flex-end;
+}
+
+button.enviar{
+    border-radius: 5px;
+    background-color: #af1717;
+    color: #fff;
+    padding: 8px 25px;
+    border: none;
+    cursor: pointer;
+    transition: all .3s ease-in;
+}
+
+button.enviar:hover {
+    background-color: #6a0f0f;
+}
