@@ -1,15 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/index.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/887a835504.js" crossorigin="anonymous"></script>
     <title>Index</title>
     <%- include('partials/head.ejs') %>
 </head>
+
 <body>
     <%- include('partials/header.ejs') %>
     <main>
+
+            <form action="/#" class="search-header">
+                
+                <input type="text" name="busqueda" placeholder="Buscar" class="search-input">
+                <button type="submit" class="search-button">
+                    <i class="fas fa-search"></i>
+                </button>
+            </form>
+                     
+
+            
+            
+            <div class="container__slider">
+
+                <div class="container">
+                    <input type="radio" name="slider" id="item-1" checked>
+                    <input type="radio" name="slider" id="item-2">
+                    <input type="radio" name="slider" id="item-3">
+        
+                    <div class="cards">
+                        <label class="card" for="item-1" id="selector-1">
+                            <img src="#">
+                        </label>
+                        <label class="card" for="item-2" id="selector-2">
+                            <img src="#">
+                        </label>
+                        <label class="card" for="item-3" id="selector-3">
+                            <img src="#">
+                        </label>
+                        
+        
+                    </div>
+                </div>
+        
+            </div>
+        
+
+
+
+
+
+        
+       <div class="text-central">
+        <h1>ELEGI TU BURGER</h1>
+         
+        <p class="text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur totam quos expedita laborum corrupti.
+            Amet expedita vitae veritatis dolorem mollitia nobis vel non voluptas voluptatum voluptatibus iste delectus
+            ipsa, hic fugit quaerat tenetur est quo rem obcaecati. Dolores eius animi delectus nesciunt alias sequi
+            ducimus, laborum, voluptate, fugiat dolorem vero quae nisi cupiditate. Debitis, iusto. Enim nostrum
+            reprehenderit unde debitis cumque porro, sequi asperiores obcaecati, a quidem tenetur nesciunt neque aut
+            iste voluptates molestiae nobis saepe mollitia fuga est exercitationem maxime aliquam? Dolorum aliquam totam
+            officiis illo quia, est ratione earum autem modi et, labore ullam repellendus neque minus vel ipsum quam
+            consectetur quo eveniet vero animi. Error itaque ratione fugiat amet, consequatur, cumque fuga eius modi aut
+            sequi eum! Illo in eius eligendi. Ea consectetur ipsum accusantium odio totam perspiciatis aliquam
+            reprehenderit veniam, qui, earum sapiente praesentium velit fugit? Facilis nemo magni illo voluptatum?
+            Dolore quam atque commodi veniam consequuntur quaerat ducimus impedit, reprehenderit at enim error iusto
+            labore sunt voluptate mollitia totam. Temporibus ipsam atque illum officiis tenetur tempora saepe.
+
+        </p>
+    </div>
+</main>
+
+<footer>
+    <div class="footer-container">
+   
+        <div class="main-footer">
+          <h4>CONOCENOS</h4>
+          <ul class="footer-list">
+          <li><a href="#">Quienes somos</a></li>
+          <li><a href="#"></a>Historia</a></li>
+          <li><a href="#"></a>Contactanos</a></li>
+          <li><a href="#"></a>Empleos</a></li>
+          </ul>
+      </div>
+      
+      <div class="social-icons">
+          <a href="#"><i class="fab fa-whatsapp"></i></a>
+           <a href="#"><i class="fab fa-instagram"></i></a>
+           <a href="#"><i class="fab fa-facebook"></i></a>
+         </div>
        
-    </main>
-</body>
-</html>
+         <p>copyright 2023 Alta Pinta</p>
+      </div>
+      
+      </footer>
+      </body>
+      
+      </html>
