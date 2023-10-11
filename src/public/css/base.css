@@ -11,10 +11,16 @@
 }
 button{
     border-radius: 5px;
-    background-color: #af1717;
     color: #fff;
     padding: 8px 25px;
     border: none;
     cursor: pointer;
     transition: all .3s ease-in;
+    margin: 10px;
+}
+.btn.btn-primary{
+    background-color: #af1717;
+}
+.btn.btn-secundary {
+    background-color:  #daa520;
 }

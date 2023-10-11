@@ -1,9 +1,3 @@
-* {
-  margin: 0px;
-  padding: 0px;
-  box-sizing: border-box;
-}
-
 main {
   width: 95%;
   height: 80vh;
@@ -55,51 +49,6 @@ article a {
   font-size: small;
 }
 
-section .buttons {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-section form button {
-  width: 60%;
-  height: 30px;
-  position: relative;
-  left: 20px;
-  top: 10px;
-  border-radius: 5px;
-  color: #fff;
-}
-
-#buy {
-  background-color: #af1717;
-}
-
-#back {
-  background-color: #daa520;
-}
-
-.buttons {
-  display: flex;
-  justify-content: space-between;
-}
-
-section button {
-  margin: auto;
-  width: 40%;
-  height: 30px;
-  border-radius: 5px;
-  color: #fff;
-}
-
-#buy {
-  background-color: #daa520;
-  order: 2;
-}
-
-#back {
-  background-color: #af1717;
-  order: 1;
-}
 
 @media (min-width: 769px) {
 }
