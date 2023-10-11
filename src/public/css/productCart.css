@@ -4,20 +4,62 @@
     box-sizing: border-box;
 }
 
+main {
+    width: 95%;
+    height: 80vh;
+    margin: auto;
+}
+
 main section h3 {
     text-align: center;
     margin: 15px 0px;
     color: #af1717;
 }
 
-footer {
+article {
+    width: 60%;
+    height: 100px;
+    margin: 10px 30px 10px;
+    border: 1px solid #000000;
     display: flex;
-    flex-direction: wrap;
+    justify-content: space-evenly;
 }
 
-footer button {
-    width: 40%;
-    height: 25px;
+article h4 {
+    text-align: left;
+    color: #af1717;
+    
+}
+
+article .cart-plus {
+    font-size: 15px;
+    text-align: right;
+    
+}
+
+article .trash {
+    font-size: 15px;
+    text-align: right;
+    
+}
+
+article .image-hamburger {
+    flex: -1;
+}
+
+article a {
+    text-decoration: inherit;
+    color: #000000;
+}
+
+section .buttons {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+section form button {
+    width: 60%;
+    height: 30px;
     position: relative;
     left: 20px;
     top: 10px;
@@ -27,16 +69,11 @@ footer button {
 
 #buy {
     background-color: #DAA520;
-
-
-
+    
 }
 
 #back {
-
     background-color: #af1717;
-
-
 }
 
 @media(min-width: 769px) {}

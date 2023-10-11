@@ -5,6 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Carrito de Compras</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="/css/productCart.css" />
   <link rel="stylesheet" href="/css/style.css" />
   <%- include('partials/head.ejs') %>
@@ -17,44 +18,36 @@
       <section>
         <h3>Carrito de Compras</h3>
         <article>
-          <i>imagen de mas</i>
-          <i>imagen de menos</i>
-          <div>
-            <img src="/images/hamb2.png" alt="Hamburguesa doble queso" />
-          </div>
           <h4>Detalle Producto</h4>
           <a href="#">Ver mas</a>
+          <div class="cart-plus"><i class="fas fa-cart-plus"></i></div>
+          <div class="trash"><i class="fas fa-trash"></i></div>
+          <div class="image-hamburger"><img src="/images/hamb2.png" width="50px" alt="Hamburguesa doble queso" /></div>
         </article>
         <article>
-          <i>imagen de mas</i>
-          <i>imagen de menos</i>
-          <div>
-            <img src="/images/hamb2.png" alt="Hamburguesa doble de pollo" />
-          </div>
           <h4>Detalle Producto</h4>
           <a href="#">Ver mas</a>
+          <div class="cart-plus"><i class="fas fa-cart-plus"></i></div>
+          <div class="trash"><i class="fas fa-trash"></i></div>
+          <div class="image-hamburger"><img src="/images/hamb2.png" width="50px" alt="Hamburguesa doble de pollo" />
+          </div>
         </article>
         <article>
-          <i>imagen de mas</i>
-          <i>imagen de menos</i>
-          <div>
-            <img src="/images/hamb3.png" alt="Hamburguesa simple" />
-          </div>
           <h4>Detalle Producto</h4>
           <a href="#">Ver mas</a>
+          <div class="cart-plus"><i class="fas fa-cart-plus"></i></div>
+          <div class="trash"><i class="fas fa-trash"></i></div>
+          <div class="image-hamburger"><img src="/images/hamb3.png" width="50px" alt="Hamburguesa simple" /></div>
         </article>
-        
-
       </section>
-
+      <section class="buttons">
+        <form action="/productDetail.ejs" method="post"></form>
+        <button id="back" type="button">Regresar</button>
+        <form action="/" method="post"></form>
+        <button id="buy" type="button">Comprar</button>
+      </section>
     </main>
-
-    <footer>
-      <form action="/productDetail.ejs" method="post"></form>
-      <button id="back" type="button" >Regresar</button>
-      <form action="/" method="post"></form>
-      <button id="buy" type="button" >Comprar</button>
-    </footer>
+    <footer></footer>
 </body>
 
 </html>
