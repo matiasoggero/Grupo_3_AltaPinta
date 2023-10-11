@@ -26,20 +26,6 @@
     text-align: center;
 }
 
-.button-container {
-    display: flex;
-    justify-content: flex-end;
-}
-
-button.enviar{
-    border-radius: 5px;
-    background-color: #af1717;
-    color: #fff;
-    padding: 8px 25px;
-    border: none;
-    cursor: pointer;
-    transition: all .3s ease-in;
-}
 
 button.enviar:hover {
     background-color: #6a0f0f;
