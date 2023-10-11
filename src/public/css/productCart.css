@@ -26,6 +26,10 @@ article {
   justify-content: space-evenly;
 }
 
+.detailandsee {
+  display: block;
+}
+
 article h4 {
   text-align: left;
   color: #af1717;
@@ -48,6 +52,7 @@ article .image-hamburger {
 article a {
   text-decoration: inherit;
   color: #000000;
+  font-size: small;
 }
 
 section .buttons {
@@ -71,6 +76,29 @@ section form button {
 
 #back {
   background-color: #af1717;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+section button {
+  margin: auto;
+  width: 40%;
+  height: 30px;
+  border-radius: 5px;
+  color: #fff;
+}
+
+#buy {
+  background-color: #daa520;
+  order: 2;
+}
+
+#back {
+  background-color: #af1717;
+  order: 1;
 }
 
 @media (min-width: 769px) {
