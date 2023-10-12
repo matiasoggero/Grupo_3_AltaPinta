@@ -29,14 +29,6 @@ main form div.option select {
     margin-bottom: 10px;
 }
 
-main form button {
-    width: 90%;
-    height: 25px;
-    position: relative;
-    left: 20px;
-    top: 10px;
-    border-radius: 5px;
-}
 
 main form button.acept {
     background-color: #DAA520;
