@@ -60,9 +60,4 @@ main form button.cancel {
         font-size: 16px;
     }
 
-    main form button {
-        height: 32px;
-        left: 50px;
-        font-size: 16px;
-    }
 }

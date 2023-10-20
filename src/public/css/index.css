@@ -1,27 +1,11 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-
-
-body{
-    background-color: #e4d9d9;
-    
-}
-
-
 .search-header{
     display: flex;
-   
     border: 1px solid #d12626; 
     border-radius: 5px; 
     margin-left: 230px; 
     width: 40%;
   }
 
-  
 .search-input {
     flex: 1;
     border: none; 
@@ -36,7 +20,6 @@ body{
     cursor: pointer;
     padding: 5px; 
   }
-  
   
   .search-button i.fas.fa-search {
     font-size: 20px; 
@@ -75,12 +58,10 @@ h2{
     transform-style: preserve-3d;
 }
 
-
 .content-carrousel:hover{
     animation-play-state: paused;
     cursor: pointer;
 }
-
 
 .content-carrousel figure{
     width: 100%;
@@ -90,7 +71,6 @@ h2{
     box-shadow: 0px 0px 20px 0px black;
     transition: all 300ms;
    background-color: black;
-    
 }
 
 .content-carrousel figure:hover{
@@ -109,7 +89,6 @@ h2{
     width: 100%;
     transition: all 300ms;
     height: 100%;
-   
 }
 
 .content-carrousel img:hover{
@@ -136,45 +115,13 @@ h1{
     text-align: center;
 }
 
-
-.footer-container{
-    display: flex;
-    width: 100%;
-    margin-top: 55px;
-    padding: 10px;
-    
-}
-
-
 .social-icons {
     font-size: 34px;
     padding-top: 50px;
     padding-left: 50px;
-   
 }
 
 .social-icons ul li{
     padding-left: 10px;
 }
 
-.main-footer{
-    padding: 0;
-    
-    margin-bottom: 1px;
-}
-
-footer p {
-    font-size: 10px;
-    position: relative;
-    padding-top: 85px;
-    padding-left: 35px;
-
-}
-
- footer div a i{
-    color:black;
-}
-
-.footer-list li a{
-    color:rgb(168, 20, 20);
-}

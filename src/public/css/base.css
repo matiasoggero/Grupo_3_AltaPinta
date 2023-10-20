@@ -5,10 +5,12 @@
     box-sizing: border-box;
 
 }
+
 .button-container {
     display: flex;
     justify-content: flex-end;
 }
+
 button{
     border-radius: 5px;
     color: #fff;
@@ -18,9 +20,11 @@ button{
     transition: all .3s ease-in;
     margin: 10px;
 }
+
 .btn.btn-primary{
     background-color: #af1717;
 }
+
 .btn.btn-secundary {
     background-color:  #daa520;
 }

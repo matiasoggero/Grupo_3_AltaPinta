@@ -1,0 +1,27 @@
+
+.footer-container{
+    display: flex;
+    width: 100%;
+    margin-top: 55px;
+    padding: 10px;
+}
+
+.main-footer{
+    padding: 0;
+    margin-bottom: 1px;
+}
+
+footer p {
+    font-size: 10px;
+    position: relative;
+    padding-top: 85px;
+    padding-left: 35px;
+}
+
+ footer div a i{
+    color:black;
+}
+
+.footer-list li a{
+    color:rgb(168, 20, 20);
+}
