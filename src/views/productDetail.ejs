@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>detalle de producto</title>
-    <link rel="stylesheet" href="/css/productDetail.css">
-    <%- include('partials/head.ejs') %>
+    
+    <%- include('partials/head.ejs',{styles: ['base', 'footer', 'header', 'productDetail']}) %>
 </head>
 
 <body>
@@ -14,7 +14,7 @@
 
     <main>
 
-        <form action="" method="post">
+        <form action="/productCart" method="get">
 
             <h4 class="title">¿QUE CLASE DE HAMBURGUESA VAS A QUERER?</h4>
 
