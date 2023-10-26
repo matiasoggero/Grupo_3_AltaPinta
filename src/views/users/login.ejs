@@ -1,9 +1,9 @@
    
-    <%- include('partials/head.ejs',{styles: ['base', 'footer', 'header', 'login']}) %>
+    <%- include('../partials/head.ejs',{styles: ['base', 'footer', 'header', 'login']}) %>
 
     
 <body>
-    <%- include('partials/header.ejs') %>
+    <%- include('../partials/header.ejs') %>
     
     <main class="login-container">
         <form action="/login" method="post">
@@ -23,7 +23,7 @@
         </form>
     </main>
     
-    <%- include('partials/footer.ejs') %>
+    <%- include('../partials/footer.ejs') %>
     
 </body>
 </html>

@@ -2,6 +2,8 @@ const express = require("express");
 const path = require("path");
 
 const mainRoutes = require('./routes/main');
+const productsRoutes = require('./routes/products');
+const usersRoutes = require('./routes/users');
 
 const app = express();
 
@@ -12,27 +14,8 @@ app.set('view engine', 'ejs');
 app.use(express.static(path.join(__dirname, "public")));
 
 app.use('/', mainRoutes); 
-
- app.get("/login",(req,res) =>{
-     res.render("login");
-})
-
-app.get("/productCart",(req,res) =>{
-    res.render("productCart");
-})
-
-
-app.get("/register",(req,res) =>{
-    res.render("register");
-})
-
-app.post("/register",(req,res) =>{
-    res.redirect("/");
-})
-
- app.post("/login",(req,res) =>{
-     res.redirect("/");
-})
+app.use('/products', productsRoutes);
+app.use('/users', usersRoutes);
 
 const port = 3040;
 app.listen(port, () => {

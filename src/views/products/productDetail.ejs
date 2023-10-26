@@ -1,12 +1,12 @@
 
-    <%- include('partials/head.ejs',{styles: ['base', 'footer', 'header', 'productDetail']}) %>
+    <%- include('../partials/head.ejs',{styles: ['base', 'footer', 'header', 'productDetail']}) %>
 
 <body>
     <%- include('../partials/header.ejs') %>
 
     <main>
 
-        <form action="/productCart" method="get">
+        <form action="/products/productCart" method="get">
 
             <h4 class="title">¿QUE CLASE DE HAMBURGUESA VAS A QUERER?</h4>
 
