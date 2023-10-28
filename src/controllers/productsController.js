@@ -2,8 +2,12 @@ const controller = {
     productDetail(req, res){
         return res.render('products/productDetail');
     },
-    productCart(req,res){
-        return res.render('products/productCart');
+    productCreation(req,res){
+        return res.render('products/productCreation');
+    },
+    productEdition(req,res){
+        return res.render('products/productEdition');
     }
 }
+
 module.exports =controller;

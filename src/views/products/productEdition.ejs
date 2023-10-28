@@ -1,0 +1,66 @@
+<%- include('../partials/head.ejs',{styles: ['base', 'footer', 'header', 'productEdition']}) %>
+
+<body>
+    <%- include('../partials/header.ejs') %>
+
+    <main>
+
+        <form action="/products/productEdition" method="POST">
+            
+            <h4 class="title">Editar un ingrediente</h4>
+
+            <div>
+                <label for="name">Nombre del ingrediente:</label>
+                <input type="text" id="txfingredient" name="newIngredient" required/>
+            </div>
+            <div>
+                <label for="description">Descripción:</label>
+                <textarea name="description" id="description" required></textarea>
+            </div>
+            <div>
+                <label>Seleccionar una imagen del ingrediente:</label>
+                <input type="file" name="imgIngredient" accept=".jpg, .png">
+            </div>
+            
+            <label>Categoría:</label>
+            <select name="typeIngredient">
+
+                    <option value="burguer">Hamburguesas</option>
+                    <option value="bread">Panes</option>
+                    <option value="dressing">Aderezos</option>
+                    <option value="stiff">Fiambres</option>
+                    <option value="cheese">Quesos</option>
+                    <option value="green">Hojas Verdes</option>
+                    <option value="raw">Vegetales Crudos</option>
+                    <option value="cooked">Vegetales Cocidos</option>
+                
+            </select>
+            <div>
+                <label for="price">Precio:</label>
+                <input type="number" id="numPrice" name="price" required/>
+            </div>
+            <section class="button-container">
+                <button class="btn btn-secundary" type="reset">Cancelar</button>
+                <button class="btn btn-primary" type="submit">Editar</button>
+                
+            </section>
+        </form>
+
+    </main>
+
+   
+</body>
+
+</html>
+            
+           
+
+
+
+
+
+           
+
+
+
+
