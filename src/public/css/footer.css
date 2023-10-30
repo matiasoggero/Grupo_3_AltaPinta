@@ -1,6 +1,6 @@
 
 .footer-container{
-    display: flex;
+    display: block;
     width: 100%;
     margin-top: 55px;
     padding: 10px;
@@ -24,4 +24,17 @@ footer p {
 
 .footer-list li a{
     color:rgb(168, 20, 20);
+}
+.social-icons {
+    font-size: 34px;
+    padding-top: 50px;
+    display: flex;
+    align-content: flex-end;
+    justify-content: space-around;
+}
+
+.copyright{
+ display: flex;
+ align-content: flex-end;
+ justify-content: space-evenly;
 }
