@@ -1,0 +1,13 @@
+.edition-container{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.edition-container form{
+    width: 40%;
+    display:flex ;
+    flex-direction: column;
+    gap: 8px
+}

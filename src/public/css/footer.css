@@ -27,7 +27,7 @@ footer p {
 }
 .social-icons {
     font-size: 34px;
-    padding-top: 50px;
+    padding: 50px, 30px, opx, 30px;
     display: flex;
     align-content: flex-end;
     justify-content: space-around;
