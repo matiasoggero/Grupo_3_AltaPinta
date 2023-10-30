@@ -41,3 +41,22 @@ Manteniendo conversaciones entre los integrantes del grupo, donde existe una muy
 
 La unica falencia encontrada fue que, al trabajar sobre la misma rama, a veces teniamos problemas al usar el comando "git pull" porque los cambios hechos anteriormente generaban conflictos con los cambios nuevos.
 Pero mas allá de eso pudimos resolverlo en conjunto proponiendo distintas soluciones.
+
+# SPRINT3
+
+## COMENZAR A HACER
+Se organizó reunión y con los presentes  dividimos tareas e intercambiamos estrategias de este  sprint. Organización de carpetas, rutas y controladores.
+
+Por otro lado organizamos tablero con cada una de las tareas .
+
+## HACER MAS
+tratar de organizarlos de manera equitativa las tareas del proyecto, ya que somos muchos integrantes para un solo proyecto.
+
+## CONTINUAR HACIENDO
+comunicación continua con el grupo.
+
+## HACER MENOS
+
+## DEJAR DE HACER
+dejar de trabajar solo en main e implementar ramas.
+

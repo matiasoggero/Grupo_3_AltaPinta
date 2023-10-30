@@ -1,5 +1,4 @@
 # Grupo_3_AltaPinta
-<<<<<<< HEAD
 
 Presentamos Alta Pinta, un modelo de negocio 100% on-line enfocado en la venta de sandwiches calientes con la particularidad de poder armarlo a tu gusto. Este modelo esta apuntado a que cualquier persona, ya sea a través de tablet, celular y/o computadora pueda realizar el pedido.
 Una vez registrado el usuario, completa su pedido, pasa a los datos de envío y forma de pago. Listo, pedido en camino.
@@ -10,7 +9,6 @@ Alta Pinta se orienta a un público amplio de 18 a 60 años, dado que la navegac
 - Debido a la funcionalidad y modo de uso, nos resulta atractivo PedidosYa(https://www.pedidosya.com.ar)
 - Otra pagina en cuanto a funcionalidad, nos agrada MercadoLibre(https://www.mercadolibre.com.ar).
 - En cuanto al publico y su amplio espectro etario, creemos que la empresa lider es Apple(https://www.apple.com).
-=======
 Presentamos Alta Pinta, un modelo de negocio 100% on-line cuya propuesta de valor está enfocada en la venta de sandwiches de hamburguesas con la particularidad de poder armarlo a tu gusto, es decir, el cliente, por medio de su dispositivo móvil o computadora puede realizar el pedido, eligiendo entre las variedades de harmburguesas y el resto de los ingredientes que desea agregar.
 Cabe resaltar que el usuario debe para ello registrarse o loguearse, si ya se encuentra registrado. Luego de completar su orden, pasa a los datos de envío, elige la forma de pago... y listo!, pedido en camino.
 Alta Pinta se orienta a un público amplio de 18 a 60 años, dado que la navegación y funcionalidad de la app web o móvil es intuitiva y facil de usar.
@@ -19,7 +17,6 @@ Alta Pinta se orienta a un público amplio de 18 a 60 años, dado que la navegac
 + Debido a la funcionalidad y modo de uso, nos resulta atractivo PedidosYa(https://www.pedidosya.com.ar)
 + Otra pagina en cuanto a funcionalidad, nos agrada MercadoLibre(https://www.mercadolibre.com.ar).
 + En cuanto al publico y su amplio rango etario, creemos que la empresa lider es Apple(https://www.apple.com).
->>>>>>> d3ad4bcd0dbd2e2c6e0d4a45f4fd64193a62699f
 
 A continuación, presentamos a los integrantes del equipo:
 
