@@ -45,18 +45,41 @@ Pero mas allá de eso pudimos resolverlo en conjunto proponiendo distintas soluc
 # SPRINT3
 
 ## COMENZAR A HACER
-Se organizó reunión y con los presentes  dividimos tareas e intercambiamos estrategias de este  sprint. Organización de carpetas, rutas y controladores.
+
+Se organizó reunión y con los presentes dividimos tareas e intercambiamos estrategias de este sprint. Organización de carpetas, rutas y controladores.
 
 Por otro lado organizamos tablero con cada una de las tareas .
 
 ## HACER MAS
+
 tratar de organizarlos de manera equitativa las tareas del proyecto, ya que somos muchos integrantes para un solo proyecto.
 
 ## CONTINUAR HACIENDO
+
 comunicación continua con el grupo.
 
 ## HACER MENOS
 
 ## DEJAR DE HACER
+
 dejar de trabajar solo en main e implementar ramas.
 
+# SPRINT 4
+
+## COMENZAR A HACER
+
+Se propuso a futuro, organizar reuniones presenciales para conocernos mejor entre los integrantes.
+
+## HACER MAS
+
+Mayor comunicación entre los integrantes del equipo a través de diferentes medios de comunicación sobre los avances individuales.
+
+## CONTINUAR HACIENDO
+
+Seguir con el buen clima de trabajo, ayudándonos entre nosotros.
+
+## HACER MENOS
+
+Durante las reuniones que el equipo tiene, evitar desviarse para aprovechar al máximo el tiempo.
+
+## DEJAR DE HACER
