@@ -1,0 +1,13 @@
+[
+  {
+    "id": 1,
+    "nombre": "Matias",
+    "usuario": "Matias",
+    "email": "matiassoggero@gmail.com",
+    "nacimiento": "2023-10-31",
+    "domicilio": "triunvirato824",
+    "telefono": "600499",
+    "password": "123456",
+    "confirm_password": "123456"
+  }
+]
