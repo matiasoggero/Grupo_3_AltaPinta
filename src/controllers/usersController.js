@@ -13,7 +13,8 @@ const controller = {
         const newUser = {
             id: users[users.length - 1]?.id ? users[users.length - 1].id + 1 : 1, 
             ...req.body,
-            confirm_password: undefined
+            confirm_password: undefined,
+            avatar: req.file?.filename || "logo.png"
         }
         users.push(newUser);
 
@@ -23,6 +24,10 @@ const controller = {
     },
     login(req,res){
         return res.render('users/login');
+    },
+    delete(req,res){
+        users = users.filter((user) => user.id != req.body.id);
+        return res.redirect('/');
     }
 }
 module.exports =controller;
