@@ -17,12 +17,12 @@ const controller = {
     return res.render("products/productEdition");
   },
   detail: (req, res) => {
-    const product = products.find((product) => product.id == req.params.id);
+    const product = products.find((product) => product.id == req.body.id);
     res.render("detail", { product });
   },
   destroy: (req, res) => {
     const indexProduct = products.findIndex(
-      (product) => product.id == req.params.id
+      (product) => product.id == req.body.id
     );
     products.splice(indexProduct, 1);
     fs.writeFileSync(productsFilePath, JSON.stringify(products, null, 2));
