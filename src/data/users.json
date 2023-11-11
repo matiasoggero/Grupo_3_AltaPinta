@@ -1,6 +1,7 @@
 [
   {
     "id": 1,
+    "rol": "admin",
     "nombre": "Matias",
     "usuario": "Matias",
     "email": "matiassoggero@gmail.com",
@@ -9,5 +10,17 @@
     "telefono": "600499",
     "password": "123456",
     "confirm_password": "123456"
+  },
+  {
+    "id": 1,
+    "rol": "user",
+    "nombre": "Diego",
+    "usuario": "Diego",
+    "email": "diegofalco@gmail.com",
+    "nacimiento": "2000-05-09",
+    "domicilio": "constitucion824",
+    "telefono": "600839",
+    "password": "629446",
+    "confirm_password": "629446"
   }
 ]
