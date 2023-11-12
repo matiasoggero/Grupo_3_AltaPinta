@@ -28,6 +28,9 @@ const controller = {
     delete(req,res){
         users = users.filter((user) => user.id != req.body.id);
         return res.redirect('/');
+    },
+    admin(req,res){
+        return res.render('users/admin');
     }
 }
 module.exports =controller;

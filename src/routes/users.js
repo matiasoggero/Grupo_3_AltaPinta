@@ -23,6 +23,7 @@ router.get('/login', usersController.login);
 //router.post('/login', usersController.login);
 router.get('/register',usersController.register);
 router.post('/register',upload.single('avatar'),usersController.create);
-router.delete('???',usersController.delete);
+//router.delete('???',usersController.delete);
+router.get('/admin',usersController.admin);
 
 module.exports = router;
