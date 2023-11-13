@@ -4,10 +4,12 @@
     <%- include('../partials/header.ejs') %>
     
     <main class="edition-container">
+
+        <h4 class="title">Editar un ingrediente</h4>
         
-        <form action="/products/productEdition" method="POST">
+        <form action="/products/<%= productToEdit.id %>/edit?_method=PUT" method="post">
             
-            <h4 class="title">Editar un ingrediente</h4>
+            
             
             <div class="label-container">
                 <label for="name">Nombre del ingrediente:</label>

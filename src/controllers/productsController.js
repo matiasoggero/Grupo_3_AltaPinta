@@ -10,24 +10,43 @@ const controller = {
   productDetail(req, res) {
     return res.render("products/productDetail");
   },
-  productCreation(req, res) {
-    return res.render("products/productCreation");
+
+  productsShow: (req, res) => {
+    res.render("products/products", { products });
   },
+
+  productCreation: (req, res) => {
+    res.render("products/productCreation");
+  },
+
+  productStore: (req, res) => {
+    const newProduct = {
+			id: products[products.length - 1].id + 1,
+			...req.body,
+			image: req.file?.filename || "default-image.png"
+    };
+    products.push(newProduct);
+		fs.writeFileSync(productsFilePath, JSON.stringify(products, null, 2));
+		res.redirect('/products/products');
+  },
+
   productEdition(req, res) {
     return res.render("products/productEdition");
   },
+
   detail: (req, res) => {
-    const product = products.find((product) => product.id == req.body.id);
-    res.render("detail", { product });
+    const product = products.find((product) => product.id == req.params.id);
+    res.render("products/detailOne", { product });
     
   },
+
   destroy: (req, res) => {
     const indexProduct = products.findIndex(
       (product) => product.id == req.body.id
     );
     products.splice(indexProduct, 1);
     fs.writeFileSync(productsFilePath, JSON.stringify(products, null, 2));
-    res.redirect("/products");
+    res.redirect("/products/products");
   },
 };
 

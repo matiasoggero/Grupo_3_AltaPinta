@@ -1,1 +1,22 @@
-[]
+[
+  {
+    "id": 1,
+    "name": "Hamburguesa de carne",
+    "price": 600,
+    "category": "burguer",
+    "description": "Carne de res",
+    "image": "hcarne.png"
+  },
+  {
+    "id": 2,
+    "name": "Hamburguesa de pollo",
+    "price": 400,
+    "category": "burguer",
+    "description": "Carne de gallina de campo",
+    "image": "hpollo.png"
+  },
+  {
+    "id": 3,
+    "image": "default-image.png"
+  }
+]

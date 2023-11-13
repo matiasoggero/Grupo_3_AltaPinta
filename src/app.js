@@ -9,15 +9,19 @@ const methodOverride = require("method-override"); // Pasar poder usar los méto
 const app = express();
 
 // configuracion para usar ejs en lugar de html
-app.set("views", path.join(__dirname, "/views"));
 app.set("view engine", "ejs");
+app.set("views", path.join(__dirname, "/views"));
+
 
 app.use(express.static(path.join(__dirname, "public")));
+app.use(express.urlencoded({ extended: false }));
+app.use(express.json());
+app.use(methodOverride("_method")); // Pasar poder pisar el method="POST" en el formulario por PUT y DELETE
 
 app.use("/", mainRoutes);
 app.use("/products", productsRoutes);
 app.use("/users", usersRoutes);
-app.use(methodOverride("_method")); // Pasar poder pisar el method="POST" en el formulario por PUT y DELETE
+
 
 const port = 3040;
 app.listen(port, () => {
