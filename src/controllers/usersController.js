@@ -38,6 +38,20 @@ const controller = {
     detail(req,res){
         const user = users.find((user) => user.id == req.params.id);
         res.render('users/userDetail',{user}); 
+    },
+    edit(req,res){
+        const edit = users.find((user)=>user.id==req.params.id);
+        res.render('edit',{user:edit});
+    },
+    update(req,res){
+        const user = users.find((user)=>user.id==req.params.id);
+        users[user]={
+            ...users[user],
+            ...req.body
+        }
+        fs.writeFileSync(usersFilePath,JSON.stringify(users,null,2));
+        res.redirect('/users');
     }
+    
 }
 module.exports =controller;

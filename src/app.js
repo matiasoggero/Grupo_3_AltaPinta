@@ -5,7 +5,7 @@ const mainRoutes = require("./routes/main");
 const productsRoutes = require("./routes/products");
 const usersRoutes = require("./routes/users");
 const methodOverride = require("method-override"); // Pasar poder usar los métodos PUT y DELETE
-const session = require ("express-session")
+const session = require ("express-session");
 const app = express();
 
 // configuracion para usar ejs en lugar de html
