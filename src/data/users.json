@@ -11,12 +11,23 @@
   },
   {
     "id": 2,
+    "name": "german popeau",
+    "email": "german@yahoo.com",
+    "date": "2023-05-11",
+    "address": "luis maggi 50",
+    "phone": "15966587",
+    "password": "123456",
+    "avatar": "logo.png"
+  },
+  {
+    "id": 3,
     "rol": "user",
-    "name": "Diego",
-    "email": "diegofalco@gmail.com",
-    "date": "2000-05-09",
-    "address": "constitucion824",
-    "phone": "600839",
-    "password": "629446"
+    "name": "diego maradona",
+    "email": "diegote@hotmail.com",
+    "date": "2023-11-02",
+    "address": "general paz 152",
+    "phone": "15847854",
+    "password": "159159",
+    "avatar": "logo.png"
   }
 ]

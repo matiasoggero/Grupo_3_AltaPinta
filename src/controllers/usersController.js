@@ -11,7 +11,8 @@ const controller = {
     },
     create(req,res){
         const newUser = {
-            id: users[users.length - 1]?.id ? users[users.length - 1].id + 1 : 1, 
+            id: users[users.length - 1]?.id ? users[users.length - 1].id + 1 : 1,
+            rol: "user", 
             ...req.body,
             confirm_password: undefined,
             avatar: req.file?.filename || "logo.png"
@@ -27,6 +28,7 @@ const controller = {
     },
     delete(req,res){
         users = users.filter((user) => user.id != req.params.id);
+        fs.writeFileSync(usersFilePath,JSON.stringify(users,null,2));
         return res.redirect('/users');
     },
     admin(req,res){
