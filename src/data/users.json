@@ -2,25 +2,21 @@
   {
     "id": 1,
     "rol": "admin",
-    "nombre": "Matias",
-    "usuario": "Matias",
+    "name": "Matias",
     "email": "matiassoggero@gmail.com",
-    "nacimiento": "2023-10-31",
-    "domicilio": "triunvirato824",
-    "telefono": "600499",
-    "password": "123456",
-    "confirm_password": "123456"
+    "date": "2023-10-31",
+    "address": "triunvirato824",
+    "phone": "600499",
+    "password": "123456"
   },
   {
-    "id": 1,
+    "id": 2,
     "rol": "user",
-    "nombre": "Diego",
-    "usuario": "Diego",
+    "name": "Diego",
     "email": "diegofalco@gmail.com",
-    "nacimiento": "2000-05-09",
-    "domicilio": "constitucion824",
-    "telefono": "600839",
-    "password": "629446",
-    "confirm_password": "629446"
+    "date": "2000-05-09",
+    "address": "constitucion824",
+    "phone": "600839",
+    "password": "629446"
   }
 ]

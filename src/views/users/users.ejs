@@ -1,0 +1,21 @@
+<%- include('../partials/head.ejs',{styles: ['base', 'footer' , 'header' , 'index' ]}) %>
+<body>
+    <%- include('../partials/headerAdmin.ejs') %>
+
+    <main>
+        <% locals.users && users.forEach((user) => { %>
+            
+            <div>
+                <a href="/users/ <%= user.id %>">
+                <div>
+                    <p>rol: <%= user.rol %></p>
+                    <p>nombre: <%=user.name  %></p>
+                </div>
+                </a>
+            </div>
+
+        <% }); %>
+    </main>
+
+</body>
+</html>

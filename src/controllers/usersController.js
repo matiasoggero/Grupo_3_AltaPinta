@@ -26,11 +26,18 @@ const controller = {
         return res.render('users/login');
     },
     delete(req,res){
-        users = users.filter((user) => user.id != req.body.id);
-        return res.redirect('/');
+        users = users.filter((user) => user.id != req.params.id);
+        return res.redirect('/users');
     },
     admin(req,res){
         return res.render('users/admin');
+    },
+    list(req,res){
+        res.render('users/users',{users});
+    },
+    detail(req,res){
+        const user = users.find((user) => user.id == req.params.id);
+        res.render('users/userDetail',{user}); 
     }
 }
 module.exports =controller;
