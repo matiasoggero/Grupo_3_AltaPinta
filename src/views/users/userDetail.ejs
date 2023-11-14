@@ -1,0 +1,34 @@
+<%- include('../partials/head.ejs',{styles: ['base', 'footer' , 'header' , 'index' ]}) %>
+
+    <body>
+        <%- include('../partials/headerAdmin.ejs') %>
+
+            <main>
+                <div>
+                    <p>
+                        <%= locals.user?.name %>
+                    </p>
+                    <p>
+                        <%= locals.user?.email %>
+                    </p>
+                    <p>
+                        <%= locals.user?.date %>
+                    </p>
+                    <p>
+                        <%= locals.user?.adress %>
+                    </p>
+                    <p>
+                        <%= locals.user?.phone %>
+                    </p>
+                    <p>
+                        <%= locals.user?.rol %>
+                    </p>
+
+                    <a href="/users/<%= locals.user?.id %>/edit" class="action-button edit">EDITAR USUARIO</a>
+                    <form action="/users/<%= locals.user?.id %>/delete?_method=DELETE" method="POST"
+                        style="display: inline-flex">
+                        <button type="submit" class="action-button delete">ELIMINAR</button>
+                    </form>
+                </div>
+            </main>
+    </body>
