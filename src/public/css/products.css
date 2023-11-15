@@ -1,77 +1,84 @@
-  html,
-  body {
-    min-height: 100vh;
-    margin: 0;
-    font-size: 10px;
-  }
-  
-  body {
-    background-color: var(--light-gray);
-  }
-  
+html,
+body {
+  min-height: 100vh;
+  margin: 0;
+  font-size: 10px;
+}
+
+body {
+  background-color: var(--light-gray);
+
+}
 
 .products-wrapper {
-    margin-top: 30px;
-    margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  width: 95%;
+  height: 80vh;
+  margin: auto;
 }
 
 .products-title {
-    font-size: 2.4em;
-    font-weight: 400;
-    color: var(--gray);
+  text-align: center;
+  margin: 15px 0px;
+  color: #af1717;
+  font-size: 23px;
 }
 
 .product-box {
-    background-color: #ffffff;
-    border-radius: 5px;
-    overflow: hidden;
-    transition: 300ms;
-    margin: 20px 0;
+  width: 30%;
+  background-color: #ffffff;
+  border-radius: 5px;
+  overflow: hidden;
+  transition: 300ms;
+  margin: 20px 0;
 }
 
 .product-box a {
-    display: block;
-    text-decoration: none;
-    color: inherit;
+  display: block;
+  text-decoration: none;
+  color: inherit;
 }
 
 .product-box_image {
-    border-bottom: 1px solid var(--light-gray);
+  border-bottom: 1px solid var(--light-gray);
 }
 
 .product-box_data {
-    padding: 15px;
-    position: relative;
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
+  padding: 15px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .product-box_data h2 {
-    font-size: 2.4em;
-    font-weight: 300;
-    margin: 0;
+  font-size: 2.4em;
+  font-weight: 300;
+  margin: 0;
+  color: #af1717;
 }
+
 .product-box_data p {
-    font-size: 1.5em;
-    width: 100%;
-    color: var(--gray);
-    margin: 0;
-    height: 0;
-    transition: 300ms;
-    overflow: hidden;
-  }
+  font-size: 1.5em;
+  width: 90%;
+  color: var(--gray);
+  margin: 0;
+  height: 0;
+  transition: 300ms;
+  overflow: hidden;
+}
 
 .product-box:hover {
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-  }
-  
-  .product-box:hover p {
-    height: 40px;
-    margin-top: 15px;
-  }
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
 
-  figure {
-    margin: 0;
-    padding: 0;
-  }
+.product-box:hover p {
+  height: 40px;
+  margin-top: 15px;
+}
+
+figure {
+  margin: 0;
+  padding: 0;
+}
