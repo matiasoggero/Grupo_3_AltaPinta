@@ -11,6 +11,7 @@
   },
   {
     "id": 2,
+<<<<<<< Updated upstream
     "name": "german popeau",
     "email": "german@yahoo.com",
     "date": "2023-05-11",
@@ -21,6 +22,8 @@
   },
   {
     "id": 3,
+=======
+>>>>>>> Stashed changes
     "rol": "user",
     "name": "diego maradona",
     "email": "diegote@hotmail.com",
