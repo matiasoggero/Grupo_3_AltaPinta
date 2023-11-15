@@ -18,14 +18,14 @@
             
             <div class="label-container">
                 <label for="description">Descripción:</label>
-                <textarea name="description" id="description" <%= productToEdit.description %>></textarea>
+                <textarea type="text" name="description" id="description" ><%= productToEdit.description %></textarea>
             </div>
             
             <label for="category">Categoría:</label>
             <select name="category">
 
                 <option value="">Elegí</option>
-                <option value="burguer" <%= productToEdit.category === "burguer" && "selected" %> >Hamburguesas</option>
+                <option value="burguer"<%= productToEdit.category === "burguer" && "selected" %> >Hamburguesas</option>
                 <option value="bread" <%= productToEdit.category === "bread" && "selected" %>>Panes</option>
                 <option value="dressing" <%= productToEdit.category === "dressing" && "selected" %>>Aderezos</option>
                 <option value="stiff" <%= productToEdit.category === "stiff" && "selected" %>>Fiambres</option>
