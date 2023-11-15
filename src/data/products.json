@@ -2,7 +2,7 @@
   {
     "id": 1,
     "name": "Hamburguesa de carne",
-    "price": "1000",
+    "price": 1000,
     "category": "burguer",
     "description": "Nuestro medallón de carne es la estrella de la hamburguesa. Elaborado con carne de res de la más alta calidad y sazonado a la perfección, este jugoso medallón es la base de una experiencia culinaria inigualable.",
     "image": "hcarne.png"
