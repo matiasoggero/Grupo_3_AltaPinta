@@ -3,7 +3,7 @@
     "id": 1,
     "name": "Hamburguesa de carne",
     "price": "1000",
-    "category": "burguer",
+    "category": "hamburguesas",
     "description": "Nuestro medallón de carne es la estrella de la hamburguesa. Elaborado con carne de res de la más alta calidad y sazonado a la perfección, este jugoso medallón es la base de una experiencia culinaria inigualable.",
     "image": "hcarne.png"
   },
@@ -11,7 +11,7 @@
     "id": 2,
     "name": "Hamburguesa de pollo",
     "price": 1000,
-    "category": "Hamburguesas",
+    "category": "hamburguesas",
     "description": "Elaborado con pechuga de pollo tierna y sazonado con especias cuidadosamente seleccionadas, este medallón ofrece una experiencia gustativa única",
     "image": "hpollo.png"
   },
@@ -19,7 +19,7 @@
     "id": 3,
     "name": "Hamburguesa de lenteja",
     "price": 700,
-    "category": "Hamburguesas",
+    "category": "hamburguesas",
     "description": "Nuestro medallón de lentejas es una opción deliciosa y saludable para aquellos que buscan una alternativa vegetariana. Elaborado con lentejas nutritivas y sazonado con una mezcla de especias aromáticas",
     "image": "hlenteja.png"
   },
@@ -27,7 +27,7 @@
     "id": 4,
     "name": "Pan clásico",
     "price": 500,
-    "category": "Panes",
+    "category": "panes",
     "description": "Nuestro pan de hamburguesa clásico es la elección perfecta para encerrar la deliciosa creación que te espera. Con una textura suave y esponjosa",
     "image": "default-image.png"
   },
@@ -35,7 +35,7 @@
     "id": 5,
     "name": "Pan con Sésamo",
     "price": "500",
-    "category": "bread",
+    "category": "panes",
     "description": "tien sesamo",
     "image": "default-image.png"
   },
@@ -43,7 +43,7 @@
     "id": 6,
     "name": "Pan de queso",
     "price": 700,
-    "category": "Panes",
+    "category": "panes",
     "description": "Nuestro pan de queso es la elección perfecta para aquellos que buscan un toque extra de sabor. Este pan, enriquecido con auténtico queso, ofrece una experiencia única desde el primer bocado",
     "image": "default-image.png"
   },
@@ -51,7 +51,7 @@
     "id": 7,
     "name": "Mayonesa",
     "price": 400,
-    "category": "Aderezos",
+    "category": "aderezos",
     "description": "Cada cucharada de nuestra mayonesa transformará tus comidas en una experiencia culinaria inolvidable",
     "image": "default-image.png"
   },
@@ -59,7 +59,7 @@
     "id": 8,
     "name": "Mostaza",
     "price": 400,
-    "category": "Aderezos",
+    "category": "aderezos",
     "description": "Nuestra mostaza tradicional es el condimento perfecto para agregar un toque de sabor audaz y picante a tus hamburguesas favoritos",
     "image": "default-image.png"
   },
@@ -67,7 +67,7 @@
     "id": 9,
     "name": "Keptchup",
     "price": 400,
-    "category": "Aderezos",
+    "category": "aderezos",
     "description": "Nuestro ketchup clásico es el condimento perfecto para añadir un toque de dulzura y acidez a tus hamburguesas",
     "image": "default-image.png"
   },
@@ -75,7 +75,7 @@
     "id": 10,
     "name": "Barbacoa",
     "price": 400,
-    "category": "Aderezos",
+    "category": "aderezos",
     "description": "Nuestra Barbacoa ahumada con su irresistible mezcla de tomates, vinagre, especias y ese toque ahumado distintivo",
     "image": "default-image.png"
   },
@@ -83,7 +83,7 @@
     "id": 11,
     "name": "Jamon cocido",
     "price": 500,
-    "category": "Fiambres",
+    "category": "fiambres",
     "description": "Nuestro jamón cocido premium es una opción de alta calidad que ofrece una experiencia de sabor excepcional",
     "image": "default-image.png"
   },
@@ -91,7 +91,7 @@
     "id": 12,
     "name": "Jamon crudo",
     "price": 500,
-    "category": "Fiambres",
+    "category": "fiambres",
     "description": "Nuestro jamón crudo de calidad es una exquisitez que resalta la tradición y el sabor auténtico. Elaborado a partir de las mejores piezas de cerdo y curado con esmero",
     "image": "default-image.png"
   },
@@ -99,7 +99,7 @@
     "id": 13,
     "name": "Lomito",
     "price": 500,
-    "category": "Fiambres",
+    "category": "fiambres",
     "description": "Nuestro lomito  premium es una elección excepcional ",
     "image": "default-image.png"
   },
@@ -107,7 +107,7 @@
     "id": 14,
     "name": "Bacon",
     "price": 500,
-    "category": "Fiambres",
+    "category": "fiambres",
     "description": "Nuestro Bacon crujiente ,cada pieza se cura y ahuma cuidadosamente para lograr ese equilibrio único entre lo salado y lo ahumado",
     "image": "default-image.png"
   },
@@ -115,7 +115,7 @@
     "id": 15,
     "name": "Tybo",
     "price": 500,
-    "category": "Quesos",
+    "category": "quesos",
     "description": "Nuestro queso Tybo es una opción deliciosa y versátil que se destaca por su sabor suave y textura cremosa",
     "image": "default-image.png"
   },
@@ -123,7 +123,7 @@
     "id": 16,
     "name": "Provolone",
     "price": 500,
-    "category": "Quesos",
+    "category": "quesos",
     "description": "Nuestro queso Provolone es una elección robusta y llena de sabor para los amantes del queso con carácter",
     "image": "default-image.png"
   },
@@ -131,7 +131,7 @@
     "id": 17,
     "name": "Chedar",
     "price": 500,
-    "category": "Quesos",
+    "category": "quesos",
     "description": "Nuestro chedar ,elaborado con leche de alta calidad, este queso británico se caracteriza por su tonalidad amarilla distintiva",
     "image": "default-image.png"
   },
@@ -139,7 +139,7 @@
     "id": 18,
     "name": "Azul",
     "price": 500,
-    "category": "Quesos",
+    "category": "quesos",
     "description": "este queso de pasta veteada presenta un sabor fuerte y complejo, con vetas de moho azul que añaden un toque picante",
     "image": "default-image.png"
   },
@@ -147,7 +147,7 @@
     "id": 19,
     "name": "Lechuga",
     "price": 300,
-    "category": "Hojas Verdes",
+    "category": "hojas verdes",
     "description": "Cultivada con cuidado, esta lechuga de hojas verdes presenta una textura tierna y un sabor suave",
     "image": "default-image.png"
   },
@@ -155,7 +155,7 @@
     "id": 20,
     "name": "Rucula",
     "price": 300,
-    "category": "Hojas Verdes",
+    "category": "hojas verdes",
     "description": "la rúcula agrega una dimensión única a las hamburguesas",
     "image": "default-image.png"
   },
@@ -163,7 +163,7 @@
     "id": 21,
     "name": "Repollo",
     "price": 300,
-    "category": "Hojas Verdes",
+    "category": "hojas verdes",
     "description": "Nuestro repollo orgánico es una excelente fuente de fibra y nutrientes esenciales",
     "image": "default-image.png"
   },
@@ -171,7 +171,7 @@
     "id": 22,
     "name": "Tomate",
     "price": 300,
-    "category": "Vegetales Crudos",
+    "category": "vegetales crudos",
     "description": "Cultivados con esmero, estos tomates rojos y maduros aportan una explosión de frescura a tus hamburguesas",
     "image": "tomate.png"
   },
@@ -179,7 +179,7 @@
     "id": 23,
     "name": "Zanahoria",
     "price": 300,
-    "category": "Vegetales Crudos",
+    "category": "vegetales crudos",
     "description": "Estas zanahorias de tonalidad naranja brillante ofrecen una textura crujiente y un sabor jugoso",
     "image": "default-image.png"
   },
@@ -187,7 +187,7 @@
     "id": 24,
     "name": "Pepino",
     "price": 300,
-    "category": "Vegetales Crudos",
+    "category": "vegetales crudos",
     "description": "Estos pepinos de piel verde clara ofrecen una textura crujiente y un sabor hidratante",
     "image": "default-image.png"
   },
@@ -195,7 +195,7 @@
     "id": 25,
     "name": "Cebolla",
     "price": 300,
-    "category": "Vegetales Crudos",
+    "category": "vegetales crudos",
     "description": "Descubre la calidad y la riqueza de nuestras cebollas frescas",
     "image": "default-image.png"
   },
@@ -203,7 +203,7 @@
     "id": 26,
     "name": "Cebolla caramelizada",
     "price": 300,
-    "category": "Vegetales Cocidos",
+    "category": "vegetales cocidos",
     "description": "Nuestra cebolla caramelizada es una deliciosa obra maestra de sabor dulce y textura suave",
     "image": "default-image.png"
   },
@@ -211,7 +211,7 @@
     "id": 27,
     "name": "Berenjena en escabeche",
     "price": 300,
-    "category": "Vegetales Cocidos",
+    "category": "vegetales cocidos",
     "description": "Cada rodaja de berenjena absorbe los aromas y sabores de hierbas",
     "image": "default-image.png"
   },
@@ -219,7 +219,7 @@
     "id": 28,
     "name": "Tomate confitado",
     "price": 300,
-    "category": "Vegetales Cocidos",
+    "category": "vegetales cocidos",
     "description": "Preparados lentamente en aceite de oliva, los tomates se caramelizan hasta obtener una textura tierna y un sabor concentrado y dulce",
     "image": "default-image.png"
   },
@@ -227,7 +227,7 @@
     "id": 29,
     "name": "Zanahoria caramelizada",
     "price": 300,
-    "category": "Vegetales Cocidos",
+    "category": "vegetales cocidos",
     "description": "Cuidadosamente cocinadas hasta lograr un caramelizado dorado, estas zanahorias ofrecen un sabor indulgente y una textura tierna",
     "image": "default-image.png"
   }
