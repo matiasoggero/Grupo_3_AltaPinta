@@ -23,11 +23,18 @@ const upload = multer({storage: storage})
 const router = express.Router();
 
 router.get("/productDetail", productsController.productDetail);
+
 router.get("/products", productsController.productsShow);
+
+router.get("/detailOne/:id", productsController.detail);
+
 router.get("/productCreation", productsController.productCreation);
 router.post("/productCreation",upload.single("image"), productsController.productStore);
-router.get("/productEdition", productsController.productEdition);
-router.get("/detailOne/:id", productsController.detail);
+
+router.get("/:id/edit", productsController.productEdition);
+router.put("/:id/edit", productsController.productUpdate)
+
+
 router.delete("/:id/delete", productsController.destroy);
 
 module.exports = router;

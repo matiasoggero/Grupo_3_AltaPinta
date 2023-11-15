@@ -2,8 +2,8 @@
   {
     "id": 1,
     "name": "Hamburguesa de carne",
-    "price": 1000,
-    "category": "Hamburguesas",
+    "price": "1000",
+    "category": "burguer",
     "description": "Nuestro medallón de carne es la estrella de la hamburguesa. Elaborado con carne de res de la más alta calidad y sazonado a la perfección, este jugoso medallón es la base de una experiencia culinaria inigualable.",
     "image": "hcarne.png"
   },
@@ -29,14 +29,14 @@
     "price": 500,
     "category": "Panes",
     "description": "Nuestro pan de hamburguesa clásico es la elección perfecta para encerrar la deliciosa creación que te espera. Con una textura suave y esponjosa",
-    "image": ""
+    "image": "default-image.png"
   },
   {
     "id": 5,
     "name": "Pan con Sésamo",
-    "price": 500,
-    "category": "Panes",
-    "description": "Nuestro delicioso pan de hamburguesa con sésamo es la elección perfecta para elevar tus hamburguesas a un nivel superior",
+    "price": "500",
+    "category": "",
+    "description": "",
     "image": "default-image.png"
   },
   {
@@ -173,7 +173,7 @@
     "price": 300,
     "category": "Vegetales Crudos",
     "description": "Cultivados con esmero, estos tomates rojos y maduros aportan una explosión de frescura a tus hamburguesas",
-    "image": "default-image.png"
+    "image": "tomate.png"
   },
   {
     "id": 23,

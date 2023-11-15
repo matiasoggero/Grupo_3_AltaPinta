@@ -31,7 +31,19 @@ const controller = {
   },
 
   productEdition(req, res) {
-    return res.render("products/productEdition");
+    const product = products.find((product) => product.id == req.params.id);
+		res.render('products/productEdition', { productToEdit: product });
+  },
+
+  productUpdate: (req, res)=> {
+		const indexProduct = products.findIndex((product) => product.id == req.params.id);
+		products[indexProduct] = {
+			...products[indexProduct],
+			...req.body
+		};
+		fs.writeFileSync(productsFilePath, JSON.stringify(products, null, 2));
+		res.redirect('/products/products');
+    
   },
 
   detail: (req, res) => {
