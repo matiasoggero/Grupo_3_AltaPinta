@@ -83,3 +83,23 @@ Seguir con el buen clima de trabajo, ayudándonos entre nosotros.
 Durante las reuniones que el equipo tiene, evitar desviarse para aprovechar al máximo el tiempo.
 
 ## DEJAR DE HACER
+
+
+
+# SPRINT 5
+
+## COMENZAR A HACER
+Sigue pendiente la reunion presencial.
+
+## HACER MAS
+Aprovechar las clases practicas para corregir errores y avanzar en el proyecto.
+
+## CONTINUAR HACIENDO
+Seguir comunicandonos entre los integrantes del equipo a través de diferentes medios de comunicación sobre los avances individuales.
+Seguir con el buen clima de trabajo, ayudándonos entre nosotros.
+
+## HACER MENOS
+En las reuniones dispersarnos menos, pero eso nos permite conocernos más.
+
+## DEJAR DE HACER
+Venimos trabajando muy bien y ordenadamente, realmente no encontramos nada para dejar de hacer.
