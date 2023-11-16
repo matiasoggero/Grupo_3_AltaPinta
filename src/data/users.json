@@ -29,38 +29,5 @@
     "phone": "15847854",
     "password": "159159",
     "avatar": "logo.png"
-  },
-  {
-    "id": 4,
-    "rol": "user",
-    "name": "Germán Agustín Poupeau",
-    "email": "poupeaug@gmail.com",
-    "date": "2023-11-10",
-    "address": "Oroño 46",
-    "phone": "21312123123132",
-    "password": "holalola",
-    "avatar": "logo.png"
-  },
-  {
-    "id": 5,
-    "rol": "user",
-    "name": "",
-    "email": "",
-    "date": "",
-    "address": "",
-    "phone": "",
-    "password": "holalola",
-    "avatar": "logo.png"
-  },
-  {
-    "id": 6,
-    "rol": "user",
-    "name": "",
-    "email": "zxczxc@asda.com",
-    "date": "2023-11-03",
-    "address": "vsvsdv",
-    "phone": "3432632423",
-    "password": "holalola",
-    "avatar": "logo.png"
   }
 ]
