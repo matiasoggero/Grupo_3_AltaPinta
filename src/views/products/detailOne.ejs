@@ -28,9 +28,12 @@
                                 <p class="product-detail-price small">
                                     <span>$<%= locals.product?.price %></span>
                                 </p>
-                            <a href="/products/<%= locals.product?.id %>/edit" class="action-button edit">EDITAR PRODUCTO</a>
-                            <form action="/products/<%= locals.product?.id %>/delete?_method=DELETE" method="POST" style="display: inline-flex">
-                                    <button type="submit" class="action-button delete">ELIMINAR</button>
+                                    
+                                <section class="button-container"></section>
+                            <a href="/products/<%= locals.product?.id %>/edit" class="btn btn-secundary">EDITAR PRODUCTO</a>
+                            <form action="/products/<%= locals.product?.id %>/delete?_method=DELETE" method="POST">
+                                    <button type="submit" class="btn btn-primary">ELIMINAR</button>
+                            </section>
                             </form>
                 
                         </article>
