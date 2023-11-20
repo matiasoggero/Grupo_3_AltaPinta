@@ -149,7 +149,7 @@
     "price": 300,
     "category": "hojas verdes",
     "description": "Cultivada con cuidado, esta lechuga de hojas verdes presenta una textura tierna y un sabor suave",
-    "image": "default-image.png"
+    "image": "lechuga (1).png"
   },
   {
     "id": 20,
@@ -197,7 +197,7 @@
     "price": 300,
     "category": "vegetales crudos",
     "description": "Descubre la calidad y la riqueza de nuestras cebollas frescas",
-    "image": "default-image.png"
+    "image": "cebolla.png"
   },
   {
     "id": 26,

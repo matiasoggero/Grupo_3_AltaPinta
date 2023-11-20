@@ -27,7 +27,7 @@
   }
   
   body{
-    color: dimgray;
+    color: black;
     background-position: center;
     background-repeat: no-repeat;
     background-size: 330vh;
@@ -96,6 +96,21 @@ h2{
     transition: all 300ms;
 }
 
+h1{
+
+    text-align: center;
+}
+
+.text-title{
+   
+    max-width: 480px;
+    margin: auto;
+}
+
+.text{
+    width: 80%;
+    margin: auto;
+}
 
 @keyframes rotar{
     from{
@@ -105,15 +120,6 @@ h2{
     }
 }
 
-
-h1{
-    text-align: center;
-}
-
-.text{
-    padding: 10px;
-    text-align: center;
-}
 
 
 

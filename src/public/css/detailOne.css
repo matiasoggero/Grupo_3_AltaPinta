@@ -1,5 +1,3 @@
-
-  
 .products-wrapper {
     font-size: 10px;
     margin-top: 30px;
@@ -7,9 +5,9 @@
 }
 
 .products-title {
-    font-size: 2.4em;
+    font-size: 4em;
     font-weight: 400;
-    color: var(--gray);
+    color: #d12626;
 }
 
 .product-detail {
@@ -25,7 +23,7 @@
   }
   
   .product-detail-info {
-    border-left: 1px solid var(--light-gray);
+    border-left: 1px solid;
     padding: 15px;
     height: 100%;
   }
