@@ -1,5 +1,8 @@
+
+
 html,
 body {
+  --light-gray: #fafafa;
   min-height: 100vh;
   margin: 0;
   font-size: 10px;
@@ -7,14 +10,12 @@ body {
 
 body {
   background-color: var(--light-gray);
-
 }
 
 .products-wrapper {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1;  
   width: 95%;
-  height: 80vh;
   margin: auto;
 }
 
@@ -26,7 +27,6 @@ body {
 }
 
 .product-box {
-  width: 30%;
   background-color: #ffffff;
   border-radius: 5px;
   overflow: hidden;
@@ -81,4 +81,10 @@ body {
 figure {
   margin: 0;
   padding: 0;
+}
+
+@media (min-width: 768px) {
+  .products-wrapper {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }

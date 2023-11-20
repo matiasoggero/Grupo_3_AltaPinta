@@ -1,18 +1,8 @@
-.creation-container{
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    margin-top: 50px;
+body {
+    background-color: #fafafa;
 }
+
 h2{
     display: block;
     justify-content: center; 
-}
-
-.creation-container form{
-    margin-top: 30px;
-    width: 40%;
-    display:flex ;
-    flex-direction: column;
-    gap: 8px
 }

@@ -1,9 +1,12 @@
 
 .footer-container{
-    display: block;
+    display: flex;
+    max-width: 768px;
     width: 100%;
-    margin-top: 55px;
-    padding: 10px;
+    padding: 50px 0;
+    margin: auto;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .main-footer{
@@ -11,26 +14,23 @@
     margin-bottom: 1px;
 }
 
-footer p {
-    font-size: 10px;
-    position: relative;
-    padding-top: 85px;
-    padding-left: 35px;
+footer div a i{
+    color:black;
 }
 
- footer div a i{
-    color:black;
+.footer-list {
+    padding: 0;
+    list-style: none;
 }
 
 .footer-list li a{
     color:rgb(168, 20, 20);
 }
 .social-icons {
-    font-size: 34px;
-    padding: 50px, 30px, opx, 30px;
     display: flex;
-    align-content: flex-end;
+    font-size: 30px;
     justify-content: space-around;
+    gap: 25px;
 }
 
 .copyright{
