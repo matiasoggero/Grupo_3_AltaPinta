@@ -45,7 +45,7 @@
     "price": 700,
     "category": "panes",
     "description": "Nuestro pan de queso es la elección perfecta para aquellos que buscan un toque extra de sabor. Este pan, enriquecido con auténtico queso, ofrece una experiencia única desde el primer bocado",
-    "image": "pan-queso.webp"
+    "image": "pan-queso.jpg"
   },
   {
     "id": 7,
@@ -85,7 +85,7 @@
     "price": 500,
     "category": "fiambres",
     "description": "Nuestro jamón cocido premium es una opción de alta calidad que ofrece una experiencia de sabor excepcional",
-    "image": "default-image.png"
+    "image": "cocido.jpg"
   },
   {
     "id": 12,
@@ -93,7 +93,7 @@
     "price": 500,
     "category": "fiambres",
     "description": "Nuestro jamón crudo de calidad es una exquisitez que resalta la tradición y el sabor auténtico. Elaborado a partir de las mejores piezas de cerdo y curado con esmero",
-    "image": "default-image.png"
+    "image": "jamon-crudo.jpg"
   },
   {
     "id": 13,
@@ -101,7 +101,7 @@
     "price": 500,
     "category": "fiambres",
     "description": "Nuestro lomito  premium es una elección excepcional ",
-    "image": "default-image.png"
+    "image": "lomito.jpg"
   },
   {
     "id": 14,
@@ -109,7 +109,7 @@
     "price": 500,
     "category": "fiambres",
     "description": "Nuestro Bacon crujiente ,cada pieza se cura y ahuma cuidadosamente para lograr ese equilibrio único entre lo salado y lo ahumado",
-    "image": "default-image.png"
+    "image": "bacon.jpg"
   },
   {
     "id": 15,
@@ -117,7 +117,7 @@
     "price": 500,
     "category": "quesos",
     "description": "Nuestro queso Tybo es una opción deliciosa y versátil que se destaca por su sabor suave y textura cremosa",
-    "image": "default-image.png"
+    "image": "tybo.jpg"
   },
   {
     "id": 16,
@@ -125,15 +125,15 @@
     "price": 500,
     "category": "quesos",
     "description": "Nuestro queso Provolone es una elección robusta y llena de sabor para los amantes del queso con carácter",
-    "image": "default-image.png"
+    "image": "provolone.jpg"
   },
   {
     "id": 17,
-    "name": "Chedar",
+    "name": "Cheddar",
     "price": 500,
     "category": "quesos",
     "description": "Nuestro chedar ,elaborado con leche de alta calidad, este queso británico se caracteriza por su tonalidad amarilla distintiva",
-    "image": "default-image.png"
+    "image": "cheddar.jpg"
   },
   {
     "id": 18,
@@ -141,7 +141,7 @@
     "price": 500,
     "category": "quesos",
     "description": "este queso de pasta veteada presenta un sabor fuerte y complejo, con vetas de moho azul que añaden un toque picante",
-    "image": "default-image.png"
+    "image": "queso-azul.jpg"
   },
   {
     "id": 19,
@@ -157,7 +157,7 @@
     "price": 300,
     "category": "hojas verdes",
     "description": "la rúcula agrega una dimensión única a las hamburguesas",
-    "image": "default-image.png"
+    "image": "rucula.jpg"
   },
   {
     "id": 21,
@@ -165,7 +165,7 @@
     "price": 300,
     "category": "hojas verdes",
     "description": "Nuestro repollo orgánico es una excelente fuente de fibra y nutrientes esenciales",
-    "image": "default-image.png"
+    "image": "repollo.jpg"
   },
   {
     "id": 22,
@@ -181,7 +181,7 @@
     "price": 300,
     "category": "vegetales crudos",
     "description": "Estas zanahorias de tonalidad naranja brillante ofrecen una textura crujiente y un sabor jugoso",
-    "image": "default-image.png"
+    "image": "zanahoria.jpg"
   },
   {
     "id": 24,
@@ -189,7 +189,7 @@
     "price": 300,
     "category": "vegetales crudos",
     "description": "Estos pepinos de piel verde clara ofrecen una textura crujiente y un sabor hidratante",
-    "image": "default-image.png"
+    "image": "pepino.jpg"
   },
   {
     "id": 25,
@@ -205,7 +205,7 @@
     "price": 300,
     "category": "vegetales cocidos",
     "description": "Nuestra cebolla caramelizada es una deliciosa obra maestra de sabor dulce y textura suave",
-    "image": "default-image.png"
+    "image": "cebolla-caramel.jpg"
   },
   {
     "id": 27,
@@ -213,7 +213,7 @@
     "price": 300,
     "category": "vegetales cocidos",
     "description": "Cada rodaja de berenjena absorbe los aromas y sabores de hierbas",
-    "image": "default-image.png"
+    "image": "berenjena-esca.jpg"
   },
   {
     "id": 28,
@@ -221,7 +221,7 @@
     "price": 300,
     "category": "vegetales cocidos",
     "description": "Preparados lentamente en aceite de oliva, los tomates se caramelizan hasta obtener una textura tierna y un sabor concentrado y dulce",
-    "image": "default-image.png"
+    "image": "tomates-confitados.jpg"
   },
   {
     "id": 29,
@@ -229,6 +229,6 @@
     "price": 300,
     "category": "vegetales cocidos",
     "description": "Cuidadosamente cocinadas hasta lograr un caramelizado dorado, estas zanahorias ofrecen un sabor indulgente y una textura tierna",
-    "image": "default-image.png"
+    "image": "zanahorias-confi.jpg"
   }
 ]
