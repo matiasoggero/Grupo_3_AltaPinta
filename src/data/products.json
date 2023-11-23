@@ -29,7 +29,7 @@
     "price": 500,
     "category": "panes",
     "description": "Nuestro pan de hamburguesa clásico es la elección perfecta para encerrar la deliciosa creación que te espera. Con una textura suave y esponjosa",
-    "image": "default-image.png"
+    "image": "pan-clasico.jpg"
   },
   {
     "id": 5,
@@ -37,7 +37,7 @@
     "price": "500",
     "category": "panes",
     "description": "tien sesamo",
-    "image": "default-image.png"
+    "image": "pan-sesamo.jpg"
   },
   {
     "id": 6,
@@ -45,7 +45,7 @@
     "price": 700,
     "category": "panes",
     "description": "Nuestro pan de queso es la elección perfecta para aquellos que buscan un toque extra de sabor. Este pan, enriquecido con auténtico queso, ofrece una experiencia única desde el primer bocado",
-    "image": "default-image.png"
+    "image": "pan-queso.webp"
   },
   {
     "id": 7,
@@ -53,7 +53,7 @@
     "price": 400,
     "category": "aderezos",
     "description": "Cada cucharada de nuestra mayonesa transformará tus comidas en una experiencia culinaria inolvidable",
-    "image": "default-image.png"
+    "image": "mayonesa.jpg"
   },
   {
     "id": 8,
@@ -61,15 +61,15 @@
     "price": 400,
     "category": "aderezos",
     "description": "Nuestra mostaza tradicional es el condimento perfecto para agregar un toque de sabor audaz y picante a tus hamburguesas favoritos",
-    "image": "default-image.png"
+    "image": "salsa-mostaza.jpg"
   },
   {
     "id": 9,
-    "name": "Keptchup",
+    "name": "Ketchup",
     "price": 400,
     "category": "aderezos",
     "description": "Nuestro ketchup clásico es el condimento perfecto para añadir un toque de dulzura y acidez a tus hamburguesas",
-    "image": "default-image.png"
+    "image": "ketchup.jpg"
   },
   {
     "id": 10,
@@ -77,7 +77,7 @@
     "price": 400,
     "category": "aderezos",
     "description": "Nuestra Barbacoa ahumada con su irresistible mezcla de tomates, vinagre, especias y ese toque ahumado distintivo",
-    "image": "default-image.png"
+    "image": "salsa-barbacoa.jpg"
   },
   {
     "id": 11,
