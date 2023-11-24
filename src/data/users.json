@@ -2,32 +2,23 @@
   {
     "id": 1,
     "rol": "admin",
-    "name": "Matias",
+    "name": "Matias Oggero",
     "email": "matiassoggero@gmail.com",
-    "date": "2023-10-31",
-    "address": "triunvirato824",
-    "phone": "600499",
-    "password": "123456"
-  },
-  {
-    "id": 2,
-    "name": "german popeau",
-    "email": "german@yahoo.com",
-    "date": "2023-05-11",
-    "address": "luis maggi 50",
-    "phone": "15966587",
-    "password": "123456",
+    "date": "",
+    "address": "Triunvirato 824",
+    "phone": "3492600499",
+    "password": "$2a$10$ukkasCap.nyuV5mSrg5TZud3ZVvs5az.kwR4I/635k7ug.Z1flA/G",
     "avatar": "logo.png"
   },
   {
-    "id": 3,
+    "id": 2,
     "rol": "user",
-    "name": "diego maradona",
-    "email": "diegote@hotmail.com",
-    "date": "2023-11-02",
-    "address": "general paz 152",
-    "phone": "15847854",
-    "password": "159159",
+    "name": "German Poupeau",
+    "email": "german@hotmail.com",
+    "date": "2023-11-01",
+    "address": "calle falsas 123",
+    "phone": "3492566665",
+    "password": "$2a$10$4RSguPCgyEoPxKFnwSlZA.la7pjDyNUZHU/T/cIS0kA8B.ib6hoCu",
     "avatar": "logo.png"
   }
 ]

@@ -2,6 +2,7 @@ const { json } = require('express');
 const fs= require('fs');
 const path = require('path');
 const {validationResult} = require('express-validator');
+const bcrypt = require('bcryptjs');
 
 const usersFilePath = path.join(__dirname, '../data/users.json');
 let users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
@@ -15,6 +16,7 @@ const controller = {
             id: users[users.length - 1]?.id ? users[users.length - 1].id + 1 : 1,
             rol: "user", 
             ...req.body,
+            password: bcrypt.hashSync(req.body.password,10),
             confirm_password: undefined,
             avatar: req.file?.filename || "logo.png"
         }
