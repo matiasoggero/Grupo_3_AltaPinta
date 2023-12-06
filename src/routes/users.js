@@ -17,9 +17,14 @@ const storage = multer.diskStorage({
     }
 });
 
+
+
 const upload = multer({storage});
 
 const router = express.Router();
+
+const authUserMiddleware = require('../middlewares/authUser');
+
 
 router.get('/login', usersController.login);
 //router.post('/login', usersController.login);
@@ -32,5 +37,6 @@ router.get('/', usersController.list);
 router.get('/:id',usersController.detail);
 router.get('/:id/edit', usersController.edit);
 router.put('/:id/edit', usersController.update);
+router.get('/login', authUserMiddleware, usersController.login);
 
 module.exports = router;
