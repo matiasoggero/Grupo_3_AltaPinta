@@ -1,12 +1,16 @@
 
-function authUser(req, res, next) {
-    const users = ['diego maradona'];
-    const isUser = users.some((element) => element.toLowerCase() === req.query.user?.toLowerCase());
-  
-    if (isUser) {
-      return res.redirect('/index'); 
+
+
+  function authUser(req, res, next) {
+    
+    if (!req.session.user) {
+        
+        return res.redirect('/login');
     }
-    return res.redirect ('/login')
-  }
+
+    
+    next();
+}
+
   
-  module.exports = authUser;
+  module.exports = authUser

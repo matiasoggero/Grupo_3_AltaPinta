@@ -22,12 +22,13 @@ const storage = multer.diskStorage({
 const upload = multer({storage});
 
 const router = express.Router();
-
-const authUserMiddleware = require('../middlewares/authUser');
+/*
+const authUser = require('../middlewares/authUser');
+router.use(authUser);*/
 
 
 router.get('/login', usersController.login);
-//router.post('/login', usersController.login);
+// router.post('/login', usersController.login);
 router.get('/register',usersController.register);
 router.post('/register',upload.single('avatar'),usersController.create);
 router.post('/register',validatorFormRegister,usersController.create);//ver esta línea
@@ -37,6 +38,7 @@ router.get('/', usersController.list);
 router.get('/:id',usersController.detail);
 router.get('/:id/edit', usersController.edit);
 router.put('/:id/edit', usersController.update);
-router.get('/login', authUserMiddleware, usersController.login);
+//router.post('/admin', authUser, usersController.login)
+
 
 module.exports = router;
