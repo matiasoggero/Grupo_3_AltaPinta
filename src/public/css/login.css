@@ -8,3 +8,7 @@
 button.enviar:hover {
     background-color: #6a0f0f;
 }
+
+.text-danger {
+    color: #6a0f0f;
+}

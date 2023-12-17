@@ -20,5 +20,16 @@
     "phone": "3492566665",
     "password": "$2a$10$4RSguPCgyEoPxKFnwSlZA.la7pjDyNUZHU/T/cIS0kA8B.ib6hoCu",
     "avatar": "logo.png"
+  },
+  {
+    "id": 3,
+    "rol": "user",
+    "name": "Melisa Vande Velde",
+    "email": "melisa175@yahoo.com.ar",
+    "date": "1987-06-05",
+    "address": "Fertonani 2046",
+    "phone": "3492314895",
+    "password": "$2a$10$04QjinNB6qr/XKw.SEY/Sute4ll82K9izwMFwZ6QXJqyOZTRnjyZ6",
+    "avatar": "logo.png"
   }
 ]

@@ -1,0 +1,19 @@
+main{
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.title{
+    display: flex;
+    margin: 15px;
+    justify-content: center;
+}
+
+h2{
+    display: flex;
+    gap: 8px;
+    margin: 15px;
+}
+

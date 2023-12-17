@@ -6,17 +6,20 @@
     <%- include('../partials/header.ejs') %>
     
     <main class="form-container">
-        <h2>REGISTRATE</h2> 
-        <form action="/login" method="post">
+        <h2>INICIA SESION</h2> 
+        <form action="/users/login" method="post">
             
             <div class="label-container">
                 <input type="email" name="email" id="email" placeholder="email">
+                <% if (locals.errors && errors.email) { %>
+                <div class="text-danger">
+                    <%= (errors.email.msg) %>
+                </div>
+                <% } %>
             </div>
-            
             <div class="label-container">
-                <input type="password" name="password" id="password" placeholder="Contraseña">
+                        <input type="password" name="password" id="password" placeholder="Contraseña">
             </div>
-            
             <div class="button-container">
                 <button class="btn btn-primary" type="submit">Enviar</button>
             </div>
