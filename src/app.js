@@ -9,6 +9,8 @@ const session = require ("express-session");
 const cookieParser = require("cookie-parser")
 const app = express();
 
+const authUsermiddleware = require ("./middlewares/authUser");
+
 
 // configuracion para usar ejs en lugar de html
 app.set("view engine", "ejs");
@@ -27,6 +29,8 @@ app.use(cookieParser());
 app.use("/", mainRoutes);
 app.use("/products", productsRoutes);
 app.use("/users", usersRoutes);
+
+app.use (authUsermiddleware)
 
 
 

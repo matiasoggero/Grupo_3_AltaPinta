@@ -22,9 +22,9 @@ const storage = multer.diskStorage({
 const upload = multer({storage});
 
 const router = express.Router();
-/*
+
 const authUser = require('../middlewares/authUser');
-router.use(authUser);*/
+/*router.use(authUser);*/
 
 
 router.get('/login', usersController.login);
@@ -38,7 +38,7 @@ router.get('/', usersController.list);
 router.get('/:id',usersController.detail);
 router.get('/:id/edit', usersController.edit);
 router.put('/:id/edit', usersController.update);
-//router.post('/admin', authUser, usersController.login)
+router.get('/admin', authUser, usersController.login)
 
 
 module.exports = router;

@@ -4,6 +4,8 @@ const path = require('path');
 const {validationResult} = require('express-validator');
 const bcrypt = require('bcryptjs');
 
+const authUser = require("../middlewares/authUser");
+
 const usersFilePath = path.join(__dirname, '../data/users.json');
 let users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 
@@ -57,6 +59,9 @@ const controller = {
         fs.writeFileSync(usersFilePath,JSON.stringify(users,null,2));
         res.redirect('/users');
     }
+    
+
+    
     
 }
 module.exports =controller;
