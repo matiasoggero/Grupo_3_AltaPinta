@@ -9,8 +9,13 @@ const usersFilePath = path.join(__dirname, '../data/users.json');
 let users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 
 const controller = {
-    register(req, res) {
-        return res.render('users/register');
+    register(req,res){
+        const errors = validationResult(req)
+        if(errors.isEmpty()){
+        }
+        else{
+        res.render('users/register',{errors:errors.mapped(),old:req.body});
+      }
     },
     create(req, res) {
         const newUser = {
