@@ -38,11 +38,10 @@ router.get('/admin', usersController.admin);
 
 router.get('/', usersController.list);
 
+router.get('/profile', usersController.profile);
 router.get('/:id', usersController.detail);
-
 router.get('/:id/edit', usersController.edit);
 router.put('/:id/edit', usersController.update);
 
-router.get('/profile', usersController.profile);
 
 module.exports = router;

@@ -3,7 +3,7 @@ const multer = require('multer');
 const path = require('path');
 
 
-const protectRoute = require('../middlewares/auth');
+const authMiddlewares = require('../middlewares/auth');
 const productsController = require("../controllers/productsController");
 
 
@@ -31,7 +31,7 @@ router.get("/detailOne/:id", productsController.detail);
 router.get("/productCreation", productsController.productCreation);
 router.post("/productCreation",upload.single("image"), productsController.productStore);
 
-router.get("/:id/edit", protectRoute, productsController.productEdition);
+router.get("/:id/edit", authMiddlewares.protectRoute, productsController.productEdition);
 router.put("/:id/edit", productsController.productUpdate)
 
 
