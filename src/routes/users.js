@@ -37,31 +37,23 @@ router.get("/admin", usersController.admin);
 
 router.get("/", usersController.list);
 
-<<<<<<< HEAD
 router.get("/:id", usersController.detail);
 
 router.get("/:id/edit", usersController.edit);
 router.put("/:id/edit", usersController.update);
 
 router.get("/profile", usersController.profile);
-=======
-router.get('/profile', usersController.profile);
-router.get('/:id', usersController.detail);
-router.get('/:id/edit', usersController.edit);
-router.put('/:id/edit', usersController.update);
 
->>>>>>> ae01145f5969e23ba79f1d08dd25989619e7c5ab
-
-router.get("/admin", protectRoute, usersController.admin);
-router.get("/products/productDetail", protectRoute, usersController.login);
+// router.get("/admin", protectRoute, usersController.admin);
+//router.get("/products/productDetail", protectRoute, usersController.login);
 
 // Ruta de huéspedes: redireccionar al perfil si el usuario está logueado
-router.get("/productDetail", protectRoute, (req, res, next) => {
+/* router.get("/products", protectRoute, (req, res, next) => {
   if (req.session.user) {
     return res.redirect("/profile"); // Redirigir al perfil si el usuario está logueado
   }
   next(); // Continuar si el usuario no está autenticado
-});
+});*/
 
 // Ruta de usuarios: redireccionar al login si el usuario no está logueado
 router.get(
