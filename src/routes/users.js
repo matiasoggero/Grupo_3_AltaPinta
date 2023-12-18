@@ -37,12 +37,20 @@ router.get("/admin", usersController.admin);
 
 router.get("/", usersController.list);
 
+<<<<<<< HEAD
 router.get("/:id", usersController.detail);
 
 router.get("/:id/edit", usersController.edit);
 router.put("/:id/edit", usersController.update);
 
 router.get("/profile", usersController.profile);
+=======
+router.get('/profile', usersController.profile);
+router.get('/:id', usersController.detail);
+router.get('/:id/edit', usersController.edit);
+router.put('/:id/edit', usersController.update);
+
+>>>>>>> ae01145f5969e23ba79f1d08dd25989619e7c5ab
 
 router.get("/admin", protectRoute, usersController.admin);
 router.get("/products/productDetail", protectRoute, usersController.login);

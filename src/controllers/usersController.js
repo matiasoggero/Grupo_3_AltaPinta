@@ -3,6 +3,7 @@ const fs = require('fs');
 const path = require('path');
 const { validationResult } = require('express-validator');
 const bcrypt = require('bcryptjs');
+const oneYear = 1000 * 60 * 60 * 24 * 365;
 
 //const User = require("../model/User");
 const usersFilePath = path.join(__dirname, '../data/users.json');
@@ -31,36 +32,33 @@ const controller = {
         return res.render('users/login');
     },
     logout(req, res) {
-        if (req.session.user) {
-            delete req.session.user
-        }
+        req.session.destroy();
         return res.redirect('/');
     },
     loginProcess(req, res) {
-        // validar campos form
+        // TODO: validar campos que vienen del form
         const userToLogin = users.find((user) => user.email == req.body.email);
 
         if (userToLogin) {
-            let okPassword = bcrypt.compareSync(req.body.password, userToLogin.password);
+            const okPassword = bcrypt.compareSync(req.body.password, userToLogin.password);
+            
             if (okPassword) {
-                delete userToLogin.password
-                req.session.user = userToLogin
-                return res.render('users/profile', {user: req.session.user});
+                const { password, ...nonSensibleUserData } = userToLogin;
+                req.session.user = nonSensibleUserData;
+                return res.redirect('/users/profile');
             }
+            
             return res.render('users/login', {
                 errors: {
                     email: {
                         msg: "El email y/o la contraseña son incorrectos"
                     }
                 }
-
             });
-
         }
-    
     },
     profile(req, res) {
-        return res.redirect('/users/profile');
+        res.render('users/profile');
     },
     delete(req, res) {
         users = users.filter((user) => user.id != req.params.id);
@@ -78,7 +76,6 @@ const controller = {
         res.render('users/userDetail', { user });
     },
     edit(req, res) {
-        console.log('en edit')
         const edit = users.find((user) => user.id == req.params.id);
         res.render('users/edit', { user: edit });
     },
