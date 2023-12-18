@@ -1,13 +1,12 @@
 const express = require("express");
 const path = require("path");
 
-const mainRoutes = require("./routes/main");
+const commonRoutes = require("./routes/common");
 const productsRoutes = require("./routes/products");
 const usersRoutes = require("./routes/users");
 const methodOverride = require("method-override"); // Pasar poder usar los métodos PUT y DELETE
 const session = require("express-session");
 const cookieParser = require("cookie-parser");
-const routes = require("./routes/controlRoutes");
 const app = express();
 
 // configuracion para usar ejs en lugar de html
@@ -22,11 +21,9 @@ app.use(
   session({ secret: "12345678", resave: false, saveUninitialized: false })
 );
 app.use(cookieParser());
-app.use("/", mainRoutes);
 app.use("/products", productsRoutes);
 app.use("/users", usersRoutes);
-
-app.use("/", routes);
+app.use("", commonRoutes);
 
 const port = 3040;
 app.listen(port, () => {

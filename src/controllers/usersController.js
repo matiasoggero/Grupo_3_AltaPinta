@@ -26,28 +26,26 @@ const controller = {
 
         fs.writeFileSync(usersFilePath, JSON.stringify(users, null, 2));
         res.redirect('/users/login');
-
-    //      const errors = validationResult(req)
-    //     if(errors.isEmpty()){
-    //     }
-    //     else{
-    //     res.render('users/register',{errors:errors.mapped(),old:req.body});
-    //   }
-
     },
     login(req, res) {
         return res.render('users/login');
     },
+    logout(req, res) {
+        if (req.session.user) {
+            delete req.session.user
+        }
+        return res.redirect('/');
+    },
     loginProcess(req, res) {
-
+        // validar campos form
         const userToLogin = users.find((user) => user.email == req.body.email);
 
         if (userToLogin) {
             let okPassword = bcrypt.compareSync(req.body.password, userToLogin.password);
             if (okPassword) {
                 delete userToLogin.password
-                req.session.userLogged = userToLogin
-                return res.render('users/profile', {user: req.session.userLogged});
+                req.session.user = userToLogin
+                return res.render('users/profile', {user: req.session.user});
             }
             return res.render('users/login', {
                 errors: {
@@ -80,6 +78,7 @@ const controller = {
         res.render('users/userDetail', { user });
     },
     edit(req, res) {
+        console.log('en edit')
         const edit = users.find((user) => user.id == req.params.id);
         res.render('users/edit', { user: edit });
     },

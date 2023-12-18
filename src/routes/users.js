@@ -23,12 +23,10 @@ const upload = multer({storage});
 
 const router = express.Router();
 
-const authUserMiddleware = require('../middlewares/authUser');
-
-
 router.get('/login', usersController.login);
 router.post('/login', usersController.loginProcess);
-router.get('/login', authUserMiddleware, usersController.login);
+
+router.get('/logout', usersController.logout);
 
 router.get('/register',usersController.register);
 router.post('/register',upload.single('avatar'),usersController.create);
@@ -36,11 +34,11 @@ router.post('/register',validatorFormRegister,usersController.create);//ver esta
 
 router.delete('/:id/delete',usersController.delete);
 
-router.get('/admin',usersController.admin);
+router.get('/admin', usersController.admin);
 
 router.get('/', usersController.list);
 
-router.get('/:id',usersController.detail);
+router.get('/:id', usersController.detail);
 
 router.get('/:id/edit', usersController.edit);
 router.put('/:id/edit', usersController.update);
