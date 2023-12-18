@@ -31,5 +31,16 @@
     "phone": "3492314895",
     "password": "$2a$10$04QjinNB6qr/XKw.SEY/Sute4ll82K9izwMFwZ6QXJqyOZTRnjyZ6",
     "avatar": "logo.png"
+  },
+  {
+    "id": 4,
+    "rol": "user",
+    "name": "Rocio Salamano",
+    "email": "rociosalamano@hotmail.com",
+    "date": "2023-05-25",
+    "address": "Constitución",
+    "phone": "03492419837",
+    "password": "$2a$10$79KHIgvq4dFOnCW.aKLIl.J8td/pTV9Iz0djKkwTRwG5nXwLo9Vi.",
+    "avatar": "logo.png"
   }
 ]

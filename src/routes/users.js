@@ -28,6 +28,7 @@ const authUserMiddleware = require('../middlewares/authUser');
 
 router.get('/login', usersController.login);
 router.post('/login', usersController.loginProcess);
+router.get('/login', authUserMiddleware, usersController.login);
 
 router.get('/register',usersController.register);
 router.post('/register',upload.single('avatar'),usersController.create);
@@ -44,7 +45,6 @@ router.get('/:id',usersController.detail);
 router.get('/:id/edit', usersController.edit);
 router.put('/:id/edit', usersController.update);
 
-router.get('/login', authUserMiddleware, usersController.login);
 router.get('/profile', usersController.profile);
 
 module.exports = router;
