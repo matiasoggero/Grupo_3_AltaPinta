@@ -42,7 +42,9 @@ const controller = {
         if (userToLogin) {
             let okPassword = bcrypt.compareSync(req.body.password, userToLogin.password);
             if (okPassword) {
-                return res.render('users/profile', {user: userToLogin});
+                delete userToLogin.password
+                req.session.userLogged = userToLogin
+                return res.render('users/profile', {user: req.session.userLogged});
             }
             return res.render('users/login', {
                 errors: {
@@ -57,8 +59,7 @@ const controller = {
     
     },
     profile(req, res) {
-        
-       return res.render('/users/profile');
+        return res.redirect('/users/profile');
     },
     delete(req, res) {
         users = users.filter((user) => user.id != req.params.id);
