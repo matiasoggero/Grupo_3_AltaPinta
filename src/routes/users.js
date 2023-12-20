@@ -45,6 +45,6 @@ router.put("/:id/edit", usersController.update);
 
 router.get("/profile", usersController.profile);
 
-// router.get("/profile", authMiddlewares.protectRoute, usersController.profile);
+router.get("/profile", authMiddlewares.protectRoute, usersController.profile);
 
 module.exports = router;
