@@ -16,5 +16,5 @@ function protectRoute(req, res, next) {
 
 module.exports = {
   protectRoute,
-  authUserInfo
-}
+  authUserInfo,
+};

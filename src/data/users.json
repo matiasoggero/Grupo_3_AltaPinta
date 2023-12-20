@@ -42,5 +42,16 @@
     "phone": "03492419837",
     "password": "$2a$10$79KHIgvq4dFOnCW.aKLIl.J8td/pTV9Iz0djKkwTRwG5nXwLo9Vi.",
     "avatar": "logo.png"
+  },
+  {
+    "id": 5,
+    "rol": "user",
+    "name": "asdasd",
+    "email": "",
+    "date": "",
+    "address": "",
+    "phone": "",
+    "password": "$2a$10$2KpVQ8nLTlwYpwYGFmlLmeLhVy6vkVUYWU4rIxhpHaN/5ScmoRBhC",
+    "avatar": "logo.png"
   }
 ]

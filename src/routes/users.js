@@ -16,6 +16,7 @@ const storage = multer.diskStorage({
   },
 });
 
+const authMiddlewares = require("../middlewares/auth");
 const protectRoute = require("../middlewares/auth");
 
 const upload = multer({ storage });
@@ -44,30 +45,6 @@ router.put("/:id/edit", usersController.update);
 
 router.get("/profile", usersController.profile);
 
-// router.get("/admin", protectRoute, usersController.admin);
-//router.get("/products/productDetail", protectRoute, usersController.login);
-
-// Ruta de huéspedes: redireccionar al perfil si el usuario está logueado
-/* router.get("/products", protectRoute, (req, res, next) => {
-  if (req.session.user) {
-    return res.redirect("/profile"); // Redirigir al perfil si el usuario está logueado
-  }
-  next(); // Continuar si el usuario no está autenticado
-});*/
-
-// Ruta de usuarios: redireccionar al login si el usuario no está logueado
-router.get(
-  "/productDetail",
-  (req, res, next) => {
-    if (!req.session.user) {
-      return res.redirect("/users/login"); // Redirigir al login si el usuario no está logueado
-    }
-    next();
-  },
-  (req, res) => {
-    // Lógica para la ruta de usuarios si es necesario
-    res.send("Bienvenido, usuario");
-  }
-);
+// router.get("/profile", authMiddlewares.protectRoute, usersController.profile);
 
 module.exports = router;
