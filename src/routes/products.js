@@ -22,19 +22,19 @@ const upload = multer({storage: storage})
 
 const router = express.Router();
 
-router.get("/productDetail", productsController.productDetail);
+
 
 router.get("/products", productsController.productsShow);
 
-router.get("/detailOne/:id", productsController.detail);
 
-router.get("/productCreation", productsController.productCreation);
 router.post("/productCreation",upload.single("image"), productsController.productStore);
 
-router.get("/:id/edit", authMiddlewares.protectRoute, productsController.productEdition);
-router.put("/:id/edit", productsController.productUpdate)
-
-
-router.delete("/:id/delete", productsController.destroy);
+router.put("/:id/edit",authMiddlewares.authUser, productsController.productUpdate)
+router.delete("/:id/delete",authMiddlewares.authUser, productsController.destroy);
+router.get("/:id/edit", authMiddlewares.authUser, productsController.productEdition);
+router.get("/detailOne/:id",authMiddlewares.authUser, productsController.detail);
+router.get("/productDetail", authMiddlewares.authUser,productsController.productDetail);
+router.get("/productCreation",authMiddlewares.authUser, productsController.productCreation);
+router.put("/:id/edit",authMiddlewares.authUser, productsController.productUpdate)
 
 module.exports = router;

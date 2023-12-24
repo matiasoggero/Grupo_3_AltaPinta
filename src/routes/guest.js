@@ -2,6 +2,9 @@ const express = require("express");
 const router = express.Router();
 const protectRoute = require("../middlewares/auth").protectRoute;
 
+
+/*const authUser = require("../middlewares/auth")*/
+
 router.get("/products/:id", (req, res) => {
   // Esta ruta ya está configurada para redirigir al perfil solo si está autenticado
   res.render("profile");

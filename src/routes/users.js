@@ -16,8 +16,8 @@ const storage = multer.diskStorage({
   },
 });
 
+
 const authMiddlewares = require("../middlewares/auth");
-const protectRoute = require("../middlewares/auth");
 
 const upload = multer({ storage });
 
@@ -31,20 +31,20 @@ router.get("/logout", usersController.logout);
 router.get("/register", usersController.register);
 router.post("/register", upload.single("avatar"), usersController.create);
 router.post("/register", validatorFormRegister, usersController.create); //ver esta línea
-
-router.delete("/:id/delete", usersController.delete);
-
-router.get("/admin", usersController.admin);
-
+router.get("/profile", usersController.profile);
 router.get("/", usersController.list);
-
 router.get("/:id", usersController.detail);
 
-router.get("/:id/edit", usersController.edit);
-router.put("/:id/edit", usersController.update);
+router.get("/:id/edit",authMiddlewares.authUser, usersController.edit);
+router.put("/:id/edit",authMiddlewares.authUser, usersController.update);
+router.delete("/:id/delete",authMiddlewares.authUser, usersController.delete);
+router.get("/admin", authMiddlewares.authUser,usersController.admin);
 
-router.get("/profile", usersController.profile);
 
-router.get("/profile", authMiddlewares.protectRoute, usersController.profile);
+
+
+
+
+
 
 module.exports = router;

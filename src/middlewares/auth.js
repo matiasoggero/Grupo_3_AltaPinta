@@ -7,14 +7,20 @@ function authUserInfo(req, res, next) {
   next();
 }
 
-function protectRoute(req, res, next) {
+
+function authUser(req, res, next) {
+    
   if (!req.session.user) {
-    return res.redirect("/users/login"); // Redirigir al login si el usuario no está autenticado
+      
+      return res.redirect('/login');
   }
-  next(); // Continuar si el usuario está autenticado
+
+  
+  next();
 }
 
+
 module.exports = {
-  protectRoute,
+  authUser,
   authUserInfo,
 };
