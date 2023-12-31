@@ -8,7 +8,7 @@
     "address": "Triunvirato 824",
     "phone": "3492600499",
     "password": "$2a$10$ukkasCap.nyuV5mSrg5TZud3ZVvs5az.kwR4I/635k7ug.Z1flA/G",
-    "avatar": "logo.png"
+    "avatar": "default-avatar.png"
   },
   {
     "id": 2,
@@ -19,7 +19,7 @@
     "address": "calle falsas 123",
     "phone": "3492566665",
     "password": "$2a$10$4RSguPCgyEoPxKFnwSlZA.la7pjDyNUZHU/T/cIS0kA8B.ib6hoCu",
-    "avatar": "logo.png"
+    "avatar": "default-avatar.png"
   },
   {
     "id": 3,
@@ -30,7 +30,7 @@
     "address": "Fertonani 2046",
     "phone": "3492314895",
     "password": "$2a$10$04QjinNB6qr/XKw.SEY/Sute4ll82K9izwMFwZ6QXJqyOZTRnjyZ6",
-    "avatar": "logo.png"
+    "avatar": "default-avatar.png"
   },
   {
     "id": 4,
@@ -41,7 +41,7 @@
     "address": "Constitución",
     "phone": "03492419837",
     "password": "$2a$10$79KHIgvq4dFOnCW.aKLIl.J8td/pTV9Iz0djKkwTRwG5nXwLo9Vi.",
-    "avatar": "logo.png"
+    "avatar": "default-avatar.png"
   },
   {
     "id": 5,

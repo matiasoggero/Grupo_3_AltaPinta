@@ -3,7 +3,7 @@ const fs = require('fs');
 const path = require('path');
 const { validationResult } = require('express-validator');
 const bcrypt = require('bcryptjs');
-const oneYear = 1000 * 60 * 60 * 24 * 365;
+const oneMonth = 1000 * 60 * 60 * 24 * 30;
 
 //const User = require("../model/User");
 const usersFilePath = path.join(__dirname, '../data/users.json');
@@ -29,15 +29,30 @@ const controller = {
         res.redirect('/users/login');
     },
     login(req, res) {
+        // verificar cookie rememberme
+        const userEmailFromCookie = req.cookies.recordarme;
+        
+        if (userEmailFromCookie) {
+            const userToLogin = users.find((user) => user.email === userEmailFromCookie);
+            
+            if (userToLogin) { 
+                const { password, ...nonSensibleUserData } = userToLogin;
+                req.session.user = nonSensibleUserData;
+                return res.redirect('/users/profile');
+            }
+        } 
+
         return res.render('users/login');
     },
     logout(req, res) {
         req.session.destroy();
+        res.clearCookie("recordarme");
         return res.redirect('/');
     },
     loginProcess(req, res) {
         // TODO: validar campos que vienen del form
         const userToLogin = users.find((user) => user.email == req.body.email);
+        const rememberMe = Boolean(req.body.recordarme);
 
         if (userToLogin) {
             const okPassword = bcrypt.compareSync(req.body.password, userToLogin.password);
@@ -45,6 +60,16 @@ const controller = {
             if (okPassword) {
                 const { password, ...nonSensibleUserData } = userToLogin;
                 req.session.user = nonSensibleUserData;
+                
+                // si puso rememberMe, guardar la cookie para la próxima vez que ingrese.
+                if (rememberMe) {
+                    res.cookie("recordarme", userToLogin.email, { 
+                        maxAge: oneMonth ,
+                        secure: true,
+                        httpOnly: true,
+                    });
+                }
+
                 return res.redirect('/users/profile');
             }
             

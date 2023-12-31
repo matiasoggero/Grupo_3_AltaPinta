@@ -23,6 +23,9 @@ app.use(
     secret: "12345678",
     resave: false,
     saveUninitialized: false,
+    cookie: {
+      maxAge: 15000,
+    }
   })
 );
 app.use(authMiddlewares.authUserInfo);
