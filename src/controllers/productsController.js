@@ -1,64 +1,75 @@
-const fs = require("fs");
-const path = require("path");
-
-const productsFilePath = path.join(__dirname, "../data/products.json");
-let products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
-
-const toThousand = (n) => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+const db = require('../../models');
 
 const controller = {
   productDetail(req, res) {
     return res.render("products/productDetail");
   },
 
-  productsShow: (req, res) => {
-    res.render("products/products", { products });
+  productsShow: async (req, res) => {
+    try {
+      const products = await db.Product.findAll();
+      return res.render("products/products", { products });
+    } catch (error) {
+      res.json(error)
+    }
   },
 
   productCreation: (req, res) => {
     res.render("products/productCreation");
   },
 
-  productStore: (req, res) => {
-    const newProduct = {
-			id: products[products.length - 1].id + 1,
-			...req.body,
-			image: req.file?.filename || "default-image.png"
-    };
-    products.push(newProduct);
-		fs.writeFileSync(productsFilePath, JSON.stringify(products, null, 2));
-		res.redirect('/products/products');
+  productStore: async (req, res) => {
+    try {
+      await db.Product.create({
+        ...req.body,
+        image: req.file?.filename || "default-image.png"
+      });
+      return res.redirect('/products/products');
+    } catch (error) {
+      return res.json(error);
+    }
   },
 
-  productEdition(req, res) {
-    const product = products.find((product) => product.id == req.params.id);
-		res.render('products/productEdition', { productToEdit: product });
+  productEdition: async (req, res) => {
+    try {
+      const product = await db.Product.findByPK(req.params.id);
+      return res.render('products/productEdition', { productToEdit: product });
+    } catch (error) {
+      return res.json(error);
+    }
   },
 
-  productUpdate: (req, res)=> {
-		const indexProduct = products.findIndex((product) => product.id == req.params.id);
-		products[indexProduct] = {
-			...products[indexProduct],
-			...req.body
-		};
-		fs.writeFileSync(productsFilePath, JSON.stringify(products, null, 2));
-		res.redirect('/products/products');
-    
+  productUpdate: async (req, res) => {
+    try {
+      await db.Product.update(req.body, {
+        where: req.params.id
+      })
+      return res.redirect('/products/products');
+    } catch (error) {
+      return res.json(error);
+    }
   },
 
-  detail: (req, res) => {
-    const product = products.find((product) => product.id == req.params.id);
-    res.render("products/detailOne", { product });
-    
+  detail: async (req, res) => {
+    try {
+      const product = await db.Products.findByPK(req.params.id);
+      return res.render("products/detailOne", { product });
+
+    } catch (error) {
+      return res.json(error);
+    }
+
   },
 
-  destroy: (req, res) => {
-    const indexProduct = products.findIndex(
-      (product) => product.id == req.body.id
-    );
-    products.splice(indexProduct, 1);
-    fs.writeFileSync(productsFilePath, JSON.stringify(products, null, 2));
-    res.redirect("/products/products");
+  destroy: async (req, res) => {
+    try {
+      await db.Product.destroy({
+        where: req.body.id
+      })
+      return res.redirect("/products/products");
+    } catch (error) {
+      return res.json(error);
+    }
   },
 };
 
