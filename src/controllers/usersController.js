@@ -5,66 +5,78 @@ const { validationResult } = require('express-validator');
 const bcrypt = require('bcryptjs');
 const oneMonth = 1000 * 60 * 60 * 24 * 30;
 
-//const User = require("../model/User");
+const db = require("../../models");
 const usersFilePath = path.join(__dirname, '../data/users.json');
 let users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 
 const controller = {
-    register(req,res){
-       return res.render('users/register')  
-      },
-      
-    create(req, res) {
-        const newUser = {
-            id: users[users.length - 1]?.id ? users[users.length - 1].id + 1 : 1,
-            rol: "user",
-            ...req.body,
-            password: bcrypt.hashSync(req.body.password, 10),
-            confirm_password: undefined,
-            avatar: req.file?.filename || "logo.png"
-        }
-        users.push(newUser);
-
-        fs.writeFileSync(usersFilePath, JSON.stringify(users, null, 2));
-        res.redirect('/users/login');
+    register: (req, res) => {
+        return res.render('users/register')
     },
-    login(req, res) {
+
+    create: async (req, res) => {
+        try {
+            await db.User.create({
+
+                rol: "user",
+                ...req.body,
+                password: bcrypt.hashSync(req.body.password, 10),
+                confirm_password: undefined,
+                avatar: req.file?.filename || "logo.png"
+            })
+            return res.redirect('/users/login');
+
+        } catch (error) {
+            return res.json(error);
+        }
+
+    },
+    login:async (req, res) => {
         // verificar cookie rememberme
         const userEmailFromCookie = req.cookies.recordarme;
-        
+
         if (userEmailFromCookie) {
-            const userToLogin = users.find((user) => user.email === userEmailFromCookie);
-            
-            if (userToLogin) { 
+            try {
+                const userToLogin = await db.Users.findOne({
+                    where: req.body.email
+                });
+
+            if (userToLogin) {
                 const { password, ...nonSensibleUserData } = userToLogin;
                 req.session.user = nonSensibleUserData;
                 return res.redirect('/users/profile');
             }
-        } 
+            return res.render('users/login');
+            } catch (error) {
+                return res.json(error);
+            }
+        }
 
-        return res.render('users/login');
     },
-    logout(req, res) {
+    logout: (req, res) => {
         req.session.destroy();
         res.clearCookie("recordarme");
         return res.redirect('/');
     },
-    loginProcess(req, res) {
+    loginProcess:async (req, res) => {
         // TODO: validar campos que vienen del form
-        const userToLogin = users.find((user) => user.email == req.body.email);
+        try {
+            const userToLogin = await db.Users.findOne({
+                where: req.body.email
+            });
         const rememberMe = Boolean(req.body.recordarme);
 
         if (userToLogin) {
             const okPassword = bcrypt.compareSync(req.body.password, userToLogin.password);
-            
+
             if (okPassword) {
                 const { password, ...nonSensibleUserData } = userToLogin;
                 req.session.user = nonSensibleUserData;
-                
+
                 // si puso rememberMe, guardar la cookie para la próxima vez que ingrese.
                 if (rememberMe) {
-                    res.cookie("recordarme", userToLogin.email, { 
-                        maxAge: oneMonth ,
+                    res.cookie("recordarme", userToLogin.email, {
+                        maxAge: oneMonth,
                         secure: true,
                         httpOnly: true,
                     });
@@ -72,7 +84,7 @@ const controller = {
 
                 return res.redirect('/users/profile');
             }
-            
+
             return res.render('users/login', {
                 errors: {
                     email: {
@@ -81,37 +93,64 @@ const controller = {
                 }
             });
         }
+        } catch (error) {
+            return res.json(error);
+        }
     },
-    profile(req, res) {
+    profile: (req, res) => {
         res.render('users/profile');
     },
-    delete(req, res) {
-        users = users.filter((user) => user.id != req.params.id);
-        fs.writeFileSync(usersFilePath, JSON.stringify(users, null, 2));
-        return res.redirect('/users');
+    delete: async (req, res) => {
+        try {
+            await db.Users.destroy({
+                where: req.params.id
+            });
+            return res.redirect('/users');
+
+        } catch (error) {
+            res.json(error)
+        }
+
     },
-    admin(req, res) {
+    admin: (req, res) => {
         return res.render('users/admin');
     },
-    list(req, res) {
-        res.render('users/users', { users });
-    },
-    detail(req, res) {
-        const user = users.find((user) => user.id == req.params.id);
-        res.render('users/userDetail', { user });
-    },
-    edit(req, res) {
-        const edit = users.find((user) => user.id == req.params.id);
-        res.render('users/edit', { user: edit });
-    },
-    update(req, res) {
-        const user = users.find((user) => user.id == req.params.id);
-        users[user] = {
-            ...users[user],
-            ...req.body
+    list: async (req, res) => {
+        try {
+            const users = await db.User.findAll();
+            return res.render('users/users', { users });
+        } catch (error) {
+            return res.json(error);
         }
-        fs.writeFileSync(usersFilePath, JSON.stringify(users, null, 2));
-        res.redirect('/users');
+    },
+    detail: async (req, res) => {
+        try {
+            const user = db.Users.findByPK(req.params.id);
+            return res.render('users/userDetail', { user });
+        } catch (error) {
+
+        }
+
+    },
+    edit: async (req, res) => {
+        try {
+            const edit = db.Users.findByPK(req.params.id);
+            return res.render('users/edit', { user: edit });
+        } catch (error) {
+            return res.json(error);
+        }
+
+    },
+    update: async (req, res) => {
+        try {
+            await db.Users.update(req.body, {
+                where: req.params.id
+            });
+
+            return res.redirect('/users');
+        } catch (error) {
+            return res.json(error);
+        }
     }
 
 }
