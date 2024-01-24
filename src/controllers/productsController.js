@@ -1,4 +1,4 @@
-const db = require('../../models');
+const db = require("../../models/index");
 
 const controller = {
   productDetail(req, res) {

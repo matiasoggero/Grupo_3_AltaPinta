@@ -1,13 +1,10 @@
-const { json } = require('express');
-const fs = require('fs');
-const path = require('path');
-const { validationResult } = require('express-validator');
+
 const bcrypt = require('bcryptjs');
 const oneMonth = 1000 * 60 * 60 * 24 * 30;
 
-const db = require("../../models");
-const usersFilePath = path.join(__dirname, '../data/users.json');
-let users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
+const db = require("../../models/index");
+
+
 
 const controller = {
     register: (req, res) => {
@@ -18,11 +15,11 @@ const controller = {
         try {
             await db.User.create({
 
-                rol: "user",
                 ...req.body,
                 password: bcrypt.hashSync(req.body.password, 10),
                 confirm_password: undefined,
-                avatar: req.file?.filename || "logo.png"
+                avatar: req.file?.filename || "logo.png",
+                roles_id: 2
             })
             return res.redirect('/users/login');
 

@@ -5,7 +5,11 @@
   "main": "app.js",
   "scripts": {
     "dev": "nodemon src/app.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "mig": "npx sequelize-cli db:migrate",
+    "mig-remove": "npx sequelize-cli db:migrate:undo:all",
+    "seed": "npx sequelize-cli db:seed:all",
+    "seed-remove": "npx sequelize-cli db:seed:undo:all"
   },
   "keywords": [],
   "author": "",
