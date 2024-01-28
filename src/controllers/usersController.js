@@ -2,7 +2,7 @@
 const bcrypt = require('bcryptjs');
 const oneMonth = 1000 * 60 * 60 * 24 * 30;
 
-const db = require("../../models/index");
+const db = require("../database/models/index");
 
 
 
@@ -31,24 +31,26 @@ const controller = {
     login:async (req, res) => {
         // verificar cookie rememberme
         const userEmailFromCookie = req.cookies.recordarme;
-
+        
         if (userEmailFromCookie) {
             try {
                 const userToLogin = await db.Users.findOne({
                     where: req.body.email
                 });
 
-            if (userToLogin) {
-                const { password, ...nonSensibleUserData } = userToLogin;
-                req.session.user = nonSensibleUserData;
-                return res.redirect('/users/profile');
-            }
-            return res.render('users/login');
+                if (userToLogin) {
+                    const { password, ...nonSensibleUserData } = userToLogin;
+                    req.session.user = nonSensibleUserData;
+                    return res.redirect('/users/profile');
+                }
+            
             } catch (error) {
                 return res.json(error);
             }
-        }
 
+        }
+        
+        return res.render('users/login');
     },
     logout: (req, res) => {
         req.session.destroy();

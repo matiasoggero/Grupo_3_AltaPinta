@@ -33,13 +33,19 @@ En mis tiempos libres exploro distintas páginas donde se puedan ver aplicados l
 Mi nombre es Martín Botta, tengo 38 años , vivo en la ciudad de Santa fe y actualmente trabajo en el area comercial de Sancor Salud. Con respecto a programción ,tengo conocimiento en html,css, javaScript y react js.
 
 Rocio Salamano,tengo 35 años,soy diseñadora de modas y vivo en Susana.
-<<<<<<< HEAD
-Con respecto al curso todo es super nuevo para mí, me esfuerzo todo el día para llegar y estudiar a full;Le dedico mucho tiempo a esta mini carrera, es mi prioridad en este momento!.
-Mi fuerte son mis ganas de aprender y superarme.git
-=======
 Con respecto al curso todo es super nuevo para mí,  me esfuerzo todo el día para llegar y estudiar a full;Le dedico mucho tiempo a esta mini carrera, es mi prioridad en este momento!.
 Mi fuerte son mis ganas de aprender y superarme.git
 
 como tablero de trabajo usamos trello. a continuacion compartimos la url:
 https://trello.com/b/jemgrOVF/alta-pinta
->>>>>>> d3ad4bcd0dbd2e2c6e0d4a45f4fd64193a62699f
+
+
+## Como correr la aplicación
+
+Crear una copia del archivo config.example.json, con el nombre de environment que se desee configurar, por ej:
+
+```
+config.development.json
+```
+
+allí se deberán especificar las variables necesarias para que la aplicación pueda ejecutarse correctamente. (ver config.example.json para saber qué variables se necesitan)

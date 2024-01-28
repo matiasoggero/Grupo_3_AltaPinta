@@ -1,3 +1,4 @@
 node_modules
 .DS_Store
-
+src/database/config/*
+!src/database/config/config.example.json

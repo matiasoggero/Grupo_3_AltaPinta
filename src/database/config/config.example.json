@@ -1,0 +1,7 @@
+{
+    "username": "<your_db_username>",
+    "password": "<your_db_password>",
+    "database": "<your_db>",
+    "host": "<your_db_host",
+    "dialect": "mysql"
+}
