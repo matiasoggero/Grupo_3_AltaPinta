@@ -32,7 +32,7 @@ app.use(authMiddlewares.authUserInfo);
 app.use(cookieParser());
 app.use("/products", productsRoutes);
 app.use("/users", usersRoutes);
-app.use("", commonRoutes);
+app.use("/", commonRoutes);
 
 app.use("/guest", require("./routes/guest"));
 

@@ -24,7 +24,8 @@ const upload = multer({ storage });
 const router = express.Router();
 
 router.get("/login",authMiddlewares.onlyGuestUser, usersController.login,);
-router.post("/login", usersController.loginProcess);
+router.post("/login", authMiddlewares.authUser, authMiddlewares.onlyGuestUser, usersController.loginProcess);
+
 router.get("/logout", usersController.logout);
 
 router.get("/register",authMiddlewares.onlyGuestUser, usersController.register);
@@ -32,6 +33,7 @@ router.get("/register",authMiddlewares.onlyGuestUser, usersController.register);
 router.post("/register", upload.single("avatar"), usersController.create);
 router.post("/register", validatorFormRegister, usersController.create); //ver esta línea
 router.get("/profile", authMiddlewares.authUser, usersController.profile);
+
 router.get("/", usersController.list);
 router.get("/:id", usersController.detail);
 

@@ -2,7 +2,7 @@
 const bcrypt = require('bcryptjs');
 const oneMonth = 1000 * 60 * 60 * 24 * 30;
 
-const db = require("../database/models/index");
+const db = require("../database/models/index.js");
 
 
 
@@ -34,7 +34,7 @@ const controller = {
         
         if (userEmailFromCookie) {
             try {
-                const userToLogin = await db.Users.findOne({
+                const userToLogin = await db.User.findOne({
                     where: req.body.email
                 });
 
@@ -49,7 +49,7 @@ const controller = {
             }
 
         }
-        
+         
         return res.render('users/login');
     },
     logout: (req, res) => {
@@ -60,7 +60,7 @@ const controller = {
     loginProcess:async (req, res) => {
         // TODO: validar campos que vienen del form
         try {
-            const userToLogin = await db.Users.findOne({
+            const userToLogin = await db.User.findOne({
                 where: req.body.email
             });
         const rememberMe = Boolean(req.body.recordarme);
@@ -101,7 +101,7 @@ const controller = {
     },
     delete: async (req, res) => {
         try {
-            await db.Users.destroy({
+            await db.User.destroy({
                 where: req.params.id
             });
             return res.redirect('/users');
@@ -124,7 +124,7 @@ const controller = {
     },
     detail: async (req, res) => {
         try {
-            const user = db.Users.findByPK(req.params.id);
+            const user = db.User.findByPK(req.params.id);
             return res.render('users/userDetail', { user });
         } catch (error) {
 
@@ -133,7 +133,7 @@ const controller = {
     },
     edit: async (req, res) => {
         try {
-            const edit = db.Users.findByPK(req.params.id);
+            const edit = db.User.findByPK(req.params.id);
             return res.render('users/edit', { user: edit });
         } catch (error) {
             return res.json(error);
@@ -142,7 +142,7 @@ const controller = {
     },
     update: async (req, res) => {
         try {
-            await db.Users.update(req.body, {
+            await db.User.update(req.body, {
                 where: req.params.id
             });
 
