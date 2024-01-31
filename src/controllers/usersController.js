@@ -80,9 +80,9 @@ const controller = {
                         httpOnly: true,
                     });
                 }
-
-                return res.redirect('/users/profile');
             }
+
+            userToLogin.roles_id == 1 ? res.redirect('/users/admin'):res.redirect('/');
 
             return res.render('users/login', {
                 errors: {
