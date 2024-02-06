@@ -28,10 +28,10 @@ const controller = {
         }
 
     },
-    login:async (req, res) => {
+    login: async (req, res) => {
         // verificar cookie rememberme
         const userEmailFromCookie = req.cookies.recordarme;
-        
+
         if (userEmailFromCookie) {
             try {
                 const userToLogin = await db.User.findOne({
@@ -43,13 +43,13 @@ const controller = {
                     req.session.user = nonSensibleUserData;
                     return res.redirect('/users/profile');
                 }
-            
+
             } catch (error) {
                 return res.json(error);
             }
 
         }
-         
+
         return res.render('users/login');
     },
     logout: (req, res) => {
@@ -57,33 +57,41 @@ const controller = {
         res.clearCookie("recordarme");
         return res.redirect('/');
     },
-    loginProcess:async (req, res) => {
+    loginProcess: async (req, res) => {
         // TODO: validar campos que vienen del form
         try {
             const userToLogin = await db.User.findOne({
-                where: req.body.email
+                where: { email: req.body.email }
             });
-        const rememberMe = Boolean(req.body.recordarme);
+            const rememberMe = Boolean(req.body.recordarme);
 
-        if (userToLogin) {
-            const okPassword = bcrypt.compareSync(req.body.password, userToLogin.password);
+            if (userToLogin) {
+                const okPassword = bcrypt.compareSync(req.body.password, userToLogin.password);
 
-            if (okPassword) {
-                const { password, ...nonSensibleUserData } = userToLogin;
-                req.session.user = nonSensibleUserData;
+                if (okPassword) {
+                    const { password, ...nonSensibleUserData } = userToLogin;
+                    req.session.user = nonSensibleUserData;
 
-                // si puso rememberMe, guardar la cookie para la próxima vez que ingrese.
-                if (rememberMe) {
-                    res.cookie("recordarme", userToLogin.email, {
-                        maxAge: oneMonth,
-                        secure: true,
-                        httpOnly: true,
-                    });
+                    // si puso rememberMe, guardar la cookie para la próxima vez que ingrese.
+                    if (rememberMe) {
+                        res.cookie("recordarme", userToLogin.email, {
+                            maxAge: oneMonth,
+                            secure: true,
+                            httpOnly: true,
+                        });
+                    }
+                    if (userToLogin.roles_id == 1) {
+                        return res.redirect('/users/admin')
+    
+    
+                    } else {
+                        return res.redirect('/');
+                    }
                 }
+
+        
+
             }
-
-            userToLogin.roles_id == 1 ? res.redirect('/users/admin'):res.redirect('/');
-
             return res.render('users/login', {
                 errors: {
                     email: {
@@ -91,8 +99,8 @@ const controller = {
                     }
                 }
             });
-        }
         } catch (error) {
+            console.log(error)
             return res.json(error);
         }
     },
