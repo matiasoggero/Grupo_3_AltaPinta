@@ -1,76 +1,60 @@
-<%- include('../partials/head.ejs',{styles: ['base', 'footer', 'header', 'productCreation']}) %>
+<%- include('../partials/head.ejs',{styles: ['base', 'footer' , 'header' , 'productCreation' ]}) %>
 
-<body>
-    <%- include('../partials/header.ejs') %>
-    
-    <main class="form-container">
-            <h2>Crear un nuevo ingrediente</h2>
-       
-        <div>
-            <form action="/products/productCreation" method="POST" enctype="multipart/form-data">
+    <body>
+        <%- include('../partials/header.ejs') %>
+
+            <main class="form-container">
+                <h2>Crear un nuevo ingrediente</h2>
+
                 <div>
-                    <label for="name">Nombre del ingrediente:</label>
-                    <input type="text" id="name" name="name" required/>
+                    <form action="/products/productCreation" method="POST" enctype="multipart/form-data">
+                        <div>
+                            <label for="name">Nombre del ingrediente:</label>
+                            <input type="text" id="name" name="name" required />
+                        </div>
+                        <div>
+                            <label for="description">Descripción:</label>
+                            <textarea name="description" id="description"></textarea>
+                        </div>
+                        <div>
+                            <label for="image">Seleccionar una imagen del ingrediente:</label>
+                            <input type="file" id="image" name="image" accept="image/*">
+                        </div>
+
+                        <label for="category">Categoría:</label>
+                        <select id="category" name="category">
+
+                            <option value="">Elegí</option>
+                            <% categories.forEach(category => { %>
+                                <option value="<%= category.id %>"><%= category.name %></option>
+                            <% }); %>
+
+                          
+                        </select>
+                        <div>
+                            <label for="price">Precio:</label>
+                            <input type="number" id="price" name="price" required />
+                        </div>
+                        <section class="button-container">
+                            <button class="btn btn-secundary" type="reset">Cancelar</button>
+                            <button class="btn btn-primary" type="submit">Crear</button>
+
+                        </section>
+                    </form>
+
                 </div>
-                <div>
-                    <label for="description">Descripción:</label>
-                    <textarea name="description" id="description" ></textarea>
-                </div>
-                <div>
-                    <label for="image">Seleccionar una imagen del ingrediente:</label>
-                    <input type="file" id="image" name="image" accept="image/*">
-                </div>
-                
-                <label for="category">Categoría:</label>
-                <select id="category" name="category">
-    
-                        <option value="">Elegí</option>
-                        <option value="burguer">Hamburguesas</option>
-                        <option value="bread">Panes</option>
-                        <option value="dressing">Aderezos</option>
-                        <option value="stiff">Fiambres</option>
-                        <option value="cheese">Quesos</option>
-                        <option value="green">Hojas Verdes</option>
-                        <option value="raw">Vegetales Crudos</option>
-                        <option value="cooked">Vegetales Cocidos</option>
-                    
-                </select>
-                <div>
-                    <label for="price">Precio:</label>
-                    <input type="number" id="price" name="price" required/>
-                </div>
-                <section class="button-container">
-                    <button class="btn btn-secundary" type="reset">Cancelar</button>
-                    <button class="btn btn-primary" type="submit">Crear</button>
-                    
-                </section>
-            </form>
-    
-        </div>
-        
-            
-            
-
-                
-        
-
-        
-    </main>
-    
-    <%- include('../partials/footer.ejs') %>
-   
-</body>
-
-</html>
-            
-           
 
 
 
 
 
-           
 
 
 
+            </main>
 
+            <%- include('../partials/footer.ejs') %>
+
+    </body>
+
+    </html>

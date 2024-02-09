@@ -1,23 +1,33 @@
-   
-    <%- include('../partials/head.ejs',{styles: ['base', 'footer', 'header', 'profile' ]}) %>
-    
+<%- include('../partials/head.ejs',{styles: ['base', 'footer' , 'header' , 'profile' ]}) %>
+
     <body>
         <%- include('../partials/header.ejs') %>
-        
-        <main>
-            
-            <div class="title">
-                <h2>Hola <%= locals.user.name %>!</h2>
-            </div>
-            
-            <div class="avatar">
-                <img src="/images/users/<%= locals.user?.avatar %>" alt="avatar" class="product-detail-img">
-            </div>
-            <div><%= user.email %></div>
-            
-        </main>
-            
-        <%- include('../partials/footer.ejs') %>
-        
+
+            <main>
+
+                <div class="title">
+                    <h2>Hola <%= locals.user.name %>!</h2>
+                </div>
+
+                <div class="avatar">
+                    <img src="/images/users/<%= locals.user?.avatar %>" alt="avatar" class="product-detail-img">
+                </div>
+                <div>
+                    <%= user.email %>
+                </div>
+                <section class="button-container">
+                    <div>
+                        <a href="/products/products/" class="btn btn-secundary">Listado de ingredientes</a>
+                    </div>
+                    <div>
+                        <a href="/products/productCreation" class="btn btn-primary">Agregar un ingrediente</a>
+                    </div>
+                </section>
+
+            </main>
+
+            <%- include('../partials/footer.ejs') %>
+
     </body>
+
     </html>

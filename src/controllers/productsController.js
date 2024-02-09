@@ -14,8 +14,14 @@ const controller = {
     }
   },
 
-  productCreation: (req, res) => {
-    res.render("products/productCreation");
+  productCreation: async (req, res) => {
+    try {
+      // Obtener todas las categorías disponibles
+      const categories = await db.Category.findAll();
+      res.render("products/productCreation", { categories });
+    } catch (error) {
+      return res.json(error);
+    }
   },
 
   productStore: async (req, res) => {
@@ -32,7 +38,7 @@ const controller = {
 
   productEdition: async (req, res) => {
     try {
-      const product = await db.Product.findByPK(req.params.id);
+      const product = await db.Product.findByPk(req.params.id);
       return res.render('products/productEdition', { productToEdit: product });
     } catch (error) {
       return res.json(error);
@@ -52,7 +58,9 @@ const controller = {
 
   detail: async (req, res) => {
     try {
-      const product = await db.Products.findByPK(req.params.id);
+      const product = await db.Product.findByPk(req.params.id, 
+        {include: [{association: "categories"}]
+      });
       return res.render("products/detailOne", { product });
 
     } catch (error) {
