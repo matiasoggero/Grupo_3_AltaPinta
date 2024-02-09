@@ -5,6 +5,11 @@
         <main>
             <h2 class="products-title"> Todos los ingredientes </h2>
         </main>
+        <section class="button-container">
+            <div>
+                <a href="/products/productCreation" class="btn btn-primary">Agregar un ingrediente</a>
+            </div>
+        </section>
         <div class="products-wrapper">
             <% locals.products && products.forEach(product => { %>
                 <div class="content-box">

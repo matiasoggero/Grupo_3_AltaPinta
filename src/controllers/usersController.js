@@ -104,7 +104,7 @@ const controller = {
             return res.json(error);
         }
     },
-    profile: (req, res) => {
+    profile: async (req, res) => {
         res.render('users/profile');
     },
     delete: async (req, res) => {

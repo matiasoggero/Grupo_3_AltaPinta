@@ -34,7 +34,7 @@ app.use("/products", productsRoutes);
 app.use("/users", usersRoutes);
 app.use("/", commonRoutes);
 
-app.use("/guest", require("./routes/guest"));
+// app.use("/guest", require("./routes/guest"));
 
 const port = 3040;
 app.listen(port, () => {
