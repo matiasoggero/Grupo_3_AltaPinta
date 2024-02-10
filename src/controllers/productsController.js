@@ -39,7 +39,8 @@ const controller = {
   productEdition: async (req, res) => {
     try {
       const product = await db.Product.findByPk(req.params.id);
-      return res.render('products/productEdition', { productToEdit: product });
+      const categoriesOptions = await db.Category.findAll();
+      return res.render('products/productEdition', { categoriesOptions, product });
     } catch (error) {
       return res.json(error);
     }
@@ -47,8 +48,10 @@ const controller = {
 
   productUpdate: async (req, res) => {
     try {
-      await db.Product.update(req.body, {
-        where: req.params.id
+      await db.Product.update({ ...req.body }, {
+        where: {
+          id: req.params.id
+        }
       })
       return res.redirect('/products/products');
     } catch (error) {
@@ -58,9 +61,10 @@ const controller = {
 
   detail: async (req, res) => {
     try {
-      const product = await db.Product.findByPk(req.params.id, 
-        {include: [{association: "categories"}]
-      });
+      const product = await db.Product.findByPk(req.params.id,
+        {
+          include: [{ association: "categories" }]
+        });
       return res.render("products/detailOne", { product });
 
     } catch (error) {
@@ -72,7 +76,10 @@ const controller = {
   destroy: async (req, res) => {
     try {
       await db.Product.destroy({
-        where: req.body.id
+        where: {
+          id: req.params.id
+        }
+
       })
       return res.redirect("/products/products");
     } catch (error) {

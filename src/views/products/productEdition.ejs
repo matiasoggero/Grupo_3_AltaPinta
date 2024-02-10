@@ -7,37 +7,32 @@
 
         <h4 class="title">Editar un ingrediente</h4>
         
-        <form action="/products/<%= productToEdit.id %>/edit?_method=PUT" method="post">
+        <form action="/products/<%= product.id %>/edit?_method=PUT" method="post">
             
             
             
             <div class="label-container">
                 <label for="name">Nombre del ingrediente:</label>
-                <input type="text" id="name" name="name" value="<%= productToEdit.name %>">
+                <input type="text" id="name" name="name" value="<%= product.name %>">
             </div>
             
             <div class="label-container">
                 <label for="description">Descripción:</label>
-                <textarea type="text" name="description" id="description" ><%= productToEdit.description %></textarea>
+                <textarea type="text" name="description" id="description" ><%= product.description %></textarea>
             </div>
             
             <label for="category">Categoría:</label>
             <select name="category">
 
                 <option value="">Elegí</option>
-                <option value="hamburguesas"<%= productToEdit.category === "hamburguesas" && "selected" %> >Hamburguesas</option>
-                <option value="panes" <%= productToEdit.category === "panes" && "selected" %>>Panes</option>
-                <option value="aderezos" <%= productToEdit.category === "aderezos" && "selected" %>>Aderezos</option>
-                <option value="fiambres" <%= productToEdit.category === "fiambres" && "selected" %>>Fiambres</option>
-                <option value="quesos" <%= productToEdit.category === "quesos" && "selected" %>>Quesos</option>
-                <option value="hojas verdes" <%= productToEdit.category === "hojas verdes" && "selected" %>>Hojas Verdes</option>
-                <option value="vegetales crudos" <%= productToEdit.category === "vegetales crudos" && "selected" %>>Vegetales Crudos</option>
-                <option value="vegetales cocidos" <%= productToEdit.category === "vegetales cocidos" && "selected" %>>Vegetales Cocidos</option>
-                
+                <% categoriesOptions.forEach(category => { %>
+                    <option value="<%= category.name %>" <%= product.categories_id === category.id? "selected" : "" %>><%= category.name %></option>
+                <% }); %>
+
             </select>
             <div class="label-container">
                 <label for="price">Precio:</label>
-                <input type="number" id="numPrice" name="price" required value="<%= productToEdit.price %>">
+                <input type="number" id="numPrice" name="price" required value="<%= product.price %>">
             </div>
             
             <section class="button-container">
