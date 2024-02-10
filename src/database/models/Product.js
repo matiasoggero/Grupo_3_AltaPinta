@@ -24,7 +24,7 @@ module.exports = (sequelize, dataTypes) => {
         },
         categories_id: {
             type: dataTypes.INTEGER(10),
-            allowNull: false
+            
         }
     };
     let config = {

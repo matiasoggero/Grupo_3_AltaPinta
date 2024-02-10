@@ -21,13 +21,14 @@
                             <input type="file" id="image" name="image" accept="image/*">
                         </div>
 
-                        <label for="category">Categoría:</label>
-                        <select id="category" name="category">
+                        <label for="">Categoría:</label>
+                        <select id="categoryId" name="categoryId">
 
                             <option value="">Elegí</option>
-                            <% categories.forEach(category => { %>
-                                <option value="<%= category.id  && "selected"%>"><%= category.name %></option>
-                            <% }); %>
+                            <% for( let i = 0; i < categories.length; i++ ) { %>
+                                <option value="<%= categories[i].id%>"><%= categories[i].name %>
+                                </option>
+                            <% } %>
 
                           
                         </select>
