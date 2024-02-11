@@ -5,8 +5,12 @@
     </form>
     <nav class="nav">
         <ul>
-            <li><a href="/users">USUARIOS</a></li>
-                  
+            <% if (locals.loggedIn) { %>
+                <li><a href="/users/logout">LOGOUT</a></li>
+            <% } else { %>
+                <li><a href="/users/login">LOGIN</a></li>
+            <% } %>
+            <li><a href="/users">USUARIOS</a></li>    
             <li><a href="/products/products">PRODUCTOS</a></li>
         </ul>
     </nav>

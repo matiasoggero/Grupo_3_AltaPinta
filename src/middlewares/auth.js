@@ -1,3 +1,5 @@
+const { getRedirectRouteByRole } = require("../utils/users")
+
 function authUserInfo(req, res, next) {
   const loggedInUser = req.session.user;
   res.locals.loggedIn = Boolean(loggedInUser);
@@ -16,7 +18,8 @@ function authUser(req, res, next) {
 
 function onlyGuestUser(req,res,next){
   if(req.session.user){
-    return res.redirect("/users/profile");
+    const routeToRedirect = getRedirectRouteByRole(req.session.user.roles_id)
+    return res.redirect(routeToRedirect);
   }
   next(); 
 }

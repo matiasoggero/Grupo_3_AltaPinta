@@ -1,4 +1,5 @@
 
+const { getRedirectRouteByRole } = require("../utils/users")
 const bcrypt = require('bcryptjs');
 const oneMonth = 1000 * 60 * 60 * 24 * 30;
 
@@ -80,13 +81,9 @@ const controller = {
                             httpOnly: true,
                         });
                     }
-                    if (userToLogin.roles_id == 1) {
-                        return res.redirect('/users/admin')
-    
-    
-                    } else {
-                        return res.redirect('/');
-                    }
+
+                    const redirectRoute = getRedirectRouteByRole(userToLogin.roles_id);
+                    return res.redirect(redirectRoute);
                 }
 
         

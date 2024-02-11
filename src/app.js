@@ -9,6 +9,7 @@ const methodOverride = require("method-override"); // Pasar poder usar los méto
 const sessions = require("express-session");
 const cookieParser = require("cookie-parser");
 const app = express();
+const ONE_MONTH_IN_MILISECONDS = 1000 * 60 * 60 * 24 * 30;
 
 // configuracion para usar ejs en lugar de html
 app.set("view engine", "ejs");
@@ -24,7 +25,7 @@ app.use(
     resave: false,
     saveUninitialized: false,
     cookie: {
-      maxAge: 15000,
+      maxAge: ONE_MONTH_IN_MILISECONDS,
     }
   })
 );
