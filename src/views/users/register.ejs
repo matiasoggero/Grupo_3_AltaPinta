@@ -10,16 +10,16 @@
 
                 <label for="name">Nombre y Apellido:</label>
                 <input type="text" id="name" name="name" placeholder="Debe contener al menos 2 caracteres" minlength="2" required/>
-                <div class= "fieldError">
+                <div id = "nameErrors" class= "fieldError">
                 </div>
                 
                 <label for="email">Email:</label>
                 <input type="email" id="email" name="email" placeholder="Debe contener un email valido" minlength="8" required/>
-                <div class= "fieldError">
+                <div id="emailErrors" class= "fieldError">
                 </div>
                 
                 <label for="date">Fecha de nacimiento:</label>
-                <input type="date" id="date" name="date" pattern="[0-9]{9}" required/>
+                <input type="date" id="date" name="date" required/>
 
                 <label for="address">Domicilio</label>
                 <input type="text" id="address" name="address" placeholder="Debe contener una direccion valida" required/>
@@ -33,12 +33,12 @@
 
                 <label for="avatar">Imagen</label>
                 <input type="file" id="avatar" name="avatar"/>
-                <div class= "fieldError" required>
+                <div id = "imageErrors" class= "fieldError" required>
                 </div>
                 
                 <label for="password">Contraseña:</label>
-                <input type="password" id="password" name="password" minlength="8" placeholder="Debe contener al menos 8 caracteres" required/>
-                <div class= "fieldError">
+                <input type="password" id="password" name="password" minlength="8" placeholder="Ingrese una contraseña" required/>
+                <div id = "passwordErrors" class= "fieldError">
                 </div>
                 
                 <label for="confirm_password">Confirmar contraseña:</label>
