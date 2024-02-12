@@ -10,7 +10,7 @@
         <form action="/users/login" method="post">
             
             <div class="label-container">
-                <input type="email" name="email" id="email" placeholder="email">
+                <input type="email" name="email" id="email" placeholder="email" required>
                 <% if (locals.errors && errors.email) { %>
                 <div class="text-danger">
                     <%= (errors.email.msg) %>
@@ -18,18 +18,18 @@
                 <% } %>
             </div>
             <div class="label-container">
-                        <input type="password" name="password" id="password" placeholder="Contraseña">
+                        <input type="password" name="password" id="password" placeholder="Contraseña" required>
             </div>
             <div class="button-container">
                 <button class="btn btn-primary" type="submit">Enviar</button>
             </div>
-
+            <div class = "rememberme">
             <label for="recordarme">RECORDARME</label>
-            <input type="checkbox" name="recordarme" id="recordarme">
+            <input type="checkbox" name="recordarme" id="recordarme" >
+        </div>
         </form>
     </main>
     
     <%- include('../partials/footer.ejs') %>
-    <!-- <script src="/src/public/js/login.js"></script> -->
 </body>
-</html> 
+</html>

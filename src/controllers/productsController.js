@@ -70,7 +70,6 @@ const controller = {
     } catch (error) {
       return res.json(error);
     }
-
   },
 
   destroy: async (req, res) => {
