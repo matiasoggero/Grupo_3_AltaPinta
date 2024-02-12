@@ -21,10 +21,10 @@
             </div>
             
             <label for="category">Categoría:</label>
-            <select name="category">
+            <select name="categoryId">
 
                 <option value="">Elegí</option>
-                <% categoriesOptions.forEach(category => { %>
+                <% categories.forEach(category => { %>
                     <option value="<%= category.name %>" <%= product.categories_id === category.id? "selected" : "" %>><%= category.name %></option>
                 <% }); %>
 
