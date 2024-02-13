@@ -13,37 +13,64 @@
                     <form action="/products/productCreation" method="POST" enctype="multipart/form-data" id="formProductCreation">
                         <div>
                             <label for="name">Nombre del ingrediente:</label>
-                            <input type="text" id="name" name="name" required />
+                            <input type="text" id="name" name="name"
+                                value="<%= (locals.oldData && oldData.name) && oldData.name %>" />
+                            <% if (locals.errors && errors.name) { %>
+                                <span class="fieldError">
+                                    <%= errors.name.msg %>
+                                </span>
+                                <% } %>
                         </div>
                         <div>
                             <label for="description">Descripción:</label>
-                            <textarea name="description" id="description"></textarea>
+                            <textarea name="description" id="description"
+                                value="<%= (locals.oldData && oldData.description) && oldData.description %>"
+                                ></textarea>
+                            <% if (locals.errors && errors.description) { %>
+                                <span class="fieldError">
+                                    <%= errors.description.msg %>
+                                </span>
+                                <% } %>
                         </div>
                         <div>
                             <label for="image">Seleccionar una imagen del ingrediente:</label>
-                            <input type="file" id="image" name="image" accept="image/*">
+                            <input type="file" id="image" name="image">
+                            <% if (locals.errors && errors.image) { %>
+                                <span class="fieldError"><%= errors.image.msg %></span>
+                            <% } %>
                         </div>
 
-                        <label for="">Categoría:</label>
+                        <label for="categoryId">Categoría:</label>
                         <select id="categoryId" name="categoryId">
 
                             <option value="">Elegí</option>
-                            <% for( let i = 0; i < categories.length; i++ ) { %>
-                                <option value="<%= categories[i].id%>"><%= categories[i].name %>
+                            <% for(let i=0; i < categories.length; i++) { %>
+                                <option value="<%= categories[i].id %>" <%=categories[i].id===(locals.oldData &&
+                                    oldData.categoryId) ? 'selected' : '' %>>
+                                    <%= categories[i].name %>
                                 </option>
-                            <% } %>
-
-                          
+                                <% } %>
                         </select>
-                        <div>
-                            <label for="price">Precio:</label>
-                            <input type="number" id="price" name="price" required/>
-                        </div>
-                        <section class="button-container">
-                            <button class="btn btn-secundary" type="reset">Cancelar</button>
-                            <button class="btn btn-primary" type="submit">Crear</button>
+                        <% if (locals.errors && errors.categoryId) { %>
+                            <span class="fieldError">
+                                <%= errors.categoryId.msg %>
+                            </span>
+                            <% } %>
+                                <div>
+                                    <label for="price">Precio:</label>
+                                    <input type="number" id="price" name="price"
+                                        value="<%= (locals.oldData && oldData.price) && oldData.price %>" />
+                                    <% if (locals.errors && errors.price) { %>
+                                        <span class="fieldError">
+                                            <%= errors.price.msg %>
+                                        </span>
+                                        <% } %>
+                                </div>
+                                <section class="button-container">
+                                    <button class="btn btn-secundary" type="reset">Cancelar</button>
+                                    <button class="btn btn-primary" type="submit">Crear</button>
 
-                        </section>
+                                </section>
                     </form>
 
                 </div>
