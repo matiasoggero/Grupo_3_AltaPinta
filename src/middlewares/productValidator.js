@@ -6,7 +6,6 @@ const validatorFormProduct = [
         .isLength({ min: 5 }).withMessage('El nombre debe tener al menos 5 caracteres'),
 
     body('description').isLength({ min: 20 }).withMessage('La descripción debe tener al menos 20 caracteres'),
-
     body('image').custom((value, { req }) => {
         if (req.files && req.files.image) {
             const imagen = req.files.image;
@@ -22,12 +21,7 @@ const validatorFormProduct = [
     body('price')
         .notEmpty().withMessage("Debes ingresar un importe").bail()
         .isNumeric().withMessage('El precio debe ser un número')
-        .custom((value, { req }) => {
-            if (parseFloat(value) <= 0) {
-                throw new Error('El precio debe ser mayor que cero');
-            }
-            return true;
-        })
+
 ];
 
 module.exports = { validatorFormProduct };

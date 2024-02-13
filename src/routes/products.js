@@ -32,8 +32,9 @@ router.post("/productCreation", validatorFormProduct, upload.single("image"), pr
 router.get("/detailOne/:id",authMiddlewares.authUser, productsController.detail);
 
 router.get("/:id/edit", authMiddlewares.authUser, productsController.productEdition);
-router.put("/:id/edit", validatorFormProduct, productsController.productUpdate)
+router.put("/:id/edit", productsController.productUpdate)
 router.delete("/:id/delete", authMiddlewares.authUser, productsController.destroy);
 //tuve que eliminar los  authMiddlewares.authUser, para que me tome el middleware validatorFormProduct
 //en rutas post y put de formularios de creacion y edición productos
+
 module.exports = router;
