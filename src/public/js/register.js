@@ -19,8 +19,6 @@ window.addEventListener("load",() => {
         const currentInputLength = event.target.value.length;
         const errors = [];
 
-        console.log(currentInputLength)
-
         if (currentInputLength <= 2){
             errors.push("Debes completar correctamente este campo")
         }
