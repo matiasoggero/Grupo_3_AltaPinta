@@ -2,10 +2,14 @@ window.addEventListener("load",() => {
     const nameInput = document.querySelector("#name");
     const emailInput = document.querySelector("#email");
     const imageInput = document.querySelector("#avatar");
+    const passwordInput = document.querySelector("#password");
+    const confirm_passwordInput = document.querySelector("#confirm_password");
 
     const nameErrors = document.querySelector("#nameErrors");
     const emailErrors = document.querySelector("#emailErrors");
     const imageErrors = document.querySelector("#imageErrors");
+    const passwordErrors = document.querySelector("#passwordErrors");
+    const confirm_passwordErrors = document.querySelector("#confirmPasswordErrors");
 
     nameInput.addEventListener("focus",() => {
         nameErrors.innerHTML ="";
@@ -15,19 +19,17 @@ window.addEventListener("load",() => {
         const currentInputLength = event.target.value.length;
         const errors = [];
 
-        console.log(currentInputLength)
-
         if (currentInputLength <= 2){
             errors.push("Debes completar correctamente este campo")
         }
         
         errors.forEach((error) => {
-            nameErrors.innerHTML += `${error}/n`;
+            nameErrors.innerHTML += `${error}`;
         });
     });
 
     emailInput.addEventListener("focus",() => {
-        email.innerHTML ="";
+        emailErrors.innerHTML ="";
     });
 
     emailInput.addEventListener("blur",(event)=>{
@@ -39,30 +41,32 @@ window.addEventListener("load",() => {
         }
 
         errors.forEach((error) => {
-            emailErrors.innerHTML += `${error}/n`;
+            emailErrors.innerHTML += `${error}`;
         })
     });
 
-   imageInput.addEventListener("change",(event)=>{
-    const allowedExtensions = ['jpg', 'jpeg', 'png', 'gif'];
-    const imageName = event.target.value;
-    const imageNameParts = imageName.split('.');
-    const fileExtension = imageNameParts.slice(-1)[0].toLowerCase();
-    const isAllowed = allowedExtensions.indexOf(fileExtension) >= 0;
-    const errors = [];
+    imageInput.addEventListener("change",(event)=>{
+        const allowedExtensions = ['jpg', 'jpeg', 'png', 'gif'];
+        const imageName = event.target.value;
+        const imageNameParts = imageName.split('.');
+        const fileExtension = imageNameParts.slice(-1)[0].toLowerCase();
+        const isAllowed = allowedExtensions.indexOf(fileExtension) >= 0;
+        const errors = [];
 
-        if(!isAllowed){
+            if(!isAllowed){
             errors.push("Debes adjuntar un archivo válido (jpg, jpeg, png)")
-         }
-        if(errors.length === 0){
-            imageErrors.innerHTML = ""
-        }else{
-            errors.forEach((error) => {
-                imageErrors.innerHTML += `${error}<br>`;
-            });
-        }
+            }
+             
+            if(errors.length === 0){
+                imageErrors.innerHTML = ""
+            }else{
+                errors.forEach((error) => {
+                    imageErrors.innerHTML += `${error}<br>`;
+                });
+            }
     })
-    password.addEventListener("change",(event)=>{
+
+    passwordInput.addEventListener("change",(event)=>{
         passwordErrors.innerHTML = "";
         const password = event.target.value;
         const passwordlength = password.length;
@@ -97,7 +101,21 @@ window.addEventListener("load",() => {
                 passwordErrors.innerHTML += `${error}<br>`;
             });
         }
-    })
+    });
 
+    confirm_passwordInput.addEventListener("focus",() => {
+        confirm_passwordErrors.innerHTML ="";
+    });
 
+    confirm_passwordInput.addEventListener("blur",() => {
+    const errors = [];
+
+        if(!confirm_passwordInput === passwordInput){
+            errors.push("No hay coincidencia con la contraseña anterior")
+        }
+        if(errors.length > 0){
+            confirm_passwordErrors.innerHTML += `${error}`;
+        };
     })
+});
+
