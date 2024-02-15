@@ -1,6 +1,6 @@
 window.addEventListener("load", function () {
 
-    let formulario = document.querySelector("#formProductCreation")
+    let formulario = document.querySelector("#formProductEdition")
 
     formulario.addEventListener("submit", function (e) {
 
@@ -27,14 +27,7 @@ window.addEventListener("load", function () {
         }
 
 
-        let select = document.querySelector("#categoryId");
-
-
-        if (select.value === "") {
-            errores.push("Por favor, selecciona una categoria");
-        }
-
-        let price = document.querySelector("#price")
+        let price = document.querySelector("#numPrice")
 
         if (price.value === "" || isNaN(price.value)) {
             errores.push("Por favor, ingresa un valor numérico válido para el precio.");
