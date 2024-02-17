@@ -193,22 +193,3 @@ body("imagen").custom((value) => {
   }
   return true;
 });
-
-// Tablas secundarias:
-body("talla").custom(async (value) => {
-  // Verificar si la talla existe en la base de datos
-  // Implementa esta lógica según tus necesidades
-  const tallaExistente = await Talla.findOne({ nombre: value });
-  if (!tallaExistente) {
-    throw new Error("La talla no es válida.");
-  }
-  return true;
-}),
-  body("color").custom(async (value) => {
-    // Verificar si el color existe en la base de datos
-    const colorExistente = await Color.findOne({ nombre: value });
-    if (!colorExistente) {
-      throw new Error("El color no es válido.");
-    }
-    return true;
-  });
