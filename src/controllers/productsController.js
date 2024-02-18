@@ -49,7 +49,8 @@ const controller = {
     try {
       const product = await db.Product.findByPk(req.params.id);
       const categories = await db.Category.findAll();
-      return res.render('products/productEdition', { categories, product });
+      
+      return res.render('products/productEdition', { product, categories });
     } catch (error) {
       return res.json(error);
     }
@@ -63,7 +64,7 @@ const controller = {
       // Si hay errores de validación, renderiza la vista con los errores
 
       return res.render("products/productEdition",
-        { errors: errors.mapped(), categories, product });
+      { errors: errors.mapped(), oldData: req.body, categories });
     }
     try {
       await db.Product.update({ ...req.body }, {
