@@ -64,7 +64,7 @@ const controller = {
       // Si hay errores de validación, renderiza la vista con los errores
 
       return res.render("products/productEdition",
-      { errors: errors.mapped(), oldData: req.body, categories });
+      { errors: errors.mapped(), oldData: req.body, product, categories });
     }
     try {
       await db.Product.update({ ...req.body }, {
