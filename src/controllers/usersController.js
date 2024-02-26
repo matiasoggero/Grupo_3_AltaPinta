@@ -129,7 +129,7 @@ const controller = {
     },
     detail: async (req, res) => {
         try {
-            const user = db.User.findByPK(req.params.id);
+            const user = await db.User.findByPK(req.params.id);
             return res.render('users/userDetail', { user });
         } catch (error) {
 

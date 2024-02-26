@@ -11,6 +11,9 @@ const cookieParser = require("cookie-parser");
 const app = express();
 const ONE_MONTH_IN_MILISECONDS = 1000 * 60 * 60 * 24 * 30;
 
+const apiProductRoute = require('./routes/api/apiProductRoute');
+const apiUserRoute = require('./routes/api/apiUserRoute');
+
 // configuracion para usar ejs en lugar de html
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "/views"));
@@ -34,6 +37,9 @@ app.use(cookieParser());
 app.use("/products", productsRoutes);
 app.use("/users", usersRoutes);
 app.use("/", commonRoutes);
+
+app.use('/api/user',apiUserRoute);
+app.use('/api/product',apiProductRoute);
 
 // app.use("/guest", require("./routes/guest"));
 

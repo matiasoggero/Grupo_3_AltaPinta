@@ -1,7 +1,7 @@
 <%- include('../partials/head.ejs',{styles: ['base', 'footer' , 'header' , 'productCreation' ]}) %>
 
     <body>
-        <%- include('../partials/header.ejs') %>
+        <%- include('../partials/headerAdmin.ejs') %>
 
             <main class="form-container">
                 <h2>Crear un nuevo ingrediente</h2>
@@ -23,9 +23,7 @@
                         </div>
                         <div>
                             <label for="description">Descripción:</label>
-                            <textarea name="description" id="description"
-                                value="<%= (locals.oldData && oldData.description) && oldData.description %>"
-                                ></textarea>
+                            <textarea name="description" id="description"><%= (locals.oldData && oldData.description) && oldData.description %></textarea>
                             <% if (locals.errors && errors.description) { %>
                                 <span class="fieldError">
                                     <%= errors.description.msg %>
@@ -45,10 +43,10 @@
 
                             <option value="">Elegí</option>
                             <% for(let i=0; i < categories.length; i++) { %>
-                                <option value="<%= categories[i].id %>" <%=categories[i].id===(locals.oldData &&
-                                    oldData.categoryId) ? 'selected' : '' %>>
+                                <option value="<%= categories[i].id %>" <%= (locals.oldData &&
+                                    oldData.categoryId == categories[i].id) ? 'selected' : '' %>>
                                     <%= categories[i].name %>
-                                </option>
+                            </option>
                                 <% } %>
                         </select>
                         <% if (locals.errors && errors.categoryId) { %>

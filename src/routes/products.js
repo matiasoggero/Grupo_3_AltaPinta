@@ -27,12 +27,11 @@ router.get("/productDetail", authMiddlewares.authUser, productsController.produc
 router.get("/products", productsController.productsShow);
 
 router.get("/productCreation", authMiddlewares.authUser, productsController.productCreation);
-router.post("/productCreation", validatorFormProduct, upload.single("image"), productsController.productStore);
-
+router.post("/productCreation", upload.single("image"), validatorFormProduct, productsController.productStore);
 router.get("/detailOne/:id",authMiddlewares.authUser, productsController.detail);
 
 router.get("/:id/edit", authMiddlewares.authUser, productsController.productEdition);
-router.put("/:id/edit", productsController.productUpdate)
+router.put("/:id/edit", validatorFormProduct, productsController.productUpdate)
 router.delete("/:id/delete", authMiddlewares.authUser, productsController.destroy);
 //tuve que eliminar los  authMiddlewares.authUser, para que me tome el middleware validatorFormProduct
 //en rutas post y put de formularios de creacion y edición productos
