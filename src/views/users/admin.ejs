@@ -1,5 +1,22 @@
 <%- include('../partials/head.ejs',{styles: ['base', 'footer' , 'header' , 'index' ]}) %>
 <body>
     <%- include('../partials/headerAdmin.ejs') %>
+    <main>
+
+        <div class="title">
+            <h2>Hola <%= user.name %>!</h2>
+        </div>
+
+        <div class="avatar">
+            <img src="/images/users/<%= locals.user?.avatar %>" alt="avatar" class="product-detail-img">
+        </div>
+        <div>
+            <%= user.email %>
+        </div>
+
+    </main>
+
+    <%- include('../partials/footer.ejs') %>
+
 </body>
 </html>
