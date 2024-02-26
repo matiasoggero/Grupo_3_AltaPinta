@@ -126,4 +126,46 @@ Durante las reuniones que el equipo tiene, evitar desviarse para aprovechar al m
 
 No encontramos falencias dentro de este sprint, quizas dada la dificultad para realizar las actividades.
 
+# SPRINT7
 
+## COMENZAR A HACER
+Implementar ramas para trabajar con GIT.
+
+## HACER MAS
+
+Tratar de organizarnos de manera equitativa las tareas del proyecto, ya que somos muchos integrantes para un solo proyecto.
+
+## CONTINUAR HACIENDO
+
+Seguir comunicandonos entre los integrantes del equipo por wsp sobre los avances individuales.
+Seguir con el buen clima de trabajo, ayudándonos entre nosotros.
+
+## HACER MENOS
+
+Durante las reuniones que el equipo tiene, evitar desviarse para aprovechar al máximo el tiempo.
+
+## DEJAR DE HACER
+
+No encontramos falencias dentro de este sprint, quizas dada la dificultad para realizar las actividades.
+
+# SPRINT8
+
+## COMENZAR A HACER
+Implementar ramas para trabajar con GIT.
+
+## HACER MAS
+
+Tratar de organizarnos de manera equitativa las tareas del proyecto, ya que somos muchos integrantes para un solo proyecto.
+
+## CONTINUAR HACIENDO
+
+Seguir comunicandonos entre los integrantes del equipo por wsp sobre los avances individuales.
+Seguir con el buen clima de trabajo, ayudándonos entre nosotros.
+
+## HACER MENOS
+
+Durante las reuniones que el equipo tiene, evitar desviarse para aprovechar al máximo el tiempo.
+
+## DEJAR DE HACER
+
+No encontramos falencias dentro de este sprint, quizas dada la dificultad para realizar las actividades.
