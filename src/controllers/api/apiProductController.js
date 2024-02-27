@@ -3,19 +3,11 @@ const db = require('../../database/models/index');
 const controller = {
     productsShow: async (req, res) => {
         try {
-            const data = await db.Product.findAll({ include: ["categories"] });
+            const data = await db.Product.findAll({ include: ["categories"],attributes:{exclude:['categories_id']}});
             const category = await db.Category.findAll();
 
-            const products = []
-            data.forEach(product => {
-                products.push({
-                    id: product.id,
-                    name: product.name,
-                    description: product.description,
-                    category: product.categories.name,
-                    detail: `http://localhost:3040/api/product/${product.id}`
-                })
-            });
+            const products = data.map(product => ({...product.dataValues,
+                detail: `/api/product/${product.id}`}))
 
             return res.send({
                 count: data.length,
