@@ -29,6 +29,7 @@ router.get("/products", productsController.productsShow);
 router.get("/productCreation", authMiddlewares.authUser, productsController.productCreation);
 router.post("/productCreation", upload.single("image"), validatorFormProduct, productsController.productStore);
 router.get("/detailOne/:id",authMiddlewares.authUser, productsController.detail);
+router.get("/productFinish",productsController.finish);
 
 router.get("/:id/edit", authMiddlewares.authUser, productsController.productEdition);
 router.put("/:id/edit", validatorFormProduct, productsController.productUpdate)

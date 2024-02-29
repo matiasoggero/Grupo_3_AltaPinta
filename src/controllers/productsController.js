@@ -105,6 +105,10 @@ const controller = {
       return res.json(error);
     }
   },
+
+  finish: (req,res) => {
+    res.render('products/productFinish');
+  }
 };
 
 module.exports = controller;
