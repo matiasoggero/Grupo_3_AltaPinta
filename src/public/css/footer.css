@@ -21,11 +21,13 @@ footer div a i{
 .footer-list {
     padding: 0;
     list-style: none;
+    text-align: center;
 }
 
 .footer-list li a{
     color:rgb(168, 20, 20);
 }
+
 .social-icons {
     display: flex;
     font-size: 30px;
@@ -37,4 +39,12 @@ footer div a i{
  display: flex;
  align-content: flex-end;
  justify-content: space-evenly;
+}
+
+@media (max-width: 768px) {
+    .footer-container {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
 }

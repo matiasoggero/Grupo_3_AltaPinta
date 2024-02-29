@@ -107,14 +107,16 @@ window.addEventListener("load",() => {
         confirm_passwordErrors.innerHTML ="";
     });
 
-    confirm_passwordInput.addEventListener("blur",() => {
+    confirm_passwordInput.addEventListener("blur",(event) => {
     const errors = [];
-
-        if(!confirm_passwordInput === passwordInput){
+    
+        if(event.target.value !== passwordInput.value){
             errors.push("No hay coincidencia con la contraseña anterior")
         }
         if(errors.length > 0){
-            confirm_passwordErrors.innerHTML += `${error}`;
+            errors.forEach((error) => {
+                confirm_passwordErrors.innerHTML += `${error}<br>`;
+            })
         };
     })
 });

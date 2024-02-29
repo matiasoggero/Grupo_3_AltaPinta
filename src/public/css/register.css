@@ -1,4 +1,4 @@
-main{
+ main{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -25,4 +25,13 @@ form input{
     margin:5px; 
     text-align: center;
     display: flex;
+}
+
+@media(max-width: 769px){
+
+   form{
+    box-sizing: border-box;
+    margin-top: 10px;
+    padding: 0px;
+   }
 }
