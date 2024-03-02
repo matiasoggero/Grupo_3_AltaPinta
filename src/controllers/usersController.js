@@ -70,9 +70,9 @@ const controller = {
                 const okPassword = bcrypt.compareSync(req.body.password, userToLogin.password);
 
                 if (okPassword) {
-                    const { password, ...nonSensibleUserData } = userToLogin;
+                    const { password, ...nonSensibleUserData } = userToLogin.dataValues;
                     req.session.user = nonSensibleUserData;
-
+                    res.locals.user = nonSensibleUserData;
                     // si puso rememberMe, guardar la cookie para la próxima vez que ingrese.
                     if (rememberMe) {
                         res.cookie("recordarme", userToLogin.email, {
@@ -101,8 +101,8 @@ const controller = {
             return res.json(error);
         }
     },
-    profile: async (req, res) => {
-        res.render('users/profile');
+    profile:  (req, res) => {  
+        return res.render('users/profile', {user : req.session.user});
     },
     delete: async (req, res) => {
         try {
@@ -117,7 +117,7 @@ const controller = {
 
     },
     admin: (req, res) => {
-        return res.render('users/admin');
+        return res.render('users/admin', {user : req.session.user});
     },
     list: async (req, res) => {
         try {
