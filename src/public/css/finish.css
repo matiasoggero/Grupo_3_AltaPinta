@@ -1,0 +1,17 @@
+.title-finish{
+    display: block;
+    text-align: center;
+}
+
+.hamb{
+    text-align: center;
+}
+
+.form-finish{
+    text-align: center;
+    background-color: #fff;   
+}
+
+.form-finish button{
+    background-color: #fff;
+}
