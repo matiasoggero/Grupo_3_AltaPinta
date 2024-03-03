@@ -92,6 +92,9 @@ const controller = {
 
   },
 
+ 
+
+
   destroy: async (req, res) => {
     try {
       await db.Product.destroy({

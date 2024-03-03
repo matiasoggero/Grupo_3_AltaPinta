@@ -8,7 +8,7 @@ const db = require("../database/models/index.js");
 
 
 const controller = {
-    register: (req, res) => {
+    register: (_req, res) => {
         return res.render('users/register')
     },
 
@@ -110,7 +110,7 @@ const controller = {
     admin: (req, res) => {
         return res.render('users/admin', { user: req.session.user });
     },
-    list: async (req, res) => {
+    list: async (_req, res) => {
         try {
             const users = await db.User.findAll();
             return res.render('users/users', { users });
@@ -166,4 +166,5 @@ const controller = {
     }
 
 }
+
 module.exports = controller;

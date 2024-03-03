@@ -37,9 +37,10 @@ router.get("/admin", authMiddlewares.authUser,usersController.admin);
 router.get("/", usersController.list);
 router.get("/userDetail/:id/", usersController.detail);
 
-router.get("/:id/edit", usersController.edit);
-router.put("/:id/edit", authMiddlewares.authUser, usersController.update);
-router.delete("/:id/delete", usersController.delete);
+
+router.get("/:id/edit",authMiddlewares.authUser, usersController.edit);
+router.put("/:id/edit",authMiddlewares.authUser, usersController.update);
+router.delete("/:id/delete",authMiddlewares.authUser, usersController.delete);
 
 
 module.exports = router;
