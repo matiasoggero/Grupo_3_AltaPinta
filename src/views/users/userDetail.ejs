@@ -1,33 +1,30 @@
-<%- include('../partials/head.ejs',{styles: ['base', 'footer' , 'header' , 'index' ]}) %>
+<%- include('../partials/head.ejs',{styles: ['base', 'footer' , 'header' , 'detailOne', 'userDetail'  ]}) %>
 
     <body>
         <%- include('../partials/headerAdmin.ejs') %>
 
-            <main>
+            <main class="main-container">
                 <div>
                     <p>
-                        <%= locals.user?.name %>
+                        Nombre: <%= locals.user?.name %>
                     </p>
                     <p>
-                        <%= locals.user?.email %>
+                        Correo Electrónico: <%= locals.user?.email %>
                     </p>
                     <p>
-                        <%= locals.user?.date %>
+                        Domicilio: <%= locals.user?.address %>
                     </p>
                     <p>
-                        <%= locals.user?.adress %>
+                        Teléfono: <%= locals.user?.phone %>
                     </p>
                     <p>
-                        <%= locals.user?.phone %>
-                    </p>
-                    <p>
-                        <%= locals.user?.rol %>
+                        Rol: <%= locals.user?.roles_id %>
                     </p>
 
-                    <a href="/users/<%= locals.user?.id %>/edit" class="action-button edit">EDITAR USUARIO</a>
-                    <form action="/users/<%= locals.user?.id %>/delete?_method=DELETE" method="POST"
+                    <a href="/users/<%= user.id %>/edit" class="btn btn-secundary">EDITAR USUARIO</a>
+                    <form action="/users/<%= user.id %>/delete?_method=DELETE" method="POST"
                         style="display: inline-flex">
-                        <button type="submit" class="action-button delete">ELIMINAR</button>
+                        <button type="submit" class="btn btn-primary">ELIMINAR</button>
                     </form>
                 </div>
             </main>

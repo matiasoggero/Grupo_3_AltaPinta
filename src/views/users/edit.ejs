@@ -1,33 +1,34 @@
-<%- include('../partials/head.ejs',{styles: ['base', 'footer', 'header', 'register']}) %>
-    
-<body>
-    <%- include('../partials/headerAdmin.ejs') %>
-    <main>
-        
-        <form action="/users/<%= user.id %>/edit?_method=PUT" method="POST">
-            
-            <label for="name">Nombre y Apellido:</label>
-            <input type="text" id="name" name="name" value="<%=user.name%>"required/>
-            
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" value="<%=user.email%>"required/>
-            
-            <label for="date">Fecha de nacimiento:</label>
-            <input type="date" id="date" name="date"value="<%=user.date%>"required />
-            
-            <label for="address">Domicilio</label>
-            <input type="text"id="address"name="address"value="<%=user.address%>"required/>
-            
-            <label for="phone">Telefono</label>
-            <input type="number"id="phone"name="phone"pattern="[0-9]{9}"value="<%=user.phone%>"required/>
-             
-            <div class="button-container">
-                <button class="btn btn-secundary" type="reset">Borrar datos</button>
-                <button class="btn btn-primary" type="submit">Enviar</button>
-            </div>
-        </main>
-        
-        <%- include('../partials/footer.ejs') %>
-        
+<%- include('../partials/head.ejs',{styles: ['base', 'footer' , 'header' , 'users' , 'register' ]}) %>
+
+    <body>
+        <%- include('../partials/headerAdmin.ejs') %>
+            <main>
+                <h4 class="users-title"> Editar un usuario </h4>
+
+                <form action="/users/<%= user.id %>/edit?_method=PUT" method="POST">
+
+
+                    <label for="name">Nombre y Apellido:</label>
+                    <input type="text" id="name" name="name" value="<%= user.name %>" required />
+
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" value="<%=user.email%>" required />
+
+                    <label for="address">Domicilio</label>
+                    <input type="text" id="address" name="address" value="<%=user.address%>" required />
+
+                    <label for="phone">Telefono</label>
+                    <input type="number" id="phone" name="phone" pattern="[0-9]{9}" value="<%=user.phone%>" required />
+
+                    <div class="button-container">
+                        <button class="btn btn-secundary" type="reset">Borrar datos</button>
+                        <button class="btn btn-primary" type="submit">Enviar</button>
+                    </div>
+            </main>
+
+            <%- include('../partials/footer.ejs') %>
+
     </body>
+
     </html>
