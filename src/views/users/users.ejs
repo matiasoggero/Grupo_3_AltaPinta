@@ -1,21 +1,34 @@
-<%- include('../partials/head.ejs',{styles: ['base', 'footer' , 'header' , 'index' ]}) %>
-<body>
-    <%- include('../partials/headerAdmin.ejs') %>
+<%- include('../partials/head.ejs',{styles: ['base', 'footer' , 'header' , 'users' ]}) %>
 
-    <main>
-        <% locals.users && users.forEach((user) => { %>
-            <!-- TO-DO: aplicar estilos a esta vista -->
-            <div style="color: black; background-color: red;">
-                <a href="/users/ <%= user.id %>">
-                <div>
-                    <p>rol: <%= user.rol %></p>
-                    <p>nombre: <%=user.name  %></p>
+    <body>
+        <%- include('../partials/headerAdmin.ejs') %>
+
+            <main>
+                <h2 class="users-title"> Todos los usuarios </h2>
+                <div class="users-wrapper">
+                    <% locals.users && users.forEach((user)=> { %>
+                        <div class="content-u-box">
+                            <section class="user-box">
+                                <a href="/users/userDetail/<%= user.id %>">
+                                    <article class="user-box-data">
+                                        <h2>
+                                            <%= user.name %>
+                                        </h2>
+                                        <p>
+                                            <%= user.roles_id %>
+                                        </p>
+                                    </article>
+                                </a>
+                            </section>
+                        </div>
+                        <% }); %>
+
                 </div>
-                </a>
-            </div>
 
-        <% }); %>
-    </main>
 
-</body>
-</html>
+
+            </main>
+
+    </body>
+
+    </html>
