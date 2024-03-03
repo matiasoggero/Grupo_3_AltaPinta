@@ -1,17 +1,23 @@
-<%- include('../partials/head.ejs',{styles: ['base', 'footer', 'header','finish']}) %>
-<body>
-    <header>
-        <img src="/images/toldo.png" alt="toldo">
-    </header>
+<%- include('../partials/head.ejs',{styles: ['base', 'footer' , 'header' ,'finish']}) %>
 
-    <div>
-        <h1 class="title-finish">GRACIAS POR ELEGIRNOS!!! ESPERAMOS VERTE PRONTO</h1>
-        <img src="../../public/images/hamb-finish.png" class="hamb">
+    <body>
+        <header>
+            <img src="/images/toldo.png" alt="toldo">
+        </header>
+
+        <h1 class="title-finish">GRACIAS POR ELEGIRNOS!!! ESPERAMOS VERTE PRONTO </h1>
+            <div class="hamb" >
+            <img class="imgHamb" src="/images/hamb-finish.png">
+        </div>
+
+        <div>
+        
         <form action="/" method="get" class="form-finish">
             <button type="submit"><img src="/images/logo.png" alt="logo"></button>
-            </form>
+        </form>
     </div>
 
-    <%- include('../partials/footer.ejs') %>
-</body>
-</html>
+        <%- include('../partials/footer.ejs') %>
+    </body>
+
+    </html>

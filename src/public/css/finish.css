@@ -4,9 +4,19 @@
 }
 
 .hamb{
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+}
+.imgHamb{
+    width: 650px;
+    height: 450px;
 }
 
+header img{
+    height:200px;
+}
 .form-finish{
     text-align: center;
     background-color: #fff;   

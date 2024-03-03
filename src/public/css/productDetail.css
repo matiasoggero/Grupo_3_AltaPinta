@@ -14,6 +14,11 @@ main form div.option label {
     text-align: center;
 }
 
+.error-container{
+    color: #fa0404;
+
+}
+
 main form div.option select {
     display: block;
     text-align: center;
