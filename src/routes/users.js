@@ -7,7 +7,7 @@ const usersController = require("../controllers/usersController");
 
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
-    cb(null, path.join(__dirname, "../public/images/avatar"));
+    cb(null, process.cwd()+'/src/public/images/users');
   },
   filename: function (req, file, cb) {
     const ext = path.extname(file.originalname);
@@ -29,8 +29,7 @@ router.get("/logout", usersController.logout);
 
 router.get("/register",authMiddlewares.onlyGuestUser, usersController.register);
 
-router.post("/register", upload.single("avatar"), usersController.create);
-router.post("/register", validatorFormRegister, usersController.create); //ver esta línea
+router.post("/register", upload.single("avatar"),validatorFormRegister, usersController.create);
 router.get("/profile", authMiddlewares.authUser, usersController.profile);
 router.get("/admin", authMiddlewares.authUser,usersController.admin);
 
