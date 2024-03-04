@@ -29,8 +29,7 @@ router.get("/logout", usersController.logout);
 
 router.get("/register",authMiddlewares.onlyGuestUser, usersController.register);
 
-router.post("/register", upload.single("avatar"), usersController.create);
-router.post("/register", validatorFormRegister, usersController.create); //ver esta línea
+router.post("/register", upload.single("avatar"),validatorFormRegister, usersController.create);
 router.get("/profile", authMiddlewares.authUser, usersController.profile);
 router.get("/admin", authMiddlewares.authUser,usersController.admin);
 
