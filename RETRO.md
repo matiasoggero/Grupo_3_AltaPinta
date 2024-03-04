@@ -169,3 +169,7 @@ Durante las reuniones que el equipo tiene, evitar desviarse para aprovechar al m
 ## DEJAR DE HACER
 
 No encontramos falencias dentro de este sprint, quizas dada la dificultad para realizar las actividades.
+
+## DASHBOARD
+
+https://github.com/martinb31753/dasboard-altaPinta.git

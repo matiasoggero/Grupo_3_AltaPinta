@@ -6,9 +6,12 @@
 
     <main class="form-container">
 
-        <form action="/products/productFinish" method="get">
+        <form action="/products/productFinish" method="get" id="formDetail">
 
             <h4 class="title">¿QUE CLASE DE HAMBURGUESA VAS A QUERER?</h4>
+            <div class="error">
+                <ul></ul>
+            </div>
 
             <div class="burguer">
 
@@ -25,9 +28,9 @@
                 <div>
                     <label for="btnLen">Lenteja</label>
                     <input type="radio" name="hamburgerType" id="btnLen">
-                </div>
-
+                </div>              
             </div>
+            
 
             <h4 class="title">NO TE OLVIDES DE ELEGIR EL PAN!</h4>
 
@@ -49,6 +52,7 @@
                 </div>
 
             </div>
+            
 
             <h4 class="title">ES HORA DE ELEGIR LOS ADEREZOS</h4>
 
@@ -80,6 +84,7 @@
                 </div>
 
             </div>
+            <div id="error-container" class="error-container"></div>
 
             <h4 class="title">AGREGA LO QUE TE GUSTA</h4>
 
@@ -150,6 +155,8 @@
     </main>
 
     <%- include('../partials/footer.ejs') %>
+    
+    <script src="/js/productDetailValidation.js"></script>
     
 
 </body>
