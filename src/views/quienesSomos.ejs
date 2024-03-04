@@ -1,14 +1,27 @@
-<%- include('partials/head.ejs',{styles: ['base', 'footer' ,'header ', 'index' ]}) %>
+<%- include('partials/head.ejs',{styles: ['base', 'footer' ,'header', 'quienesSomos' ]}) %>
 <body>
-    <header>
-        <img src="/images/toldo.png" alt="toldo">
-    </header>
-   
-           
-        
-         <h1>Holaaaaaaaaaaaaaaaaa</h1>
+    <%- include('partials/headerViews.ejs') %>
+    
+
+<h1> Conocenos...</h1>
+<div class="texto">
+En Alta Pinta, comenzamos como un grupo de amigos apasionados por la buena comida y decididos a compartir nuestra pasión con el mundo. Lo que comenzó como una idea entre amigos pronto se convirtió en una misión para ofrecer las mejores hamburguesas de la ciudad.
+
+Nos regimos por los valores fundamentales de la amistad, la calidad y la comunidad. Creemos en el poder de reunir a las personas alrededor de una buena comida y en crear momentos especiales que perduren en la memoria de nuestros clientes.
+
+En cada hamburguesa que servimos, nos esforzamos por reflejar estos valores. Utilizamos ingredientes frescos y de la más alta calidad, cuidadosamente seleccionados para ofrecerte una experiencia gastronómica excepcional en cada bocado.
+
+Además, estamos comprometidos con nuestra comunidad y nos enorgullece apoyar a organizaciones locales y eventos benéficos siempre que podemos. Creemos en devolver a la comunidad que nos ha apoyado y en construir relaciones sólidas que trasciendan más allá de nuestras cuatro paredes.
+
+Gracias por elegir Alta Pinta. Esperamos que disfrutes de nuestras hamburguesas tanto como nosotros disfrutamos al prepararlas para ti.
+
+¡Bienvenido a la familia de Alta Pinta!
+
+</div>
+
         
     <%- include('partials/footer.ejs') %>
+    
 
 </body>
 </html>
