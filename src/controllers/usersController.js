@@ -8,7 +8,7 @@ const db = require("../database/models/index.js");
 
 
 const controller = {
-    register: (req, res) => {
+    register: (_req, res) => {
         return res.render('users/register')
     },
 
@@ -86,7 +86,7 @@ const controller = {
                     return res.redirect(redirectRoute);
                 }
 
-        
+
 
             }
             return res.render('users/login', {
@@ -101,25 +101,16 @@ const controller = {
             return res.json(error);
         }
     },
-    profile:  (req, res) => {  
-        return res.render('users/profile', {user : req.session.user});
-    },
-    delete: async (req, res) => {
-        try {
-            await db.User.destroy({
-                where: req.params.id
-            });
-            return res.redirect('/users');
 
-        } catch (error) {
-            res.json(error)
-        }
-
+    profile: (req, res) => {
+        return res.render('users/profile', { user: req.session.user });
     },
+
+
     admin: (req, res) => {
-        return res.render('users/admin', {user : req.session.user});
+        return res.render('users/admin', { user: req.session.user });
     },
-    list: async (req, res) => {
+    list: async (_req, res) => {
         try {
             const users = await db.User.findAll();
             return res.render('users/users', { users });
@@ -129,17 +120,18 @@ const controller = {
     },
     detail: async (req, res) => {
         try {
-            const user = await db.User.findByPK(req.params.id);
+            const user = await db.User.findByPk(req.params.id);
             return res.render('users/userDetail', { user });
         } catch (error) {
+            return res.json(error);
 
         }
 
     },
     edit: async (req, res) => {
         try {
-            const edit = db.User.findByPK(req.params.id);
-            return res.render('users/edit', { user: edit });
+            const user = await db.User.findByPk(req.params.id);
+            return res.render('users/edit', { user});
         } catch (error) {
             return res.json(error);
         }
@@ -147,15 +139,32 @@ const controller = {
     },
     update: async (req, res) => {
         try {
-            await db.User.update(req.body, {
-                where: req.params.id
-            });
+            await db.User.update({ ...req.body }, {
+                where: {
+                  id: req.params.id
+                }
+              });
 
             return res.redirect('/users');
         } catch (error) {
             return res.json(error);
         }
+    },
+    delete: async (req, res) => {
+        try {
+            await db.User.destroy({
+                where: {
+                    id: req.params.id
+                }
+            });
+            return res.redirect('/users');
+
+        } catch (error) {
+            res.json(error)
+        }
+
     }
 
 }
+
 module.exports = controller;

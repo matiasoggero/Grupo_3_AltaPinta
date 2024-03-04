@@ -1,22 +1,24 @@
-<%- include('../partials/head.ejs',{styles: ['base', 'footer' , 'header' , 'index' ]}) %>
-<body>
-    <%- include('../partials/headerAdmin.ejs') %>
-    <main>
+<%- include('../partials/head.ejs',{styles: ['base', 'footer' , 'header' , 'profile' ]}) %>
 
-        <div class="title">
-            <h2>Hola <%= user.name %>!</h2>
-        </div>
+    <body>
+        <%- include('../partials/headerAdmin.ejs') %>
+            <main>
 
-        <div class="avatar">
-            <img src="/images/users/<%= locals.user?.avatar %>" alt="avatar" class="product-detail-img">
-        </div>
-        <div>
-            <%= user.email %>
-        </div>
+                <div class="title">
+                    <h2>Hola <%= locals.user?.name %>!</h2>
+                </div>
 
-    </main>
+                <div class="avatar">
+                    <img src="/images/users/<%= locals.user?.avatar %>" alt="avatar" class="product-detail-img">
+                </div>
+                <div>
+                    <%= user.email %>
+                </div>
 
-    <%- include('../partials/footer.ejs') %>
+            </main>
 
-</body>
-</html>
+            <%- include('../partials/footer.ejs') %>
+
+    </body>
+
+    </html>

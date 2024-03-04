@@ -1,34 +1,42 @@
-<%- include('../partials/head.ejs',{styles: ['base', 'footer', 'header', 'products']}) %>
+<%- include('../partials/head.ejs',{styles: ['base', 'footer' , 'header' , 'products' ]}) %>
 
-<body>
-    <%- include('../partials/headerAdmin.ejs') %>
-        <main>
-            <h2 class="products-title"> Todos los ingredientes </h2>
-        </main>
-        <section class="button-container">
-            <div>
-                <a href="/products/productCreation" class="btn btn-primary">Agregar un ingrediente</a>
-            </div>
-        </section>
-        <div class="products-wrapper">
-            <% locals.products && products.forEach(product => { %>
-                <div class="content-box">
-                    <section class="product-box">
-                        <a href="/products/detailOne/<%= product.id %>">
-                            <figure class="product-box_image">
-                                <img src="/images/<%= product.image %>" alt="imagen de producto">
-                            </figure>
-                            <article class="product-box_data">
-                                <h2><%= product.name %></h2>
-                                <p>$<%=  product.price %></p>
-                                <p><%= product.description %></p>
-                            </article>
-                        </a>
-                    </section>
+    <body>
+        <%- include('../partials/headerAdmin.ejs') %>
+            <main>
+                <h2 class="products-title"> Todos los ingredientes </h2>
+
+                <section class="button-container">
+                    <div>
+                        <a href="/products/productCreation" class="btn btn-primary">Agregar un ingrediente</a>
+                    </div>
+                </section>
+                <div class="products-wrapper">
+                    <% locals.products && products.forEach(product=> { %>
+                        <div class="content-box">
+                            <section class="product-box">
+                                <a href="/products/detailOne/<%= product.id %>">
+                                    <figure class="product-box_image">
+                                        <img src="/images/<%= product.image %>" alt="imagen de producto">
+                                    </figure>
+                                    <article class="product-box_data">
+                                        <h2>
+                                            <%= product.name %>
+                                        </h2>
+                                        <p>$<%= product.price %>
+                                        </p>
+                                        <p>
+                                            <%= product.description %>
+                                        </p>
+                                    </article>
+                                </a>
+                            </section>
+                        </div>
+                        <% }) %>
                 </div>
-                <% }) %>            
-        </div>
-        
-</body>
+            </main>
 
-</html>
+            <%- include('../partials/footer.ejs') %>
+
+    </body>
+
+    </html>
