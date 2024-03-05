@@ -1,4 +1,5 @@
 .title-finish{
+    padding: 3%;
     display: block;
     text-align: center;
 }
@@ -10,8 +11,8 @@
   
 }
 .imgHamb{
-    width: 650px;
-    height: 450px;
+    padding: 3%;
+    width: 50%;
 }
 
 header img{

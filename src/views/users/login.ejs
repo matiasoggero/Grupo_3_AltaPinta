@@ -10,7 +10,8 @@
         <form action="/users/login" method="post">
             
             <div class="label-container">
-                <input type="email" name="email" id="email" placeholder="email" required>
+                <input type="email" name="email" id="emailLogin" placeholder="email" required>
+                <div id = "emailErrors" class= "fieldError"></div>
                 <% if (locals.errors && errors.email) { %>
                 <div class="text-danger">
                     <%= (errors.email.msg) %>
@@ -18,7 +19,8 @@
                 <% } %>
             </div>
             <div class="label-container">
-                        <input type="password" name="password" id="password" placeholder="Contraseña" required>
+                        <input type="password" name="password" id="passwordLogin" placeholder="Contraseña" required>
+                        <div id = "passwordErrors" class= "fieldError"></div>
             </div>
             <div class="button-container">
                 <button class="btn btn-primary" type="submit">Enviar</button>
