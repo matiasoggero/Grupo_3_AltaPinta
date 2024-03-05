@@ -1,0 +1,65 @@
+<%- include('partials/head.ejs',{styles: ['base', 'footer' ,'header', 'trabajaConNosotros' ]}) %>
+
+    <body>
+        <%- include('partials/headerViews.ejs') %>
+
+
+            <h1>Trabajá en Alta Pinta</h1>
+            <p class="trabaja">¡Sumate a nuestro equipo, te estamos esperando!</p>
+
+            <form action="#" method="POST" enctype="multipart/form-data">
+                <div>
+                    <h2>Datos Personales</h2>
+                    <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
+                    <input type="text" id="apellido" name="apellido" placeholder="Apellido" required>
+                    <input type="text" id="dni" name="dni" placeholder="DNI Número" required>
+                    <input type="text" id="fecha_nacimiento" name="fecha_nacimiento"
+                        placeholder="Fecha de Nacimiento (DD/MM/AAAA)" required>
+                    <input type="email" id="email" name="email" placeholder="Email" required>
+                    <input type="tel" id="telefono" name="telefono" placeholder="Teléfono" required>
+                    <select id="nivel_estudio" name="nivel_estudio" required>
+                        <option value="">Nivel de Estudios</option>
+                        <option value="secundario_en_curso">Secundario en Curso</option>
+                        <option value="secundario_completo">Secundario Completo</option>
+                        <option value="terciario">Terciario</option>
+                        <option value="universitario">Universitario</option>
+                    </select>
+                </div>
+
+                <div>
+                    <h2>Dirección</h2>
+                    <input type="text" id="domicilio" name="domicilio" placeholder="Domicilio" required>
+                    <input type="text" id="provincia" name="provincia" placeholder="Provincia/Distrito" required>
+                    <input type="text" id="ciudad" name="ciudad" placeholder="Ciudad/Localidad" required>
+                </div>
+
+                <div>
+                    <h2>Disponibilidad Horaria</h2>
+                    <select id="disponibilidad" name="disponibilidad" required>
+                        <option value="">Disponibilidad</option>
+                        <option value="tiempo_completo">Tiempo Completo</option>
+                        <option value="medio_tiempo">Medio Tiempo</option>
+                        <option value="fin_de_semana">Fin de Semana</option>
+                    </select>
+                </div>
+
+                <div>
+                    <h2>Subir CV</h2>
+                    <input type="file" id="cv" name="cv" accept=".docx, .doc, .pdf" required>
+                </div>
+
+                <div>
+                    <input type="submit" value="Enviar">
+                </div>
+
+
+
+            </form>
+
+
+            <%- include('partials/footer.ejs') %>
+
+
+    </body>
+
+    </html>

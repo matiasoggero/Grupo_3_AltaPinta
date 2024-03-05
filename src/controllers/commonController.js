@@ -9,7 +9,12 @@ const controller = {
   
   contactanos (req, res){
     return res.render('contactanos');
+  },
+
+  trabajaConNosotros(req, res){
+    return res.render("trabajaConNosotros");
   }
+
 };
 
 

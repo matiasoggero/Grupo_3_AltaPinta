@@ -1,0 +1,46 @@
+h1{
+    text-align: center;
+    font-size: 60px;
+}
+
+.trabaja{
+    text-align: center;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 700px;
+    margin: 0 auto;
+    padding-top: 20px;
+}
+
+input, select {
+    margin-bottom: 15px;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 300px;
+    
+}
+
+input[type="submit"] {
+    background-color: #bd1d1d;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #000000;
+}
+
+h2 {
+    margin-bottom: 5px;
+}
