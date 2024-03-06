@@ -1,5 +1,6 @@
 const express = require("express");
 const path = require("path");
+const cors = require('cors');
 
 const authMiddlewares = require("./middlewares/auth");
 const commonRoutes = require("./routes/common");
@@ -18,6 +19,7 @@ const apiUserRoute = require('./routes/api/apiUserRoute');
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "/views"));
 
+app.use(cors());
 app.use(express.static(path.join(__dirname, "public")));
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
