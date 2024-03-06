@@ -4,14 +4,15 @@ const controller = {
     productsShow: async (req, res) => {
         try {
             const data = await db.Product.findAll({ include: ["categories"],attributes:{exclude:['categories_id']}});
-            const category = await db.Category.findAll();
+            const categories = await db.Category.findAll();
 
             const products = data.map(product => ({...product.dataValues,
                 detail: `/api/product/${product.id}`}))
 
             return res.send({
                 count: data.length,
-                countByCategory: category.length,
+                countByCategory: categories.length,
+                categories,
                 products
             });
         } catch (error) {
