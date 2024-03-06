@@ -13,6 +13,10 @@ const controller = {
 
   trabajaConNosotros(req, res){
     return res.render("trabajaConNosotros");
+  },
+
+  franquicias(req, res){
+    return res.render("franquicias");
   }
 
 };
