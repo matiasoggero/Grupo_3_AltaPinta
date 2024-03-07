@@ -39,6 +39,11 @@ app.use(cookieParser());
 app.use("/products", productsRoutes);
 app.use("/users", usersRoutes);
 app.use("/", commonRoutes);
+// Middleware para renderizar la vista de página no encontrada
+app.use((req, res) => {
+  res.status(404).render("index");
+});
+
 
 app.use('/api/user',apiUserRoute);
 app.use('/api/product',apiProductRoute);
