@@ -47,3 +47,5 @@ input[type="submit"]:hover {
 textarea {
    height: 70px;
 }
+.errorContainer{
+    color: #aa0606;}

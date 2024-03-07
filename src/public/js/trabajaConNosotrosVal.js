@@ -98,7 +98,7 @@ window.addEventListener("load", function () {
             return;
         }
 
-        // Si no hay errores, envía el formulario
+    
         this.submit();
 
         function addError(errorMessage) {

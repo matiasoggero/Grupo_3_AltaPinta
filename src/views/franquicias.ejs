@@ -4,12 +4,15 @@
     <%- include('partials/headerViews.ejs') %>
     <h1>Formulario de Franquicias</h1>
     <p>Completá este formulario para saber más de nuestras franquicias</p>
-    <form action="#" method="POST">
-        <input type="text" id="nombre" name="nombre" placeholder="Nombre *" required>
-        <input type="text" id="apellido" name="apellido" placeholder="Apellido *" required>
-        <input type="email" id="email" name="email" placeholder="Email *" required>
-        <input type="tel" id="telefono" name="telefono" placeholder="Teléfono *" required>
-        <select id="como_conocieron" name="como_conocieron" required>
+    
+    <form action="" method="POST" id="formFranquicias">
+
+        <input type="text" id="nombre" name="nombre" placeholder="Nombre">
+        <input type="text" id="apellido" name="apellido" placeholder="Apellido">
+        <input type="email" id="email" name="email" placeholder="Email">
+        <input type="tel" id="telefono" name="telefono" placeholder="Teléfono ">
+
+        <select id="como_conocieron" name="como_conocieron">
             <option value="">¿Cómo nos conocieron? *</option>
             <option value="Internet">Internet</option>
             <option value="Redes Sociales">Redes Sociales</option>
@@ -18,14 +21,19 @@
             <option value="Evento">Evento</option>
             <option value="Otro">Otro</option>
         </select>
-        <input type="text" id="zona_interes" name="zona_interes" placeholder="Zona de Interés *" required>
-        <input type="text" id="ocupacion" name="ocupacion" placeholder="Ocupación *" required>
-        <textarea id="mensaje" name="mensaje" placeholder="Mensaje *" required></textarea>
+
+        <input type="text" id="zona_interes" name="zona_interes" placeholder="Zona de Interés ">
+        <input type="text" id="ocupacion" name="ocupacion" placeholder="Ocupación">
+        <textarea id="mensaje" name="mensaje" placeholder="Mensaje " ></textarea>
+
+        <div id="errorContainer" class="errorContainer"></div>
+
         <input type="submit" value="Enviar">
     </form>
         
     <%- include('partials/footer.ejs') %>
     
+    <script src="/js/franquiciasValidation.js"></script>
 
 </body>
 </html>
