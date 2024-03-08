@@ -49,3 +49,7 @@ config.development.json
 ```
 
 allí se deberán especificar las variables necesarias para que la aplicación pueda ejecutarse correctamente. (ver config.example.json para saber qué variables se necesitan)
+
+## Dashboard Alta Pinta
+
+https://github.com/martinb31753/dashboard-altaPinta
