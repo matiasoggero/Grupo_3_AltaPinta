@@ -6,3 +6,6 @@ h2{
     display: block;
     justify-content: center; 
 }
+.error{
+    color: #d10f0f;
+}

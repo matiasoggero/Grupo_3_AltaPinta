@@ -5,9 +5,7 @@
 
             <main class="form-container">
                 <h2>Crear un nuevo ingrediente</h2>
-                <div class="error">
-                    <ul></ul>
-                </div>
+                
 
                 <div>
                     <form action="/products/productCreation" method="POST" enctype="multipart/form-data" id="formCreation">
@@ -63,7 +61,11 @@
                                             <%= errors.price.msg %>
                                         </span>
                                         <% } %>
-                                </div>
+                                    </div>
+
+                                    <div class="error">
+                                        <ul></ul>
+                                    </div>
                                 <section class="button-container">
                                     <button class="btn btn-secundary" type="reset">Cancelar</button>
                                     <button class="btn btn-primary" type="submit">Crear</button>

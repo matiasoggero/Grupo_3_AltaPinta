@@ -4,8 +4,8 @@ window.addEventListener("load", function () {
 
     formulario.addEventListener("submit", function (e) {
 
-
         let errores = [];
+        
 
         let name = document.querySelector("#name")
 
@@ -39,6 +39,8 @@ window.addEventListener("load", function () {
         if (price.value === "" || isNaN(price.value)) {
             errores.push("Por favor, ingresa un valor numérico válido para el precio.");
         }
+        
+        
 
         if (errores.length > 0) {
             e.preventDefault();

@@ -56,5 +56,19 @@
     transition: all 300ms ease;
 }
 .container-contactanos .btn-enviar:hover{
-    background: #af1717;
+    background: black;
+}
+.campo:focus {
+    outline: none; 
+    border-width: 0.5px; 
+    border-style: solid; 
+    border-color: #bd1d1d; 
+}
+
+.container-contactanos form .campo:focus,
+.container-contactanos form textarea:focus {
+    outline: none; 
+    border-width: 0.5px; 
+    border-style: solid; 
+    border-color: black;
 }

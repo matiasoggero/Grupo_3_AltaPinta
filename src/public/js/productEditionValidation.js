@@ -3,7 +3,7 @@ window.addEventListener("load", function () {
     let formulario = document.querySelector("#formProductEdition")
 
     formulario.addEventListener("submit", function (e) {
-
+        
 
         let errores = [];
 
@@ -43,3 +43,6 @@ window.addEventListener("load", function () {
 
     });
 });
+
+
+

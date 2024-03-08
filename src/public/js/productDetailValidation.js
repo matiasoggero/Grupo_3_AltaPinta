@@ -5,6 +5,12 @@ window.addEventListener("load", function () {
     form.addEventListener('submit', function (event) {
         event.preventDefault(); 
 
+
+      
+
+
+
+
         errorContainer.innerHTML = ''; 
         
         const hamburgerType = document.querySelector('input[name="hamburgerType"]:checked');
