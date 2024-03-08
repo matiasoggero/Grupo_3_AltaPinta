@@ -38,13 +38,16 @@ window.addEventListener("load", function () {
 
         if (price.value === "" || isNaN(price.value)) {
             errores.push("Por favor, ingresa un valor numérico válido para el precio.");
+        }else if (price.value.length < 2) { 
+            errores.push("El campo precio debe tener al menos 2 caracteres.");
         }
-        
+    
         
 
         if (errores.length > 0) {
             e.preventDefault();
             let ulErrores = document.querySelector("div.error ul");
+            ulErrores.innerHTML = "";
             for (let i = 0; i < errores.length; i++) {
                 ulErrores.innerHTML += "<li>" + errores[i] + "</li>"
             }
