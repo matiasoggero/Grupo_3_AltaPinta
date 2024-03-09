@@ -1,4 +1,4 @@
-<%- include('partials/head.ejs',{styles: ['base', 'footer' ,'header', 'quienesSomos', 'contactanos' ]}) %>
+<%- include('partials/head.ejs',{styles: ['base', 'footer' ,'header','contactanos']}) %>
 <script src="https://kit.fontawesome.com/eb496ab1a0.js" crossorigin="anonymous"></script>
 <body>
     <%- include('partials/headerViews.ejs') %>
@@ -10,10 +10,11 @@
             <a href="#"><i class="fa fa-envelope"></i>altapinta@email.com</a>
             <a href="#"><i class="fa fa-map-marked"></i>Rafaela, Santa Fe, Argentina</a>
         </div>
-        <form action="#" autocomplete="off">
-            <input type="text" name="nombre" placeholder="Ingresa tu nombre" class="campo">
-            <input type="text" name="email" placeholder="Ingresa tu email" class="campo">
-            <textarea name="mensaje" placeholder="Ingresa tu mensaje"></textarea>
+        <form action="#" autocomplete="off" id="formContact">
+            <input type="text" name="nombre" placeholder="Ingresa tu nombre" class="campo" id="nombre">
+            <input type="text" name="email" placeholder="Ingresa tu email" class="campo" id="email">
+            <textarea name="mensaje" placeholder="Ingresa tu mensaje" id="mensaje"></textarea>
+            <div id="error-container" class="error-container"></div>
             <input type="submit" name="enviar" value="Enviar mensaje" class="btn-enviar">
         </form>
     </div>
@@ -22,7 +23,8 @@
 
         
     <%- include('partials/footer.ejs') %>
-    
+     
+    <script src="/js/contactanos.js"></script>
 
 </body>
 </html>

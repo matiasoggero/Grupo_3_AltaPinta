@@ -72,3 +72,7 @@
     border-style: solid; 
     border-color: black;
 }
+.error-container{
+    color: #aa0606;
+    padding-bottom: 15px;
+}

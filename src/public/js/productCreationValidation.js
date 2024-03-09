@@ -16,7 +16,7 @@ window.addEventListener("load", function () {
 
         let description = document.querySelector("#description")
 
-        if (description.value.length < 5) {
+        if (description.value.length < 10) {
             errores.push("la descripción debe tener al menos 10 caracteres")
         }
 
