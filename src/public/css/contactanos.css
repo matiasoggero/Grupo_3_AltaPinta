@@ -2,13 +2,16 @@ h1, h2{
     text-align: center;
 }
 
-a{
-    color: #000;
-    margin: 23px;
+.links-container{
+    display: flex;
+    flex-direction: column;
+    gap: 10px
 }
 
-p{
-    padding: 10px;;
+.links-container a{
+    color: #000;
+    margin: 0px;
+    padding: 0px;
 }
 
 .fa{

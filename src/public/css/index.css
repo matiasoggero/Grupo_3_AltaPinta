@@ -21,12 +21,12 @@ h2{
     margin: auto;
     perspective: 800px;
     position: relative;
-    margin-top: 50px;
+    margin-top: 150px;
 }
 
 .content-carrousel{
     width: 100%;
-    position: absolute;
+    min-height: 220px;
     animation: rotar 10s infinite linear;
     transform-style: preserve-3d;
 }

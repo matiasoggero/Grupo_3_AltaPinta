@@ -1,7 +1,7 @@
 window.addEventListener("load",() => {
     const emailLogin = document.querySelector("#emailLogin");
     const passwordLogin = document.querySelector("#passwordLogin");
-    const iconLogin = document.querySelector(".bx")
+    const iconLogin = document.querySelector("#togglePasswordIcon")
 
 
     emailLogin.addEventListener("focus",() => {
@@ -37,12 +37,12 @@ window.addEventListener("load",() => {
     iconLogin.addEventListener("click", (e) =>{
         if(passwordLogin.type === "password"){
           passwordLogin.type = "text";
-          iconLogin.classList.remove("bx bx-show")
-          iconLogin.classList.add("bx bx-hide")
+          iconLogin.classList.remove("bx-show")
+          iconLogin.classList.add("bx-hide")
         }else{
           passwordLogin.type = "password";
-          iconLogin.classList.add("bx bx-show")
-          iconLogin.classList.remove("bx bx-hide")
+          iconLogin.classList.add("bx-show")
+          iconLogin.classList.remove("bx-hide")
         }
       })
 });

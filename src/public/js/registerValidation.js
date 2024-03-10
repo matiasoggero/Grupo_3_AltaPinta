@@ -4,7 +4,9 @@ window.addEventListener("load", () => {
   const imageInput = document.querySelector("#avatar");
   const passwordInput = document.querySelector("#password");
   const confirm_passwordInput = document.querySelector("#confirm_password");
-  const iconInput = document.querySelector(".bx")
+  const iconInputs = document.querySelectorAll(".bx");
+  const form = document.getElementById("registerForm");
+
 
   const nameErrors = document.querySelector("#nameErrors");
   const emailErrors = document.querySelector("#emailErrors");
@@ -14,12 +16,8 @@ window.addEventListener("load", () => {
     "#confirmPasswordErrors"
   );
 
-  nameInput.addEventListener("focus", () => {
-    nameErrors.innerHTML = "";
-  });
-
-  nameInput.addEventListener("blur", (event) => {
-    const currentInputLength = event.target.value.length;
+  const validateName = (nameInput) => {
+    const currentInputLength = nameInput.value.length;
     const errors = [];
 
     if (currentInputLength <= 2) {
@@ -29,14 +27,13 @@ window.addEventListener("load", () => {
     errors.forEach((error) => {
       nameErrors.innerHTML += `${error}`;
     });
-  });
 
-  emailInput.addEventListener("focus", () => {
-    emailErrors.innerHTML = "";
-  });
+    return errors.length === 0;
 
-  emailInput.addEventListener("blur", (event) => {
-    const containsAtSymbol = event.target.value.includes("@");
+  }
+
+  const validateEmail = (emailInput) => {
+    const containsAtSymbol = emailInput.value.includes("@");
     const errors = [];
 
     if (!containsAtSymbol) {
@@ -46,11 +43,13 @@ window.addEventListener("load", () => {
     errors.forEach((error) => {
       emailErrors.innerHTML += `${error}`;
     });
-  });
 
-  imageInput.addEventListener("change", (event) => {
+    return errors.length === 0;
+  }
+
+  const validateImage = (imageInput) => {
     const allowedExtensions = ["jpg", "jpeg", "png", "gif"];
-    const imageName = event.target.value;
+    const imageName = imageInput.value;
     const imageNameParts = imageName.split(".");
     const fileExtension = imageNameParts.slice(-1)[0].toLowerCase();
     const isAllowed = allowedExtensions.indexOf(fileExtension) >= 0;
@@ -67,11 +66,14 @@ window.addEventListener("load", () => {
         imageErrors.innerHTML += `${error}<br>`;
       });
     }
-  });
 
-  passwordInput.addEventListener("change", (event) => {
+    return errors.length === 0;
+
+  }
+
+  const validatePassword = (passwordInput) => {
     passwordErrors.innerHTML = "";
-    const password = event.target.value;
+    const password = passwordInput.value;
     const passwordlength = password.length;
     const upperLetterRegex = /[A-Z]/;
     const lowerLetterRegex = /[a-z]/;
@@ -104,31 +106,87 @@ window.addEventListener("load", () => {
         passwordErrors.innerHTML += `${error}<br>`;
       });
     }
-  });
-  iconInput.addEventListener("click", e =>{
-    if(passwordInput.type === "password"){
-      passwordInput.type = "text";
-      iconInput.classList.remove("bx bx-show")
-      iconInput.classList.add("bx bx-hide")
-    }else{
-      passwordInput.type = "password";
-      iconInput.classList.add("bx bx-show")
-      iconInput.classList.remove("bx bx-hide")
+
+    return errors.length === 0;
+
+  } 
+
+  const validateConfirmPassword = () => {
+    const errors = [];
+
+    if (confirm_passwordInput.value !== passwordInput.value) {
+      errors.push("No hay coincidencia con la contraseña anterior");
     }
-  })
+
+    if (errors.length > 0) {
+      errors.forEach(error => {
+        confirm_passwordErrors.innerHTML += `${error} \n`;
+      })
+    }
+
+    return errors.length === 0;
+
+  }
+
+  nameInput.addEventListener("focus", () => {
+    nameErrors.innerHTML = "";
+  });
+
+  nameInput.addEventListener("blur", (event) => {
+    validateName(event.target);
+  });
+
+  emailInput.addEventListener("focus", () => {
+    emailErrors.innerHTML = "";
+  });
+
+  emailInput.addEventListener("blur", (event) => {
+    validateEmail(event.target);
+  });
+
+  imageInput.addEventListener("change", (event) => {
+    validateImage(event.target);
+  });
+
+  passwordInput.addEventListener("change", (event) => {
+    validatePassword(event.target);
+  });
 
   confirm_passwordInput.addEventListener("focus", () => {
     confirm_passwordErrors.innerHTML = "";
   });
 
-  confirm_passwordInput.addEventListener("blur", () => {
-    const errors = [];
+  confirm_passwordInput.addEventListener("blur", (event) => {
+    validateConfirmPassword(event.target);
+  });
 
-    if (!confirm_passwordInput === passwordInput) {
-      errors.push("No hay coincidencia con la contraseña anterior");
-    }
-    if (errors.length > 0) {
-      confirm_passwordErrors.innerHTML += `${error}`;
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const validName = validateName(e.target.elements.name);
+    const validEmail = validateEmail(e.target.elements.email);
+    const validPass = validatePassword(e.target.elements.password);
+    const validConfirmPass = validateConfirmPassword()
+
+    if (validName && validEmail && validPass && validConfirmPass) {
+      e.target.submit();
     }
   });
+
+  iconInputs.forEach(input => {
+    
+    input.addEventListener("click", e =>{
+      const parent = e.target.parentElement;
+      const element = parent.classList.contains("confirm-password") ? confirm_passwordInput : passwordInput;
+
+      if(element.type === "password"){
+        element.type = "text";
+        e.target.classList.remove("bx-show")
+        e.target.classList.add("bx-hide")
+      }else{
+        element.type = "password";
+        e.target.classList.add("bx-show")
+        e.target.classList.remove("bx-hide")
+      }
+    })
+  })
 });

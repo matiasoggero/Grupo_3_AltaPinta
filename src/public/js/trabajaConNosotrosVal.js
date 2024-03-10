@@ -98,7 +98,6 @@ window.addEventListener("load", function () {
             return;
         }
 
-    
         this.submit();
 
         function addError(errorMessage) {

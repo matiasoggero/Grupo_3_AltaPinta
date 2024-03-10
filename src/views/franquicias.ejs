@@ -5,35 +5,36 @@
     <h1>Formulario de Franquicias</h1>
     <h2>Completá este formulario para saber más de nuestras franquicias</h2>
     
-    <form class="form-container"> 
-        <section action="" method="POST" id="formFranquicias"></section>
+    <section class="form-container"> 
+        <form action="" method="POST" id="formFranquicias">
 
-        <input type="text" id="nombre" name="nombre" placeholder="Nombre">
-        <input type="text" id="apellido" name="apellido" placeholder="Apellido">
-        <input type="email" id="email" name="email" placeholder="Email">
-        <input type="tel" id="telefono" name="telefono" placeholder="Teléfono ">
+            <input type="text" id="nombre" name="nombre" placeholder="Nombre" >
+            <input type="text" id="apellido" name="apellido" placeholder="Apellido">
+            <input type="email" id="email" name="email" placeholder="Email">
+            <input type="tel" id="telefono" name="telefono" placeholder="Teléfono ">
 
-        <select id="como_conocieron" name="como_conocieron">
-            <option value="">¿Cómo nos conocieron? *</option>
-            <option value="Internet">Internet</option>
-            <option value="Redes Sociales">Redes Sociales</option>
-            <option value="Recomendación">Recomendación</option>
-            <option value="Prensa">Prensa</option>
-            <option value="Evento">Evento</option>
-            <option value="Otro">Otro</option>
-        </select>
+            <select id="como_conocieron" name="como_conocieron">
+                <option value="">¿Cómo nos conocieron? *</option>
+                <option value="Internet">Internet</option>
+                <option value="Redes Sociales">Redes Sociales</option>
+                <option value="Recomendación">Recomendación</option>
+                <option value="Prensa">Prensa</option>
+                <option value="Evento">Evento</option>
+                <option value="Otro">Otro</option>
+            </select>
 
-        <input type="text" id="zona_interes" name="zona_interes" placeholder="Zona de Interés ">
-        <input type="text" id="ocupacion" name="ocupacion" placeholder="Ocupación">
-        <textarea id="mensaje" name="mensaje" placeholder="Mensaje " ></textarea>
+            <input type="text" id="zona_interes" name="zona_interes" placeholder="Zona de Interés ">
+            <input type="text" id="ocupacion" name="ocupacion" placeholder="Ocupación">
+            <textarea id="mensaje" name="mensaje" placeholder="Mensaje " ></textarea>
 
-        <div id="errorContainer" class="errorContainer"></div>
+            <div id="errorContainer" class="errorContainer"></div>
 
-        <div class="button-container"></section>
-                <button type="submit" class="btn btn-primary">ENVIAR</button>
-        </div>
+            <div class="button-container">
+                    <button type="submit" class="btn btn-primary">ENVIAR</button>
+            </div>
     
-    </form>
+         </form>
+    </section>
         
     <%- include('partials/footer.ejs') %>
     
