@@ -7,10 +7,6 @@ h1{
     text-align: center;
 }
 
-body {
-    font-family: Arial, sans-serif;
-}
-
 form {
     display: flex;
     flex-direction: column;
@@ -18,29 +14,14 @@ form {
     margin: 0 auto;
     padding-top: 20px;
     gap: 30px;
-   
 }
 
 input, select {
     margin-bottom: 15px;
     padding: 5px;
     border-radius: 5px;
-    border: 0.5px solid #ccc;
-    width: 300px;
-    
-}
-
-input[type="submit"] {
-    background-color: #bd1d1d;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 20px;
-    cursor: pointer;
-}
-
-input[type="submit"]:hover {
-    background-color: #000000;
+    border: 1px solid #ccc;
+    width: 300px; 
 }
 
 h2 {
@@ -48,14 +29,5 @@ h2 {
 }
 
 .errorContainer{
-    
         color: #aa0606;
-    
-}
-
-input:focus {
-    outline: none; 
-    border-width: 0.5px; 
-    border-style: solid; 
-    border-color:black; 
 }

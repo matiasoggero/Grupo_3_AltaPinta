@@ -52,6 +52,17 @@ button{
     width: 100%;
     margin: 5px 0 10px;
 }
+.password-container{
+    display: inline-flex;
+    align-items: center;
+}
+
+.bx{
+    align-items: center;
+    font-size: 18px;
+    transform: translate(-45px);
+    cursor: pointer;
+}
 
 a {
     text-decoration: none;

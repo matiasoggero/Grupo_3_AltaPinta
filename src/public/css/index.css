@@ -1,31 +1,4 @@
-.search-header{
-    display: flex;
-    border: 1px solid #d12626; 
-    border-radius: 5px; 
-    margin-left: 230px; 
-    width: 40%;
-  }
 
-.search-input {
-    flex: 1;
-    border: none; 
-    padding: 5px; 
-    font-size: 16px; 
-    width: 30%;
-  }
-  
-  .search-button {
-    background: none; 
-    border: none; 
-    cursor: pointer;
-    padding: 5px; 
-  }
-  
-  .search-button i.fas.fa-search {
-    font-size: 20px; 
-    color: #333;
-  }
-  
   body{
     color: black;
     background-position: center;
@@ -43,12 +16,12 @@ h2{
 }
 
 .content-all{
+    
     width: 210px;
     margin: auto;
     perspective: 800px;
     position: relative;
     margin-top: 50px;
-    margin-bottom: 350px;
 }
 
 .content-carrousel{

@@ -3,9 +3,10 @@
 <body>
     <%- include('partials/headerViews.ejs') %>
     <h1>Formulario de Franquicias</h1>
-    <p>Completá este formulario para saber más de nuestras franquicias</p>
+    <h2>Completá este formulario para saber más de nuestras franquicias</h2>
     
-    <form action="" method="POST" id="formFranquicias">
+    <form class="form-container"> 
+        <section action="" method="POST" id="formFranquicias"></section>
 
         <input type="text" id="nombre" name="nombre" placeholder="Nombre">
         <input type="text" id="apellido" name="apellido" placeholder="Apellido">
@@ -28,7 +29,10 @@
 
         <div id="errorContainer" class="errorContainer"></div>
 
-        <input type="submit" value="Enviar">
+        <div class="button-container"></section>
+                <button type="submit" class="btn btn-primary">ENVIAR</button>
+        </div>
+    
     </form>
         
     <%- include('partials/footer.ejs') %>

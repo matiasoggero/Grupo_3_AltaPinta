@@ -3,10 +3,6 @@
     padding: 0%;
     box-sizing: border-box; }
 
-   
-
-
-
 h1{
     text-align: center;
     color: rgba(8, 1, 1, 0.801);
@@ -15,16 +11,17 @@ h1{
 .texto{
     
     color: aliceblue;
+    white-space: normal;
     text-align: center;
     background-image:url("/images/burguerr.jpg");
     background-size: contain; 
-  background-repeat: no-repeat; 
-  background-position: center; 
-  background-color: rgba(0, 0, 0, 0.767);
-  height: 400px;
-  padding-left: 400px;
-  padding-right: 400px;
-  padding-top: 30px;
+    background-repeat: no-repeat; 
+    background-position: center; 
+    background-color: rgba(0, 0, 0);
+    height: 400px;
+    padding-left: 400px;
+    padding-right: 400px;
+    padding-top: 15px;
 
     
 }

@@ -5,60 +5,59 @@
 
 
             <h1>Trabajá en Alta Pinta</h1>
-            <p class="trabaja">¡Sumate a nuestro equipo, te estamos esperando!</p>
+            <h2 class="trabaja">¡Sumate a nuestro equipo, te estamos esperando!</h2>
 
-            <form action="#" method="POST"  id="formTrabaja">
-                <div>
-                    <h2>Datos Personales</h2>
-                    <input type="text" id="nombre" name="nombre" placeholder="Nombre" >
-                    <input type="text" id="apellido" name="apellido" placeholder="Apellido" >
-                    <input type="text" id="dni" name="dni" placeholder="DNI Número" >
-                    <input type="text" id="fecha_nacimiento" name="fecha_nacimiento"
-                        placeholder="Fecha de Nacimiento (DD/MM/AAAA)" >
-                    <input type="email" id="email" name="email" placeholder="Email" >
-                    <input type="tel" id="telefono" name="telefono" placeholder="Teléfono" >
-                    <select id="nivel_estudio" name="nivel_estudio" >
-                        <option value="">Nivel de Estudios</option>
-                        <option value="secundario_en_curso">Secundario en Curso</option>
-                        <option value="secundario_completo">Secundario Completo</option>
-                        <option value="terciario">Terciario</option>
-                        <option value="universitario">Universitario</option>
-                    </select>
-                </div>
+            <div class="form-container"> 
+                <form action="#" method="POST"  id="formTrabaja">
+                    <div>
+                        <h2>Datos Personales</h2>
+                        <input type="text" id="nombre" name="nombre" placeholder="Nombre" >
+                        <input type="text" id="apellido" name="apellido" placeholder="Apellido" >
+                        <input type="text" id="dni" name="dni" placeholder="DNI Número" >
+                        <input type="text" id="fecha_nacimiento" name="fecha_nacimiento"
+                            placeholder="Fecha de Nacimiento (DD/MM/AAAA)" >
+                        <input type="email" id="email" name="email" placeholder="Email" >
+                        <input type="tel" id="telefono" name="telefono" placeholder="Teléfono" >
+                        <select id="nivel_estudio" name="nivel_estudio" >
+                            <option value="">Nivel de Estudios</option>
+                            <option value="secundario_en_curso">Secundario en Curso</option>
+                            <option value="secundario_completo">Secundario Completo</option>
+                            <option value="terciario">Terciario</option>
+                            <option value="universitario">Universitario</option>
+                        </select>
+                    </div>
 
-                <div>
-                    <h2>Dirección</h2>
-                    <input type="text" id="domicilio" name="domicilio" placeholder="Domicilio">
-                    <input type="text" id="provincia" name="provincia" placeholder="Provincia/Distrito">
-                    <input type="text" id="ciudad" name="ciudad" placeholder="Ciudad/Localidad" >
-                </div>
+                    <div>
+                        <h2>Dirección</h2>
+                        <input type="text" id="domicilio" name="domicilio" placeholder="Domicilio">
+                        <input type="text" id="provincia" name="provincia" placeholder="Provincia/Distrito">
+                        <input type="text" id="ciudad" name="ciudad" placeholder="Ciudad/Localidad" >
+                    </div>
 
-                <div>
-                    <h2>Disponibilidad Horaria</h2>
-                    <select id="disponibilidad" name="disponibilidad">
-                        <option value="">Disponibilidad</option>
-                        <option value="tiempo_completo">Tiempo Completo</option>
-                        <option value="medio_tiempo">Medio Tiempo</option>
-                        <option value="fin_de_semana">Fin de Semana</option>
-                    </select>
-                </div>
+                    <div>
+                        <h2>Disponibilidad Horaria</h2>
+                        <select id="disponibilidad" name="disponibilidad">
+                            <option value="">Disponibilidad</option>
+                            <option value="tiempo_completo">Tiempo Completo</option>
+                            <option value="medio_tiempo">Medio Tiempo</option>
+                            <option value="fin_de_semana">Fin de Semana</option>
+                        </select>
+                    </div>
 
-                <div>
-                    <h2>Subir CV</h2>
-                    <input type="file" id="cv" name="cv" accept=".docx, .doc, .pdf">
-                </div>
+                    <div>
+                        <h2>Subir CV</h2>
+                        <input type="file" id="cv" name="cv" accept=".docx, .doc, .pdf">
+                    </div>
 
-                <div id="errorContainer" class="errorContainer"></div>
+                    <div id="errorContainer" class="errorContainer"></div>
 
-                <div>
-                    <input type="submit" value="Enviar">
-                </div>
+                    <div class="button-container">
+                        <button type="submit" class="btn btn-primary">ENVIAR</button>
+                    </div>
 
+                </form>
 
-
-            </form>
-
-
+            </div>
             <%- include('partials/footer.ejs') %>
 
             <script src="/js/trabajaConNosotrosVal.js"></script>

@@ -2,21 +2,26 @@
 <script src="https://kit.fontawesome.com/eb496ab1a0.js" crossorigin="anonymous"></script>
 <body>
     <%- include('partials/headerViews.ejs') %>
-    <div class="container-contactanos"> 
-        <div class="info-contactanos">
-            <h2>Contactanos</h2>
-            <p>¡Nos encantaría saber de ti! Ya sea que tengas preguntas, comentarios o simplemente quieras saludar, estamos aquí para ayudarte. Puedes comunicarte con nosotros aquí y responderemos a la brevedad.</p>
-            <a href="#"><i class="fa fa-phone"></i>987654321</a>
-            <a href="#"><i class="fa fa-envelope"></i>altapinta@email.com</a>
-            <a href="#"><i class="fa fa-map-marked"></i>Rafaela, Santa Fe, Argentina</a>
+    <h1>Contactanos</h1>
+    <h2>¡Nos encantaría saber de ti! Ya sea que tengas preguntas, comentarios o simplemente quieras saludar, estamos aquí para ayudarte.</h2>
+    <h2>Puedes comunicarte con nosotros aquí y responderemos a la brevedad.</h2>
+    
+    <div class="form-container"> 
+                <form action="#" autocomplete="off">
+                    <input type="text" name="nombre" placeholder="Ingresa tu nombre">
+                    <input type="text" name="email" placeholder="Ingresa tu email">
+                    
+                    <textarea name="mensaje" placeholder="Ingresa tu mensaje"></textarea>
+                    <div class="button-container">
+                        <button class="btn btn-primary" type="submit">Enviar</button>
+                    </div>
+                </form>
+                <div class="links-container">
+                    <a href="#"><i class="fa fa-phone"></i>3492514321</a>
+                    <a href="#"><i class="fa fa-envelope"></i>altapinta@email.com</a>
+                    <a href="#"><i class="fa fa-map-marked"></i>Rafaela, Santa Fe, Argentina</a>
+                </div>
         </div>
-        <form action="#" autocomplete="off" id="formContact">
-            <input type="text" name="nombre" placeholder="Ingresa tu nombre" class="campo" id="nombre">
-            <input type="text" name="email" placeholder="Ingresa tu email" class="campo" id="email">
-            <textarea name="mensaje" placeholder="Ingresa tu mensaje" id="mensaje"></textarea>
-            <div id="error-container" class="error-container"></div>
-            <input type="submit" name="enviar" value="Enviar mensaje" class="btn-enviar">
-        </form>
     </div>
 
 </div>

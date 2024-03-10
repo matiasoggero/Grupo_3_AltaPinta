@@ -4,6 +4,7 @@ window.addEventListener("load", () => {
   const imageInput = document.querySelector("#avatar");
   const passwordInput = document.querySelector("#password");
   const confirm_passwordInput = document.querySelector("#confirm_password");
+  const iconInput = document.querySelector(".bx")
 
   const nameErrors = document.querySelector("#nameErrors");
   const emailErrors = document.querySelector("#emailErrors");
@@ -104,6 +105,17 @@ window.addEventListener("load", () => {
       });
     }
   });
+  iconInput.addEventListener("click", e =>{
+    if(passwordInput.type === "password"){
+      passwordInput.type = "text";
+      iconInput.classList.remove("bx bx-show")
+      iconInput.classList.add("bx bx-hide")
+    }else{
+      passwordInput.type = "password";
+      iconInput.classList.add("bx bx-show")
+      iconInput.classList.remove("bx bx-hide")
+    }
+  })
 
   confirm_passwordInput.addEventListener("focus", () => {
     confirm_passwordErrors.innerHTML = "";

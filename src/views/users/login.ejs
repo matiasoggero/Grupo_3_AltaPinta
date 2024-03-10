@@ -3,6 +3,7 @@
 
     
 <body>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <%- include('../partials/header.ejs') %>
     
     <main class="form-container">
@@ -10,7 +11,7 @@
         <form action="/users/login" method="post">
             
             <div class="label-container">
-                <input type="email" name="email" id="emailLogin" placeholder="email" required>
+                <input type="email" name="email" id="emailLogin" placeholder="email">
                 <div id = "emailErrors" class= "fieldError"></div>
                 <% if (locals.errors && errors.email) { %>
                 <div class="text-danger">
@@ -18,19 +19,26 @@
                 </div>
                 <% } %>
             </div>
+
             <div class="label-container">
-                        <input type="password" name="password" id="passwordLogin" placeholder="Contraseña" required>
-                        <div id = "passwordErrors" class= "fieldError"></div>
+                <section class="password-container">
+                    <input type="password" name="password" id="passwordLogin" placeholder="Contraseña" >
+                    <i class='bx bx-show'></i>
+                    <i class='bx bx-hide' ></i>
+                    <div id = "passwordErrors" class= "fieldError"></div>
+                </section>
             </div>
+
             <div class="button-container">
                 <button class="btn btn-primary" type="submit">Enviar</button>
             </div>
-            <div class = "rememberme">
+
+            <div class="rememberme">
             <label for="recordarme">RECORDARME</label>
             <input type="checkbox" name="recordarme" id="recordarme" >
         </div>
             <div class="registrarse">
-                Aún no te registraste?<a href ="http://localhost:3040/users/register" style="color:blue">
+                Aún no te registraste?<a href ="http://localhost:3040/users/register" style="color:#daa520 ">
                  REGISTRATE AQUÍ</a>
             </div>
         </form>
