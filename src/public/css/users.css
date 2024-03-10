@@ -10,11 +10,10 @@ body {
 }
 
 .users-title {
-    font-size: 24px;
+    font-size: 34px;
     margin-bottom: 20px;
     text-align: center;
     color: #af1717;
-    font-size: 23px;
 }
 
 .users-wrapper {
@@ -24,10 +23,9 @@ body {
 }
 
 .content-u-box {
-    width: 50%;
+    width: 33%;
     padding: 20px;
     box-sizing: border-box;
-
 }
 
 .user-box {

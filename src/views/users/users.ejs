@@ -3,9 +3,9 @@
     <body>
         <%- include('../partials/headerAdmin.ejs') %>
 
-            <main>
-                <h2 class="users-title"> Todos los usuarios </h2>
-                <div class="users-wrapper">
+                <h1 class="users-title"> Todos los usuarios </h1>
+                <main class="users-wrapper">
+                
                     <% locals.users && users.forEach((user)=> { %>
                         <div class="content-u-box">
                             <section class="user-box">
@@ -22,10 +22,6 @@
                             </section>
                         </div>
                         <% }); %>
-
-                </div>
-
-
 
             </main>
 

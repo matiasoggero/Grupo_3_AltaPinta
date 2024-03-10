@@ -6,11 +6,6 @@ window.addEventListener("load", function () {
         event.preventDefault(); 
 
 
-      
-
-
-
-
         errorContainer.innerHTML = ''; 
         
         const hamburgerType = document.querySelector('input[name="hamburgerType"]:checked');

@@ -10,14 +10,14 @@ window.addEventListener("load", function () {
         let name = document.querySelector("#name")
 
         if (name.value.length < 3) {
-            errores.push("el campo de nombre debe tener al menos 3 caracteres")
+            errores.push("El campo de nombre debe tener al menos 3 caracteres")
         }
 
 
         let description = document.querySelector("#description")
 
         if (description.value.length < 10) {
-            errores.push("la descripción debe tener al menos 10 caracteres")
+            errores.push("La descripción debe tener al menos 10 caracteres")
         }
 
         let image = document.querySelector("#image");
@@ -41,7 +41,6 @@ window.addEventListener("load", function () {
         }else if (price.value.length < 2) { 
             errores.push("El campo precio debe tener al menos 2 caracteres.");
         }
-    
         
 
         if (errores.length > 0) {

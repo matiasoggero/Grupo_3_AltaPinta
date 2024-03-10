@@ -13,9 +13,7 @@ body {
 .button-container {
   margin-bottom: 20px;
   margin-top: 20px;
-  
 }
-
 
 .products-wrapper {
   display: grid;
@@ -29,7 +27,7 @@ body {
   text-align: center;
   margin: 15px 0px;
   color: #af1717;
-  font-size: 23px;
+  font-size: 34px;
 }
 
 .product-box {
